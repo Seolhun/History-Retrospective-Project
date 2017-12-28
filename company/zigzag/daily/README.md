@@ -7,7 +7,7 @@
 
 
 ## Reference
-- GitHub
-	- [Github - Pull Request merges](https://help.github.com/articles/about-pull-request-merges/)
-- [Mithril JS](https://mithril.js.org/index.html)
-	- 
+	- GitHub
+		- [Github - Pull Request merges](https://help.github.com/articles/about-pull-request-merges/)
+	- [Mithril JS](https://mithril.js.org/index.html)
+		- 
