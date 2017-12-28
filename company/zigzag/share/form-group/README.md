@@ -31,34 +31,11 @@
 		- FormObjectValue (Object Type) : FormObjectValue에서 Array타입이 아니며 Object타입일 경우 사용되는 fn
 		- FormValue (Primitive Type) : primitive type으로 지정하거나, FormObjectValue에서 Array, Object타입이 아닌 경우 사용되는 fn
 
-## Examples
+## Process
+1. Model과 같은 FormModel(ModelFV)을 만든다. 타입은 FormValue를 이용한다.
+	- **FormValue**에 대해서 알고가자
+		- FormValue는 Mithril/Stream을 상속받아 구현하였으므로 Stream과 같으며 추가적인 기능이 구현되었다.
+		- FormValue는 lodash에 있는 [_.cloneDeep](https://lodash.com/docs/4.17.4#cloneDeep)을 이용하여 다른 주소값으로 값을 복사한다.(즉, ) 
 1. FormValueGroup
-	- ```
-	class FormValueGroup<T> {
-	  is_valid: Stream.Stream<boolean>;
-	  is_modified: Stream.Stream<boolean>;
-	  reset: () => void;
-	  save: () => void;
-	}
-	```
-
-1. FormValue
-	- ```typescript
-	interface FormValue<T, U = T> extends Stream.Stream<U> {
-	  is_modified: Stream.Stream<boolean>;
-	  error_message: Stream.Stream<string>;
-	  validation_state: Stream.Stream<string>;
-	  reset: () => void;
-	  save: () => void;
-	  toValue: () => T;
-	}
-	```
-2. FormObjectValue
-	- ```typescript
-	export type FormedT<T> = {[key in keyof T]: FormValue<any>; };
-	interface FormObjectValue<T extends object, U extends FormedT<T>> extends FormValue<T, U> {
-	}
-	```
-
-
+	- FormValueGroup에 FormObjectValue<T>로 생성한 값을 
 
