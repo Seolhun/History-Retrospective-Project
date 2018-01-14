@@ -98,11 +98,11 @@
 		> ```
 	2. default npm install 
 	> ```bash
-	>
+	> ./install_all_node_modules.sh 
 	> ```
 	3. create Account using console
 	> ```bash
-	>
+	> 
 	> ```
 	4. run project test
 	> ```bash
