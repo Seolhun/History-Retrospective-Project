@@ -1,3 +1,6 @@
+## 프로젝트 구현 순서
+- Thrift, Services, Server, Client
+
 ## ZIGZAG 배포 순서
 1. 라이브서버로 실행하기 - 데이터는 리얼이므로 select 동작만 할 것
 	- `npm run start:real`
@@ -7,9 +10,6 @@
 	- `git pull`
 4. 변경된 프로젝트 배포하기  - ex) apps/management/client에서
 	- `npm run deploy`
-
-## 프로젝트 구현 순서
-- Thrift, Services, Server, Client
 
 ## Interface generate 방법
 1. 인터페이스 디렉토리로 이동.
