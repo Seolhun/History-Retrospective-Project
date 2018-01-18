@@ -44,16 +44,20 @@
 	- `url_utils.ts`
 
 ## Examples
-- cd ~/git/zigzag/services/goods-update/app/scrapers
-- npm run console:real
-	- `CheckScraperPrivateService`
-		- `.checkScraper(arg?, limit?)`
+- Directory
+	- cd ~/git/zigzag/services/goods-update/app/scrapers
+	- npm run preconsole
+	
+- Usabled function
+	- npm run console:real
+		- `CheckScraperPrivateService.checkScraper(shop_id, limit?)`
+		- `ScraperPrivateService.common_scraper.debug = ['title','price']`
 
 - Scraper repository
 	- cd ~/git/zigzag/services/goods-update/app/scrapers
 	- git push(master)
 
-- goods-update
+- goods-update : Deploy 방법
 	- cd ~/git/zigzag/services/goods-update
 	- git pull
 	- npm run deploy
