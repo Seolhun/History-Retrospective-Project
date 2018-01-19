@@ -21,13 +21,13 @@
 ## Model 분석
 - Goods
 	- Main Column
+		- `item` : 해당 아이템들을 모아 놓은 곳에서 해당 1개의 아이템 돔까지 - ex) ul > li
 		- `proudct_no`
 		- `title` : 120자가 최대(앱에서 보여주기 위한 최대치)
 		- `price`
 		- `url`
 		- `image_url`
-	- Sub_Column
-		- `deleted_at` : 삭제한 시각
+- goods와 detail의 교차검증을 통해 유효성을 검사한다.
 
 ## Scrapers 만드는 방법/분석
 - deleted_pattern : 품절되는 것을 확인하는 방법
@@ -36,6 +36,8 @@
 - extractor : 해당 규칙에서 정해진 값을 추출할 때.
 - exports.main_url : Main.URL을 변경한다.(메인에 사진만 있을 경우 주로 사용.)
 - cafe24_badges : 사진과 함께 보여줘야 하는 것. 앞의 숫자는 `%`이다.
+	- xratio
+	- yratio
 - title_modified : 제목이 수정되었을 경우 
 
 ## 공통 사항 정의된 파일
@@ -44,16 +46,20 @@
 	- `url_utils.ts`
 
 ## Examples
-- cd ~/git/zigzag/services/goods-update/app/scrapers
-- npm run console:real
-	- `CheckScraperPrivateService`
-		- `.checkScraper(arg?, limit?)`
+- Directory
+	- cd ~/git/zigzag/services/goods-update/app/scrapers
+	- npm run preconsole
+	
+- Usabled function
+	- npm run console:real
+		- `CheckScraperPrivateService.checkScraper(shop_id, limit?)`
+		- `ScraperPrivateService.common_scraper.debug = ['title','price']`
 
 - Scraper repository
 	- cd ~/git/zigzag/services/goods-update/app/scrapers
 	- git push(master)
 
-- goods-update
+- goods-update : Deploy 방법
 	- cd ~/git/zigzag/services/goods-update
 	- git pull
 	- npm run deploy
