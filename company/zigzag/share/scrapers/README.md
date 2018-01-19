@@ -27,7 +27,6 @@
 		- `price`
 		- `url`
 		- `image_url`
-
 - goods와 detail의 교차검증을 통해 유효성을 검사한다.
 
 ## Scrapers 만드는 방법/분석
