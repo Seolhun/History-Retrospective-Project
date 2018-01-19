@@ -1,4 +1,6 @@
 # [GraphQL](http://graphql.org/)
+- Author : [HunSeol](https://github.com/Seolhun/)
+- Repo : [https://github.com/Seolhun/typescript-graphql-example](https://github.com/Seolhun/typescript-graphql-example)
 
 ## Query
 ```gql
