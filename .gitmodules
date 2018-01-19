@@ -1,3 +1,7 @@
 [submodule "study/vue/kr-study-incheon"]
 	path = study/vue/kr-study-incheon
 	url = https://github.com/Seolhun/retrospective-project.git
+
+[submodule "study/vue/kr-study-incheon"]
+	path = study/vue/vue-example
+	url = https://github.com/Seolhun/retrospective-project.git
