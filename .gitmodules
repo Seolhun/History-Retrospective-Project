@@ -13,3 +13,9 @@
 [submodule "devops/docker"]
 	path = devops/docker
 	url = https://github.com/Seolhun/docker-example.git
+[submodule "study/java/java-example"]
+	path = study/java/java-example
+	url = https://github.com/Seolhun/java-example.git
+[submodule "study/python/python-example"]
+	path = study/python/python-example
+	url = https://github.com/Seolhun/python-example.git
