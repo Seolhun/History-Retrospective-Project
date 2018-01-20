@@ -4,3 +4,12 @@
 [submodule "study/vue/vue-example"]
 	path = study/vue/vue-example
 	url = https://github.com/Seolhun/vue-example.git
+[submodule "company"]
+	path = company
+	url = https://github.com/Seolhun/company.git
+[submodule "devops/aws"]
+	path = devops/aws
+	url = https://github.com/Seolhun/aws.git
+[submodule "devops/docker"]
+	path = devops/docker
+	url = https://github.com/Seolhun/docker-example.git
