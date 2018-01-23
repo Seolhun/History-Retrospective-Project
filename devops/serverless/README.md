@@ -4,13 +4,13 @@
 
 
 ## [Simple Serverless Quick Start](https://serverless.com/framework/docs/providers/aws/guide/quick-start/)
-1. Create a new service.
+#### 1. Create a new service.
 ```Bash
 serverless create --template aws-nodejs --path my-service
 cd my-service
 ```
 
-2. Update a `serverless.yml`
+#### 2. Update a `serverless.yml`
 ```yml
 provider:
   name: aws
@@ -26,7 +26,7 @@ custom:
     prod: hunseol
 ```
 
-3. Write a aws-profiles
+#### 3. Write a aws-profiles
 ```bash
 vim ~/.aws/credentials
 
@@ -45,7 +45,7 @@ aws_secret_access_key = <access-secret-key>
 serverless deploy --aws-profile seolhun
 ```
 
-4. Build a Function
+#### 4. Build a Function
 - Deploy the Function
 	- 신속하게 기능 코드를 업로드하고 덮어 쓰면 더 빨리 개발할 수 있습니다.
 ```bash
@@ -67,14 +67,16 @@ serverless logs -f hello -t
 serverless remove
 ```
 
-5. Build a Service
-#### Contains 4 functions that do Users CRUD operations and the Users database
+#### 5. Build a Service
+- Contains 4 functions that do Users CRUD operations and the Users database
 - users/
 	- serverless.yml 
-#### Contains 4 functions that do Posts CRUD operations and the Posts database
+
+- Contains 4 functions that do Posts CRUD operations and the Posts database
 - posts/
 	- serverless.yml 
-#### Contains 4 functions that do Comments CRUD operations and the Comments database
+
+- Contains 4 functions that do Comments CRUD operations and the Comments database
 - comments/
 	- serverless.yml 
 
