@@ -86,7 +86,7 @@ serverless remove
 |   +-- members.yml
 +-- _site
 +-- index.html
-.
+
 - users/
 	- serverless.yml # Contains 4 functions that do Users CRUD operations and the Users database
 - posts/
