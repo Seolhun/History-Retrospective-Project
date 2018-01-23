@@ -1,16 +1,30 @@
-# Serverless Framework Guide
+# Serverless Framework Guide 1
 - Author : [Seolhun](https//github.com/seolhun)
 - [https://serverless.com/](https://serverless.com/)
 
-
 ## [Simple Serverless Quick Start](https://serverless.com/framework/docs/providers/aws/guide/quick-start/)
-#### 1. Create a new service.
+
+## 1. Create a new service.
+- Template 종류
+  - aws-nodejs
+  - aws-nodejs-typescript
+  - aws-nodejs-ecma-script
+  - aws-python
+  - aws-python3
+  - aws-kotlin-jvm-maven
+  - aws-kotlin-nodejs-gradle
+  - aws-groovy-gradle
+  - aws-java-gradle
+  - aws-java-maven
+  - aws-scala-sbt
+  - aws-csharp
+  - aws-fsharp
 ```Bash
-serverless create --template aws-nodejs --path my-service
+serverless create --template aws-nodejs-typescript --path my-service
 cd my-service
 ```
 
-#### 2. Update a `serverless.yml`
+## 2. Update a `serverless.yml`
 ```yml
 provider:
   name: aws
@@ -26,7 +40,7 @@ custom:
     prod: hunseol
 ```
 
-#### 3. Write a aws-profiles
+## 3. Write a aws-profiles
 ```bash
 vim ~/.aws/credentials
 
@@ -45,7 +59,7 @@ aws_secret_access_key = <access-secret-key>
 serverless deploy --aws-profile seolhun
 ```
 
-#### 4. Build a Function
+## 4. Build a Function
 - Deploy the Function
 	- 신속하게 기능 코드를 업로드하고 덮어 쓰면 더 빨리 개발할 수 있습니다.
 ```bash
@@ -66,19 +80,3 @@ serverless logs -f hello -t
 ```bash
 serverless remove
 ```
-
-#### 5. Build a Service
-- Contains 4 functions that do Users CRUD operations and the Users database
-- users/
-	- serverless.yml 
-
-- Contains 4 functions that do Posts CRUD operations and the Posts database
-- posts/
-	- serverless.yml 
-
-- Contains 4 functions that do Comments CRUD operations and the Comments database
-- comments/
-	- serverless.yml 
-
-- 현재 모든 서비스는 AWS API 게이트웨이에 별도의 REST API를 만듭니다. AWS API 게이트웨이의 제한으로 인해 하나의 REST API 당 맞춤 도메인 만 가질 수 있습니다. 대규모 REST API를 만들려는 경우이 제한 사항을 기록해 두십시오. 또한 수정 프로그램이 작동 중이며 최우선 순위입니다.
-
