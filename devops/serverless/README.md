@@ -68,31 +68,15 @@ serverless remove
 ```
 
 5. Build a Service
-.
-+-- _config.yml
-+-- _drafts
-|   +-- begin-with-the-crazy-ideas.textile
-|   +-- on-simplicity-in-technology.markdown
-+-- _includes
-|   +-- footer.html
-|   +-- header.html
-+-- _layouts
-|   +-- default.html
-|   +-- post.html
-+-- _posts
-|   +-- 2007-10-29-why-every-programmer-should-play-nethack.textile
-|   +-- 2009-04-26-barcamp-boston-4-roundup.textile
-+-- _data
-|   +-- members.yml
-+-- _site
-+-- index.html
-
+#### Contains 4 functions that do Users CRUD operations and the Users database
 - users/
-	- serverless.yml # Contains 4 functions that do Users CRUD operations and the Users database
+	- serverless.yml 
+#### Contains 4 functions that do Posts CRUD operations and the Posts database
 - posts/
-	- serverless.yml # Contains 4 functions that do Posts CRUD operations and the Posts database
+	- serverless.yml 
+#### Contains 4 functions that do Comments CRUD operations and the Comments database
 - comments/
-	- serverless.yml # Contains 4 functions that do Comments CRUD operations and the Comments database
+	- serverless.yml 
 
 - 현재 모든 서비스는 AWS API 게이트웨이에 별도의 REST API를 만듭니다. AWS API 게이트웨이의 제한으로 인해 하나의 REST API 당 맞춤 도메인 만 가질 수 있습니다. 대규모 REST API를 만들려는 경우이 제한 사항을 기록해 두십시오. 또한 수정 프로그램이 작동 중이며 최우선 순위입니다.
 
