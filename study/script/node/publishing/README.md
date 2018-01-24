@@ -1,4 +1,5 @@
-# How to init Npm repo
+# How to publish Npm Repository
+- Author : [SeolHun](https://github.com/Seolhun/)
 
 ## npm이란?
 npm을 사용하면 JavaScript 개발자가 코드를 쉽게 공유하고 재사용 할 수 있으며 공유하는 코드를 쉽게 업데이트 할 수 있습니다.

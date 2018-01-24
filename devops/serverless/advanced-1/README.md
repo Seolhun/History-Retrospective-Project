@@ -125,7 +125,7 @@ serverless deploy
 3. 사용자가 AWS에서 dev stage와 us-east-1 영역을 기본값으로 지정하거나 다른 위치에 지정하지 않은 경우에는 옵션을 다음과 같이 추가하십시오.
 - 현재 저희는 `serverless.yml`에 정의하였기 때문에 상관없습니다.
 ```bash
-serverless deploy --stage prod --region us-east-1
+serverless deploy --stage prod --region ap-northeast-2
 ```
 
 ## 5. Installing Serverless in an existing service
