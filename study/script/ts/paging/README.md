@@ -1,6 +1,8 @@
 ## Github Issue Paging
 
 ```typescript
+import * as _ from 'lodash';
+
 function pagination(c: number, t: number, limit: number) {
   const current: number = c;
   const total_page: number = t;
