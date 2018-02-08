@@ -21,4 +21,5 @@
 2. git checkout `${branch_name}`
 
 #### Management Branch
-1. - git remote prune origin
+1. Remove Deleted Branches.
+	- git remote prune origin

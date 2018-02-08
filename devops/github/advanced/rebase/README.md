@@ -19,4 +19,11 @@
 3. 해당 커밋마다 종류를 선택한다.
 	- `drop, pick 등 각 커밋마다 진행될 옵션을 선택한다.`
 
-	
+
+## Undoing Git Rebase
+1. git reflog
+```bash
+17f16d7e7 (HEAD -> undoingBranch) HEAD@{0}: rebase finished: returning to refs/heads/undoingBranch
+17f16d7e7 (HEAD -> undoingBranch) HEAD@{1}: rebase: target branch.
+```
+2. git reset --hard HEAD@{1}

@@ -29,4 +29,50 @@
 if [ -f ~/.bashrc ]; then
     . ~/.bashrc
 fi
+
+```
+
+#### Alias and Disaplying PWD
+```bash
+#.bash_profile
+if [ -f ~/.bashrc ]; then
+. ~/.bashrc
+fi
+
+export NVM_DIR=~/.nvm
+source ~/.nvm/nvm.sh
+
+# Show always fullpath on terminal
+export PS1='\u@\H [\w]$ '
+export PATH="/usr/local/opt/m4/bin:$PATH"
+
+# Disaply git branch
+PS1='\[\033[0;32m\]\[\033[0m\033[0;32m\]\u\[\033[0;36m\] @ \w\[\033[0;32m\]\n$(git branch 2>/dev/null | grep "^*" | colrm 1 2)\[\033[0;32m\]└─\[\033[0m\033[0;32m\] \$\[\033[0m\033[0;32m\]\[\033[0m\]'
+
+# NodeJS
+#export NODE_ENV="production"
+#===================
+# Personnal Aliases
+#===================
+alias bp='vim ~/.bash_profile'
+alias sbp='tail -n 20  ~/.bash_profile'
+
+#=============
+# ZIGZAG Part 
+#=============
+alias zz='code ~/git/zigzag/'
+alias mzz='cd ~/git/zigzag/'
+alias zz:m='cd ~/git/zigzag/apps/management/'
+alias zz:s='cd ~/git/zigzag/apps/seller/'
+
+alias sc='code ~/git/zigzag/services/goods-update/app/scrapers/'
+alias sc:m='cd ~/git/zigzag/services/goods-update/app/scrapers/'
+
+alias gu:m='cd ~/git/zigzag/services/goods-update/'
+alias gu:r='cd ~/git/zigzag/services/goods-update/app/ && npm run console:real'
+
+#================
+# ZIGZAG AWS Part
+#================
+alias aws:search='ssh -i "~/.aws/ZIGZAG-Elastic-Search.pem" ubuntu@ec2-52-78-36-142.ap-northeast-2.compute.amazonaws.com'
 ```
