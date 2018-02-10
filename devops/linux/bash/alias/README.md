@@ -16,18 +16,10 @@ alias sbp='tail -n 40  ~/.bash_profile'
 alias aws:s='tail -n 40 ~/.aws/credentials'
 
 #=============
-# ZIGZAG Part 
+# hunseol Part 
 #=============
-alias zz='code ~/git/zigzag/'
-alias mzz='cd ~/git/zigzag/'
-alias zz:m='cd ~/git/zigzag/apps/management/'
-alias zz:s='cd ~/git/zigzag/apps/seller/'
-
-alias sc='code ~/git/zigzag/services/goods-update/app/scrapers/'
-alias sc:m='cd ~/git/zigzag/services/goods-update/app/scrapers/'
-
-alias gu:m='cd ~/git/zigzag/services/goods-update/'
-alias gu:r='cd ~/git/zigzag/services/goods-update/app/ && npm run console:real'
+alias hs:c='code ~/git/hunseol/'
+alias hs:m='cd ~/git/hunseol/'
 ```
 
 - 터미널을 껐다 다시 켜서 `root`를 입력하면 홈 다이렉토리로 가는지 확인한다.
