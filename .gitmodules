@@ -19,3 +19,6 @@
 [submodule "study/python/python-example"]
 	path = study/python/python-example
 	url = https://github.com/Seolhun/python-example.git
+[submodule "view-retrospective-project"]
+	path = view-retrospective-project
+	url = https://github.com/Seolhun/view-retrospective-project
