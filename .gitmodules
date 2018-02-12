@@ -19,6 +19,3 @@
 [submodule "study/python/python-example"]
 	path = study/python/python-example
 	url = https://github.com/Seolhun/python-example.git
-[submodule "study/jtn-script"]
-	path = study/jtn-script
-	url = https://github.com/Seolhun/jtn-script-example.git
