@@ -3,109 +3,22 @@
 - 싱글톤 패턴은 가장 단순한 디자인 패턴 중 하나입니다. 이 유형의 디자인 패턴은 오브젝트를 생성하는 가장 좋은 방법 중 하나를 제공하므로이 패턴은 Creational Patterns에 속해 있습니다. **이 패턴은 단일 객체 만 생성되도록하면서 객체를 만드는 단일 클래스를 포함합니다. 이 클래스는 클래스 객체를 인스턴스화하지 않고 직접 액세스 할 수있는 유일한 객체에 접근하는 방법을 제공합니다.**
 
 ```typescript
-import * as _ from 'lodash';
-
 class Singleton {
   private static instance: Singleton;
-  name: string;
 
-  constructor() {
-    this.name = 'seolhun';
+  private constructor() {
     Singleton.instance = this;
   }
 
   static get getInstance() {
-    this.printInstance();
+    if (!Singleton.instance) {
+      Singleton.instance = new Singleton();
+    }
     return this.instance;
   }
-
-  static set setInstance(this: Singleton) {
-    Singleton.instance = this;
-  }
-
-  get getName() {
-    return this.name;
-  }
-
-  set setName(name: string) {
-    this.name = name;
-  }
-
-  static printInstance() {
-    console.log(this.instance);
-  }
-
-  printName() {
-    const s = new Singleton();
-    console.log(s.name);
-  }
-
-  static lazyFunction = _.debounce((fn: (query?: string) => void) => {
-    fn.call(fn);
-  }, 1000, { maxWait: 1000 });
 }
 
 export default Singleton;
-```
-
-```javascript
-define(["require", "exports", "lodash"], function (require, exports, _) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    var Singleton = /** @class */ (function () {
-        function Singleton() {
-            this.name = 'seolhun';
-            Singleton.instance = this;
-        }
-
-        Object.defineProperty(Singleton, "getInstance", {
-            get: function () {
-                this.printInstance();
-                return this.instance;
-            },
-            enumerable: true,
-            configurable: true
-        });
-
-        Object.defineProperty(Singleton, "setInstance", {
-            set: function () {
-                Singleton.instance = this;
-            },
-            enumerable: true,
-            configurable: true
-        });
-
-        Object.defineProperty(Singleton.prototype, "getName", {
-            get: function () {
-                return this.name;
-            },
-            enumerable: true,
-            configurable: true
-        });
-
-        Object.defineProperty(Singleton.prototype, "setName", {
-            set: function (name) {
-                this.name = name;
-            },
-            enumerable: true,
-            configurable: true
-        });
-
-        Singleton.printInstance = function () {
-            console.log(this.instance);
-        };
-
-        Singleton.prototype.printName = function () {
-            var s = new Singleton();
-            console.log(s.name);
-        };
-
-        Singleton.lazyFunction = _.debounce(function (fn) {
-            fn.call(fn);
-        }, 1000, { maxWait: 1000 });
-        return Singleton;
-    }());
-});
 ```
 
 ## 내용
