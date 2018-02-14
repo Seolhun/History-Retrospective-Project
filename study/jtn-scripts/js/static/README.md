@@ -27,5 +27,26 @@ console.log(2 * Helpers.PI); // 6.28
 console.log(Helpers.calcCircumference(8)); // 25.12
 ```
 
+## Review
+- JavaScript에서 static은 결국, 해당 instance를 class 혹은 function 안에 객체를 선언하여 해당 값을 담아놓는 것이다.
+- TypeScript와 JavaScript 코드를 같이 보면 이것이 더 명확해진다.
+```typescript
+class StaticClass {
+    private static size: number = 20;
+    static getStaticClassSize() {
+        return this.size * 2;
+    }
+}
+```
+```javascript
+var StaticClass = /** @class */ (function () {
+    Singleton.size = 20;
+    StaticClass.getStaticClassSize = function () {
+        return this.size * 2;
+    };
+    return StaticClass
+}
+```
+
 ## References
 - [https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes/static](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes/static)

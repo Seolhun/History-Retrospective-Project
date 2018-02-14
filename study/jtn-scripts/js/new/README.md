@@ -27,7 +27,7 @@
 ## Examples
 ```javascript
 function Car() {}
-car1 = new Car();
+var car1 = new Car();
 console.log(car1.color);    // undefined
 Car.prototype.color = null;
 console.log(car1.color);    // null
