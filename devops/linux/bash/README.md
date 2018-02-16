@@ -31,29 +31,3 @@ if [ -f ~/.bashrc ]; then
 fi
 
 ```
-
-#### Alias and Disaplying PWD
-```bash
-#.bash_profile
-if [ -f ~/.bashrc ]; then
-. ~/.bashrc
-fi
-
-export NVM_DIR=~/.nvm
-source ~/.nvm/nvm.sh
-
-# Show always fullpath on terminal
-export PS1='\u@\H [\w]$ '
-export PATH="/usr/local/opt/m4/bin:$PATH"
-
-# Disaply git branch
-PS1='\[\033[0;32m\]\[\033[0m\033[0;32m\]\u\[\033[0;36m\] @ \w\[\033[0;32m\]\n$(git branch 2>/dev/null | grep "^*" | colrm 1 2)\[\033[0;32m\]└─\[\033[0m\033[0;32m\] \$\[\033[0m\033[0;32m\]\[\033[0m\]'
-
-# NodeJS
-#export NODE_ENV="production"
-#===================
-# Personnal Aliases
-#===================
-alias bp='vim ~/.bash_profile'
-alias sbp='tail -n 20  ~/.bash_profile'
-```

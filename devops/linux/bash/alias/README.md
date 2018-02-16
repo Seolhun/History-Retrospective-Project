@@ -1,5 +1,9 @@
 # Bash Profile에 alias 정의하기
+- Author : [SeolHun](https://github.com/Seolhun/)
+
+## Process
 - `vim ~/.bash_profile`
+
 ```bash
 #.bash_profile
 if [ -f ~/.bashrc ]; then
