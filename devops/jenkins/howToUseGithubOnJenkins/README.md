@@ -7,8 +7,16 @@
 - Jenkins
 
 ## Intro
-현재 저희 지그재그는 CI(Continuouse Integration) 툴로 Jenkins를 사용하고 있습니다. Jenkins를 통해 Android, iOS, Server, Client 별, 빌드/테스트를 통해 버그를 줄이고자 노력하고 있습니다.
-결론적으로, 지그재그 개발팀은 DevOps를 추구하지만 Jenkins를 통해 CI까지만 사용하는 이유는, 코드리뷰 및 UI 테스트처럼 직접 개발자가 리뷰/확인 해야하는 안정장치를 과정을 통해 배포를 하기 때문에 CI 툴을 통한 100% 자동화 CD(Continuouse Deploy)를 사용하지 않고 있습니다.
+현재 저희 지그재그는 CI(Continuouse Integration) 툴로 Jenkins를 사용하고 있습니다. Jenkins를 통해 Android, iOS, Server, Client 별 빌드/테스트를 통해 버그를 줄이고자 노력하고 있습니다.
+지그재그 개발팀은 DevOps를 추구하고 있지만, 코드리뷰와 UI 테스트 등 직접 개발자가 리뷰/테스트 해야하는 과정을 거친 후 배포를 하기 때문에 CI 툴을 통한 100% 자동화 CD(Continuouse Delivery/Deploy)까지는 사용하지 않고 있습니다.
+배포는 코드리뷰와 UI테스트(UI 수정 시)가 문제가 없다면 각자 개발자들이 직접 배포할 수 있는 환경을 구축하였습니다. 지그재그는 개발팀은 앞으로도 Jenkins를 통한 자동화 테스트 과정을 확대할 계획을 가지고 있습니다. 이와 관련된 내용은 개발팀 블로그를 통해 하나씩 공유하도록 노력하겠습니다.
+
+## Goal
+Jenkins와 Github 연결하는 방법에 대한 포스트를 준비하면서 설정방법 외에 어떠한 정보를 전달해야 할지 고민이 많았습니다. 고민 과정 속에서 Jenkins와 관련된 다양한 내용을 접하게 되었고, 자연스럽게 CI/CD 프로세스에 대한 차이와 과정을 이해하게 되었습니다.
+또한, 이전에 갖고 있던 Git과 연결하는 것이 당연하다는 피상적인 생각에서, 현재는 Github와 Jenkins를 왜 설정해야 하는지에 대한 당의성과 이유를 알게 되었습니다. (굳이 Github는 아니어도 되지만)
+
+- Jenkins의 간단한 동작방식을 이해한다.
+- Jenkins와 Github를 연결을 통해 CI 흐름을 간단히 이해한다.
 
 <sub>
 	CI와 CD(Delivery), CD(Deploy)의 차이점이 헷갈리신다면 아래 그림을 통해 쉽게 이해할 수 있습니다.
@@ -19,9 +27,7 @@
 현재 대부분이 Git을 통해 버전관리를 운영하고 있으며, Github를 통해 해당 코드들을 원격으로 저장/관리/통합하고 있습니다. 이 부분에서 중요한 것은 `Code`에 해당되는 내용은 Git과 Github에 해당된다는 것입니다. 엄밀히 보면 `Build`하는 과정부터가 Jenkins가 담당하는 부분인 것이죠. 그러므로, 해당 일련의 과정을 설명하기에 앞서, `Code > Build` 과정을 먼저 설명하는 것이 Jenkins를 설명하기에 더 좋은 순서가 될 것이라고 생각합니다.
 이번 포스트를 통해 Jenkins - Github 설정방법을 통해 `Code > Build` 과정을 알아보도록 하겠습니다.
 
-- 목표
-	- Jenkins의 간단한 동작방식을 이해한다.
-	- Jenkins와 Github를 연결을 통해 CI 흐름을 간단히 이해한다.
+
 
 ## Contents
 <img src="../img/Github-Jenkins.png" width="970" height="400" alt="Github-Jenkins">
