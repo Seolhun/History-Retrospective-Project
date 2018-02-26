@@ -154,7 +154,7 @@ Jenkins 관리에 들어가면 많은 항목을 볼 수 있습니다. 그 중 �
 	2. URL 마지막에 `/github-webhook/`을 붙여주지 않아도 정상작동되지 않습니다.
 
 ## 6. Jenkins에서  새로운 Item(Job) 만들기 - (Freestyle, Pipeline)
-#### - 참고사항 : 진행과정 중 Credentials에 궁금증이나 문제가 생긴다면 <a href="#credential-주의-사항">Credentials 주의사항</a> 부분을 먼저 읽어보시기 바랍니다.
+#### - 참고사항 : 진행과정 중 Credentials에 궁금증이나 문제가 생긴다면 <a href="#2-credential-주의-사항">Credentials 주의사항</a> 부분을 먼저 읽어보시기 바랍니다.
 - Item(Job)을 정의하는 곳입니다. 
 - 일련의 CI 과정을 정의하는 Item(Job)을 만드는 곳이라고 생각할 수 있습니다.
 - Item(Job) 별로 다양하며, 기본적으로 Freestyle, Pipeline 등이 있습니다.
