@@ -51,21 +51,6 @@ CI와 CD의 차이는 결국, Process 단계의 정도로 나누어집니다. �
 - Jenkins는 개발 작업을 자동화 할뿐 아니라, 파이프라인(Pipeline)을 사용해 거의 모든 언어와 소스코드에 대해 지속적인 통합(CI)과 전달(CD) 환경을 구축하는 간단한 방법을 제공합니다.
 - Jenkins가 각각의 단계에 대한 스크립트 작성의 필요성을 없애주지는 않지만, 사용자가 쉽게 구축할 수 있는 것보다 더 빠르고 더 강력하게 빌드(Build), 테스트(Test), 그리고 배포(Deployment) 등 체인 전체를 통합할 수 있는 방법을 제공해 줍니다.
 
-- 기능 및 특징
-    - 쉬운 설치
-    	- `java -jar jenkins.war`, `brew`, `apt-get`, `yum` 등 다양한 운영체제에서 손쉽게 설치 할 수 있으며 추가적인 데이터베이스 설치도 필요없습니다.
-    - 쉬운 설정
-    	- GUI 및 Pipeline을 통한 Script 작성을 통해 손 쉬운 설정을 할 수 있습니다.
-    - 풍부한 플러그인/확장성
-    	- Jenkins는 다양한 플러그인을 여러가지 기능을 사용 할 수 있으며 확장할 수 있습니다. - [Jenkins plugins](https://wiki.jenkins.io/display/JENKINS/Plugins)
-    - 분산 빌드 시스템
-    	- Jenkins는 운영체제 상관없이 빌드/테스트 서버를 여러대로 나누어 운영할 수 있습니다.(Master - Slave)
-    - 테스트 보고서 생성
-    - 실행 결과 통보
-    	- Email 및 다양한 plugin을 통해 Slack 등과 통합할 수 있습니다.
-    - 산출물 저장소에 산출결과 저장/보관
-    	- Code와 Artifact 등을 모두 보관하며, 유지기간 등을 설정할 수 있습니다.
-
 - 핵심 키워드
 	- Item(Job)
  	- Executor
@@ -83,13 +68,6 @@ CI와 CD의 차이는 결국, Process 단계의 정도로 나누어집니다. �
 - Jenkins는 자바로 구현되어 Java(Servlet container)가 필요합니다. 
 - Java는 8버전을 설치하도록 합니다. Java 9 버전을 아직 Jenkins가 100% 지원하지 않아([Which tool support Java 9](https://www.infoworld.com/article/3234470/java/which-developer-tools-support-javas-new-modularity-features.html)) 몇가지 에러가 발생합니다. Plugin설치로 해결이 가능할 것으로 보이지만 몇가지 이슈가 제기된 것으로 보입니다. 안정적인 Jenkins 사용을 위해 Java 8 버전을 설치하겠습니다.
 	- [How to Install Multiple Java on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-ubuntu-16-04#managing-java)
-
-```bash
-$ java -version
-openjdk version "1.8.0_151"
-OpenJDK Runtime Environment (build 1.8.0_151-8u151-b12-0ubuntu0.16.04.2-b12)
-OpenJDK 64-Bit Server VM (build 25.151-b12, mixed mode)
-```
 
 #### 2. Git 설치
 - Jenkins가 SCM(Source Code Management)로 사용 할 Git이 필요합니다.
@@ -148,10 +126,10 @@ sudo apt-get install git
 </sub>
 
 ##### 2. Jenkins가 설치된 서버의 IP와 Port를 입력해주시기 바랍니다.
+- 아래와 같이 설정하면 **Public Repository**에서 추가 인증 없이 Jenkins와 Repository가 연동되어 Build Trigger가 정상작동됩니다.
 <sub>
 	<img src="../img/7-gitServiceJenkins3.jpg" width="970" height="600" alt="Webhooks2">
 </sub>
-- 위와 같이 설정하면 **Public Repository인 경우 추가적인 인증 없이 Jenkins와 Repository가 연동되어 Build Trigger가 정상작동됩니다.**
 
 - 주의사항
 	1. Jenkins 서버 URL이 적합하지 않으면 정상작동되지 않습니다.
@@ -270,15 +248,11 @@ GIT_AUTHOR_EMAIL testJenkins@testJenkins.com
 
 ##### 4. Jenkinsfile
 - Jenkinsfile은 Pipeline을 정의하기 위한 Jenkinsfile 형식입니다. Jenkinsfile은 Declaretive, Scripted 모두 지원하며 지속적으로 Pipelines들을 전달하여 손쉽게 CI환경을 구축할 수 있습니다.
-
 ```groovy
 node {
-    stage('Clone sources') {
-        git url:'https://github.com/Seolhun/test-jenkins.git'
-    }
-    def gitValues = checkout scm
-    stage('Build') {
-        echo 'Building...'
+	// 1번 Stage
+    stage('1. Clone sources with Git Plugin') {
+		def gitValues = git credentialsId: 'JenkinsGithubUser', url:'https://github.com/Seolhun/test-jenkins.git'
         echo "GIT_COMMIT : ${gitValues.GIT_COMMIT}"
         echo "GIT_PREVIOUS_COMMIT : ${gitValues.GIT_PREVIOUS_COMMIT}"
         echo "GIT_PREVIOUS_SUCCESSFUL_COMMIT : ${gitValues.GIT_PREVIOUS_SUCCESSFUL_COMMIT}"
@@ -290,14 +264,48 @@ node {
         echo "GIT_COMMITTER_EMAIL : ${gitValues.GIT_COMMITTER_EMAIL}"
         echo "GIT_AUTHOR_EMAIL : ${gitValues.GIT_AUTHOR_EMAIL}"
     }
+    // 2번 Stage
+    stage('2. Clone sources with SCM Step Plugin') {
+        def gitValues = checkout scm
+        echo "GIT_COMMIT : ${gitValues.GIT_COMMIT}"
+        echo "GIT_PREVIOUS_COMMIT : ${gitValues.GIT_PREVIOUS_COMMIT}"
+        echo "GIT_PREVIOUS_SUCCESSFUL_COMMIT : ${gitValues.GIT_PREVIOUS_SUCCESSFUL_COMMIT}"
+        echo "GIT_BRANCH : ${gitValues.GIT_BRANCH}"
+        echo "GIT_LOCAL_BRANCH : ${gitValues.GIT_LOCAL_BRANCH}"
+        echo "GIT_COGIT_URLMMIT : ${gitValues.GIT_URL}"
+        echo "GIT_COMMITTER_NAME : ${gitValues.GIT_COMMITTER_NAME}"
+        echo "GIT_AUTHOR_NAME : ${gitValues.GIT_AUTHOR_NAME}"
+        echo "GIT_COMMITTER_EMAIL : ${gitValues.GIT_COMMITTER_EMAIL}"
+        echo "GIT_AUTHOR_EMAIL : ${gitValues.GIT_AUTHOR_EMAIL}"
+    }
+    // 3번 Stage
+    stage('Build') {
+        echo 'Building...'
+    }
+    // 4번 Stage
     stage('Test') {
         echo 'Testing...'
     }
+    // 5번 Stage
     stage('Deploy') {
         echo 'Deploying...'
     }
 }
 ```
+- Jenkinsfile 분석
+	- 참고사항 
+		- [Jenkins Pipeline Git](https://jenkins.io/doc/pipeline/steps/git/) 
+			- [Jenkins Git Plugin](https://plugins.jenkins.io/git)
+		- [Jenkins Pipeline SCM step](https://jenkins.io/doc/pipeline/steps/workflow-scm-step/) 
+			- [Jenkins Pipeline:SCM Step Plugin](https://plugins.jenkins.io/workflow-scm-step)
+	1. 1번 Stage
+		- Git Plugin을 사용하여 Github에 접근합니다. **해당 Job에 credentials를 정의하고 credentialId 변수를 줌으로써 정상작동합니다.**
+	2. 2번 Stage
+		- Pipeline:SCM Step Plugin을 사용하여 Github에 접근합니다. **해당 Job에 credentials 정의하고 선택해야 기능이 정상작동합니다.**
+	3. 나머지 스테이지는 각 기능 별로 필요한 기능을 정의하여 사용할 수 있습니다.
+		- [Jenkins Global Variables](https://qa.nuxeo.org/jenkins/pipeline-syntax/globals)
+			- WORKSPACE 등 다양한 Jenkins 전역 변수를 통해 Artifact 등에 접근하여 Test 및 Deploy를 실행할 수 있습니다.
+
 - 해당 Jenkins 파일을 실행하면 아래와 같은 결과가 나옵니다.
 ```bash
 GIT_COMMIT : 6be818a0007ce1b07bec3426d610314e89e1c52b
@@ -333,13 +341,11 @@ GIT_AUTHOR_EMAIL : testJenkins@testJenkins.com
 
 - 결론
 	- 인증 방법에 따라 System계층에서 적용되는 것이 있고, Job에만 적용되는 것이 있습니다. 예를 들어, Credentials 생성시 Username:Password는 Job 요청시에만 적용이 가능합니다. Secret Text(Token)은 Job에서 불가능하고 System 계층에서 사용가능합니다.
-	- System계층은 Jenkins서버에서 Jenkins 유저의 권한으로 다른서버에 권한을 요청할 떄 필요합니다. 예를들어, Github 서버에 System계층에서 Bash shell을 요청하면 System 계층에서의 권한이 필요해집니다.
+	- System계층은 Jenkins서버에서 Jenkins 유저의 권한으로 다른서버에 권한을 요청할 때 필요합니다. 예를들어, Github 서버에 System계층에서 Bash shell을 요청하면 System 계층에서의 권한이 필요해집니다.
 	- Secret Text 값을 Job에서 사용하고 싶으면 해당 Credential 값을 변수화하는 방법이 있습니다. 
 		- Secret 값 파라미터화 하기 : [Injecting Secrets into Jenkins Build Jobs](https://support.cloudbees.com/hc/en-us/articles/203802500-Injecting-Secrets-into-Jenkins-Build-Jobs)
 
 #### 3. Credential을 이용하여 Github 인증하기(Private Repository)
-- 참고사항
-	- [Credentials Binding Plugin](https://jenkins.io/doc/pipeline/steps/credentials-binding/)
 - Jenkins는 Github Service에 등록하여 Webhooks와는 잘 연결이 되었습니다. 하지만, 추가적으로 Private Repository에 접근하기 위해서는 인증과정이 필요합니다.
 
 ##### 1. Username with Password
@@ -364,42 +370,43 @@ GIT_AUTHOR_EMAIL : testJenkins@testJenkins.com
 	- 해당 값을 credentials로 생성시, `Secret Text`에 입력하여줍니다.
 	<img src="../img/8-oauth2Token4.jpg" width="970" height="350" alt="Oauth2 Token3">
 
-##### 3. 해당 Credentials를 Pipeline에서 이용하기
+##### 3. Credentials를 Binding하여 Pipeline에서 이용하기
+- 참고사항
+	- [Credentials Binding Plugin](https://jenkins.io/doc/pipeline/steps/credentials-binding/)
 ```groovy
 node {
-    stage('Private Clone sources') {
-        git credentialsId: 'JenkinsGithubUser',
-            url:'https://github.com/Seolhun/test-jenkins.git'
+	// 1번 Stage
+    stage('1. Clone sources with Git Plugin') {
+		def gitValues = git credentialsId: 'JenkinsGithubUser', url:'https://github.com/Seolhun/test-jenkins.git'
+        echo "GIT_COMMIT : ${gitValues.GIT_COMMIT}"
     }
+    // 2번 Stage
+    stage('2. Clone sources with SCM Step Plugin') {
+        def gitValues = checkout scm
+        echo "GIT_COMMIT : ${gitValues.GIT_COMMIT}"
+    }
+    // 3번 Stage
     stage('Binding Credentials') {
         // credentials block with Github Username/Password
     	withCredentials([usernamePassword(credentialsId: 'JenkinsGithubUser', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
     		sh('echo ${GIT_USERNAME}')
     		sh('echo ${GIT_PASSWORD}')
-	}
+		}
 
-	// credentials block with GithubToken
+		// credentials block with GithubToken
         withCredentials([string(credentialsId: 'JenkinsGithubToken', variable: 'TOKEN')]) {
         	sh('echo ${TOKEN}')
         }
     }
-    def gitValues = checkout scm
+    // 4번 Stage
     stage('Build') {
         echo 'Building...'
-        echo "GIT_COMMIT : ${gitValues.GIT_COMMIT}"
-        echo "GIT_PREVIOUS_COMMIT : ${gitValues.GIT_PREVIOUS_COMMIT}"
-        echo "GIT_PREVIOUS_SUCCESSFUL_COMMIT : ${gitValues.GIT_PREVIOUS_SUCCESSFUL_COMMIT}"
-        echo "GIT_BRANCH : ${gitValues.GIT_BRANCH}"
-        echo "GIT_LOCAL_BRANCH : ${gitValues.GIT_LOCAL_BRANCH}"
-        echo "GIT_COGIT_URLMMIT : ${gitValues.GIT_URL}"
-        echo "GIT_COMMITTER_NAME : ${gitValues.GIT_COMMITTER_NAME}"
-        echo "GIT_AUTHOR_NAME : ${gitValues.GIT_AUTHOR_NAME}"
-        echo "GIT_COMMITTER_EMAIL : ${gitValues.GIT_COMMITTER_EMAIL}"
-        echo "GIT_AUTHOR_EMAIL : ${gitValues.GIT_AUTHOR_EMAIL}"
     }
+    // 5번 Stage
     stage('Test') {
         echo 'Testing...'
     }
+    // 6번 Stage
     stage('Deploy') {
         echo 'Deploying...'
     }
@@ -407,7 +414,7 @@ node {
 ```
 
 ## 결론
-Jenkins 설치부터 Github 연결, 그리고 Pipeline까지 다양하게 알아봤습니다. 특히, Jenkins와 Git(Github)를 연결하여 `Code > Build`가 일어나는 과정을 알아보았습니다. 솔직히 말씀드리면 `Build Trigger`가 되어 해당 코드들이 Build/Test가 되는 과정은 생략되었습니다만, 해당 Script 혹은 Item 별로 각 Stage에 적절한 Pipeline을 구현해준다면 Build/Test까지도 구현가능 할 수 있을 것입니다.
+Jenkins 설치부터 Github 연결, 그리고 Pipeline까지 다양하게 알아봤습니다. 특히, Jenkins와 Git(Github)를 연결하여 `Code > Build`가 일어나는 과정을 알아보았습니다. `Build Trigger`가 되어 해당 코드들이 Build/Test가 되는 과정은 생략되었습니다만, 해당 Script 혹은 Item 별로 각 Stage에 적절한 Pipeline을 구현해준다면 Build/Test까지도 구현가능 할 수 있습니다.
 
 이번 과정을 통해 Jenkins와 Git(Github)를 통해 끊임없이 코드가 빌드/테스트/통합 등 일련의 과정을 머리 속에 그리실 수 있었을 것이라고 생각합니다. 또한, FreeStyle과 Pipeline의 변화를 보며, Jenkins 2.0부터 큰 변화라고 느끼실 수 있었을 것입니다. 이전의 방식(Freestyle)으로는 코드가 없어 재사용이 전혀 없고 추가/수정 마다 큰 어려움 있었습니다. 하지만, Pipeline을 통해서는 해당 흐름을 모두 코드로 정의할 수 있게 되어 재사용성 및 가독성 모두가 좋아졌습니다. 거기다가 BlueOcean이라는 뛰어난 UI/UX 플러그인을 통해 대부분의 기능들을 쉽게 적용시킬 수 있습니다. 이 외에도 Jenkins에서 Docker를 사용하여 Build/Test System의 환경을 자동화할 수 있는 부분이 더 많아습니다. 또한, 이를 통해 Node 별 분산 시스템 구현도 예전보다 쉬워졌으리라 판단합니다.
 
