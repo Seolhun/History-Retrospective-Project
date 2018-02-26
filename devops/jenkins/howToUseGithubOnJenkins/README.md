@@ -2,10 +2,9 @@
 # Continuous Integration with Jenkins and Github
 
 ## Intro
-> Continuous Integration doesn’t get rid of bugs, but it does make them dramatically easier to find and remove. 
->> Martin Fowler
+> Continuous Integration doesn’t get rid of bugs, but it does make them dramatically easier to find and remove. - Martin Fowler
 
-CI 툴을 이용한다는 것은 위 인용한 글 처럼, **손 쉽게 버그를 찾고 제거하기 위함일 것입니다.** 현재 지그재그도 Jenkins를 이용하여 CI를 운영하고 있으며, 최근에는 Storybook으로 UI를 테스트할 수 있는 시스템을 추가하였습니다. 지그재그는 자동화 CI 시스템을 지속적으로 확대할 계획입니다. 
+CI 툴을 이용한다는 것은 위 인용한 글 처럼, **손 쉽게 버그를 찾고 제거하기 위함일 것입니다.** 현재 지그재그는 Jenkins를 이용하여 CI를 운영하고 있으며, 최근에는 Storybook으로 UI를 테스트할 수 있는 시스템을 추가하였습니다. 앞으로도 지그재그는 자동화 CI 시스템을 지속적으로 확대할 예정입니다. 이와 관련하여 포스트를 작성하고자 합니다.
 
 ## 주제
 이번 포스트에서는 Jenkins와 Github 연결하는 방법을 알아보고 간단히 테스트하는 예제를 다룰 예정입니다.
@@ -13,7 +12,7 @@ CI 툴을 이용한다는 것은 위 인용한 글 처럼, **손 쉽게 버그�
 #### 목표
 1. CI와 CD의 차이점을 이해한다.
 2. Jenkins와 Git(Github)를 연결하는 이유를 이해한다.
-3. UI(Freestyle)방식과 새로운 Pipeline 방식의 차이를 이해한다.
+3. Freestyle(GUI)과 새로운 Pipeline(Script)ㄴ방식의 차이를 이해한다.
 
 #### 목록
 1. CI란 무엇인가?
@@ -37,20 +36,20 @@ CI 툴을 이용한다는 것은 위 인용한 글 처럼, **손 쉽게 버그�
 
 ## 1. CI란 무엇인가?(Continuous Integrate)
 - Continuous Integrate, Continuous Delivery, Continuous Deploy
+<img src="../img/CICD.jpg" width="970" height="400" alt="CI(Continuouse Integration) vs CD(Continuouse Delivery) vs CD(Continuouse Deploy)">
 
-<sub>
-	CI(Integrate)와 CD(Delivery), CD(Deploy) 차이
-	<img src="../img/CICD.jpg" width="970" height="400" alt="CI(Continuouse Integration) vs CD(Continuouse Delivery) vs CD(Continuouse Deploy)">
-</sub>
+CI와 CD의 차이는 결국, Process 단계의 정도로 나누어집니다. 모든 CI 툴이 순수하게 위의 과정을 다 제공하지는 않습니다. 다만, CI 툴은 다양한 플러그인(라이브러리)으로 해당 기능과 함께 제공할 뿐이죠.
 
-위 그림을 통해 이번 포스트와 가장 연관된 부분은 `Code`, `Build`, `Integrate` 부분입니다. 요즘 대부분이 Git(Github)을 통해 코드 버전관리를 하고 있습니다. 코드를 작성하고, 버전관리하는 작업들은 `Code`, `Integrate`에 해당되는 내용입니다. 엄밀히 보면 `Build`, `Test`, `Release`, `Deploy` 과정이 Jenkins가 담당할 수 있는 부분인 것이죠.
+그렇다면, CI 과정을 설명하면서 Git(Github)와 연결하는 방법을 소개하는 이유는 무엇일까요? 
 
-즉, Jenkins와 Git(Github)를 연결하는 방법에 대해 설명한다는 것은 `Code`, `Build`, `Integrate` 과정을 설명하는 것과 같습니다. 빌드 후 테스트까지 처리한다면 `Test`까지 추가되어 완벽한 CI를 구성 할수 있습니다. 간단히 CI와 Jenkins를 이해하기위해 Github와 Jenkins의 연결방법을 주제로 선정했습니다.
+이유는 바로, Git(Github)이란 SCM(Source Code Management)을 통해 Jenkins와 함께 코드를 관리하고 통합(`Code`, `Integrate`)하는 기능을 제공하기 때문입니다. 엄밀히 보면 `Build`, `Test`, `Release`, `Deploy` 과정이 Jenkins가 담당하는(할 수 있는) 부분인 것이죠. 
+
+즉, 이번과정에서 Jenkins와 Git(Github)를 연결하는 방법을 통해 `Code`, `Build`, `Integrate` 과정을 설명하기 위함입니다. 추가적으로 빌드 후 테스트까지 작성한다면 CI 과정의 `Test`까지 추가되어 완벽한 CI를 구성 할수 있습니다. 지금부터 알아보도록 할까요?
 
 ## 2. Jenkins란?
-- Jenkins는 2004년에 썬 마이크로시스템즈에서 시작된 소프트웨어이며, 지속적인 통합과 테스트를 위해 Kawaguchi Kohsuke에 의해 만들어졌습니다. 처음 이름은 Hudson이지만, 이후 분기되어 현재는 Jenkins라는 이름으로 오픈소스 프로젝트로 관리되고 있습니다.
-- Jenkins는 개발 작업을 자동화할 뿐 아니라, 파이프라인(Pipeline)을 사용해 거의 모든 언어와 소스코드에 대해 지속적인 통합(CI)과 전달(CD) 환경을 구축하는 간단한 방법을 제공합니다.
-- Jenkins가 각각의 단계에 대한 스크립트 작성의 필요성을 없애주지는 않지만, 사용자가 쉽게 구축할 수 있는 것보다 더 빠르고 더 강력하게 빌드(Build), 테스트(Test), 그리고 배포(deployment) 등 체인 전체를 통합할 수 있는 방법을 제공해 줍니다.
+- Jenkins는 2004년에 썬 마이크로시스템즈에서 시작된 소프트웨어이며, 지속적인 통합과 테스트를 위해 Kawaguchi Kohsuke에 의해 만들어졌습니다. 처음 이름은 Hudson이지만, 이후 분기되어 현재는 Jenkins라는 이름으로 관리되고 있습니다.
+- Jenkins는 개발 작업을 자동화 할뿐 아니라, 파이프라인(Pipeline)을 사용해 거의 모든 언어와 소스코드에 대해 지속적인 통합(CI)과 전달(CD) 환경을 구축하는 간단한 방법을 제공합니다.
+- Jenkins가 각각의 단계에 대한 스크립트 작성의 필요성을 없애주지는 않지만, 사용자가 쉽게 구축할 수 있는 것보다 더 빠르고 더 강력하게 빌드(Build), 테스트(Test), 그리고 배포(Deployment) 등 체인 전체를 통합할 수 있는 방법을 제공해 줍니다.
 
 - 기능 및 특징
     - 쉬운 설치
@@ -102,22 +101,21 @@ sudo apt-get install git
 - Jenkins를 구동시키기 위해서는 Jenkins가 설치되어있는 서버가 필요합니다. Jenkins 설치와 관련한 내용은 잘 정리되어 있는 글이 많기에 추가적으로 작성하지는 않았습니다. 설치가 필요하신 분들은 아래 링크를 통해 Jenkins를 설치하시기 바랍니다.
 	- [How to Install Jenkins on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-16-04)
 - **주의사항**
-	- `ufw enalbe` : 해당 블로그에 방화벽 설정 후 적용하는 글이 없어서 추가로 입력해줍니다. 미적용 시 `/github-web-hook/` Firewall에 막히는 문제가 발생됩니다. 추가적으로 Jenkins 서버에서 `web-hook`을 요청하는 인바운드 포트 및 IP가 막혀있을 경우 Timeout error가 발생됩니다.
+	- `ufw enalbe` : 위 블로그에 방화벽 설정 후 적용하는 글이 없어서 추가로 입력해줍니다. 미적용 시 나중 단계인 `/github-web-hook/` 설정에서 Firewall에 막히는 문제가 발생됩니다. 
+	- 추가적으로 Jenkins를 설치한 서버에 추가적인 가상 방화벽으로 제한해 둔 경우 Github Webhook의 요청이 Timeout error가 발생됩니다.
 
-<sub>
-	3가지 모두 설치를 완료하고 Admin 첫 계정을 생성하면 아래와 같은 그림을 볼 수 있습니다.
-	<img src="../img/1-firstJenkins.jpg" width="970" height="500" alt="Init Jenkins">
-</sub>
+3가지 모두 설치를 완료하고 Admin 첫 계정을 생성하면 아래와 같은 그림을 볼 수 있습니다.
+<img src="../img/1-firstJenkins.jpg" width="970" height="500" alt="Init Jenkins">
 
 ## 4. Jenkins 기본 설정
-Jenkins 관리에 들어가면 많은 항목을 볼 수 있습니다. 그 중 지금 저희에게 필요한 것은 3가지 입니다.
+Jenkins 관리에 들어가면 많은 항목을 볼 수 있습니다. 그 중 지금 필요한 것은 3가지 설정입니다.
 
 #### 1. Global Tool Configuration
 - Jenkins가 실행될 때 필요한 기본 Build Tool들의 경로를 설정하는 곳입니다. 
 - 현재 Jenkins는 Build Tool로 JDK, Git, Gradle, Ant, Maven, Docker 총 6개를 기본적으로 지원하고 있습니다.
 
 <sub>
-	JDK와 Git을 아래와 같이 설정해줍니다.
+	- JDK와 Git을 아래와 같이 설정해줍니다.
 	<img src="../img/2-globalToolConfig.jpg" width="970" height="500" alt="Jenkins Git Plugins">
 </sub>
 
@@ -125,7 +123,7 @@ Jenkins 관리에 들어가면 많은 항목을 볼 수 있습니다. 그 중 �
 - 서버관련 환경, 플러그인, 스크립트, 알림 등 다양한 Jenkins 관련 시스템 설정을 할 수 있는 곳입니다.
 
 <sub>
-	시스템 설정에서는 Git config에 기본적으로 필요한 name과 email을 기본적으로 설정해줍니다.
+	- 시스템 설정에서는 Git config에 기본적으로 필요한 name과 email을 기본적으로 설정해줍니다.
 	<img src="../img/3-systemGitPlugin.jpg" width="970" height="100" alt="Jenkins Git Plugins">
 </sub>
 
@@ -133,28 +131,30 @@ Jenkins 관리에 들어가면 많은 항목을 볼 수 있습니다. 그 중 �
 - 말 그대로 플러그인 설치/삭제/업데이트 등 플러그인을 관리할 수 있는 곳입니다.
 
 <sub>
-	참고로 Jenkins에서 기본적으로 제안하는 설치를 하면 Git Plugin이 자동으로 설치됩니다. 기본적으로 설치되는 Git Plugins는 아래 그림으로 확인할 수 있습니다.
+	- 참고로 Jenkins에서 기본적으로 제안하는 설치를 하면 Git Plugin이 자동으로 설치됩니다. 기본적으로 설치되는 Git Plugins는 아래 그림으로 확인할 수 있습니다.
 	<img src="../img/4-defaultGitPlugins.jpg" width="970" height="250" alt="Jenkins Git Plugins">
 </sub>
 
 ## 5. Jenkins, Github 서비스에 등록/인증하기
 #### Jenkins, Github Webhook 서비스로 등록하기
-- `Integrations & Services`에 Jenkins를 등록하면 해당 Url에 맞게 `Webhooks`에 Integrations & Services 설정 값이 자동으로 저장됩니다. Services에 적용에 Success Check이 완료되면 이후에 Integrations & Services에 있던 설정은 삭제되며 Webhooks에 저장됩니다.
-- 이전에는 Token 값 혹은 Username과 Password로만 Webhooks가 지원되었지만, 이제는 CI 서버와 Github Repository를 명시적으로 연결하여야지만 정상작동됩니다. 아래와 같은 방법으로 해당 Repsitory에 Jenkins 서비스를 등록하여줍니다.
+- Github에 해당 Repositroy > Settings에서 `Integrations & Services`에 Jenkins를 등록하면, 해당 Url에 맞게 `Webhooks`에 Integrations & Services 설정 값이 자동으로 저장됩니다. Services 적용에 Success Check이 완료되면 이후에 Integrations & Services에 있던 설정은 삭제되며 Webhooks에 저장됩니다.
 
-1. Jenkins와 연동 할 Repository에 Webhooks 서비스 등록하기
+- **이전과의 변경사항**
+	- 이전에는 Username/Password 혹은 Token 값 설정만으로도 Webhooks가 지원되었지만, 이제는 CI 서버와 Github Repository를 명시적으로 연결하여야지만 정상작동됩니다. 아래와 같은 방법으로 해당 Repsitory에 Jenkins 서비스를 등록하여줍니다.
+
+1. Repositroy > Settings 아래와 같은 방식으로 찾아주시기 바랍니다.
 <img src="../img/7-gitServiceJenkins2.jpg" width="970" height="400" alt="Webhooks1">
 
-2. Jenkins와 연동 할 Repository에 Webhooks 서비스 등록하기2
+2. Jenkins가 설치된 서버의 IP와 Port를 입력해주시기 바랍니다.
 <img src="../img/7-gitServiceJenkins3.jpg" width="970" height="600" alt="Webhooks2">
-- 위와 같이 Webhooks를 설정하면, **Public Repository는 추가적인 인증 없이 Jenkins와 Repository가 연동되어 Build Trigger가 정상작동됩니다.**
+- 위와 같이 설정하면 **Public Repository인 경우 추가적인 인증 없이 Jenkins와 Repository가 연동되어 Build Trigger가 정상작동됩니다.**
 
 - 주의사항
 	1. Jenkins 서버 URL이 적합하지 않으면 정상작동되지 않습니다.
 	2. URL 마지막에 `/github-webhook/`을 붙여주지 않아도 정상작동되지 않습니다.
 
-## 6. Jenkins에서  새로운 Item(Job) 만들기
-#### 진행과정 중 Credentials에 궁금증이나 문제가 생긴다면 이 부분을 먼저 읽어보시기 바랍니다. - <a href="#Credential 주의 사항">Credentials 주의사항</a>
+## 6. Jenkins에서  새로운 Item(Job) 만들기 - (Freestyle, Pipeline)
+#### - 참고사항 : 진행과정 중 Credentials에 궁금증이나 문제가 생긴다면 <a href="#credential-주의-사항">Credentials 주의사항</a> 부분을 먼저 읽어보시기 바랍니다.
 - Item(Job)을 정의하는 곳입니다. 
 - 일련의 CI 과정을 정의하는 Item(Job)을 만드는 곳이라고 생각할 수 있습니다.
 - Item(Job) 별로 다양하며, 기본적으로 Freestyle, Pipeline 등이 있습니다.
@@ -184,14 +184,15 @@ Jenkins 관리에 들어가면 많은 항목을 볼 수 있습니다. 그 중 �
 2. Git Repository를 연결합니다.
 <img src="../img/6-jenkinsGitConfig1.jpg" width="970" height="400" alt="Git Repository">
 
-3. Build Trigger를 Github로 설정합니다.
+3. Build Trigger를 Github hook trigger로 설정합니다. 여기에 체크하는 것이 Github에 Services에 등록한 것과 연결이 됩니다.
 <img src="../img/6-jenkinsGitConfig2.jpg" width="970" height="220" alt="Build Trigger">
 
 4. Build에서 Shell에 해당 Git 정보를 확인하는 Script를 작성합니다.
 <img src="../img/freestyleResult1.jpg" width="970" height="250" alt="Build Trigger">
 
-5. Github에 해당 Branch로 푸쉬합니다.
-6. 아래와 같은 결과를 확인할 수 있습니다.
+5. Github에 해당 Branch에 새롭게 푸쉬를 해봅니다.
+6. Github에 Push되면, Jenkins에 `/web-hook/`가 전송되어 Jenkins의 Item(Job)이 Trigger되어 해당 Item(Job)을 수행합니다.
+	- Build에 정의한 Shell Script가 수행되어 아래와 같은 결과를 얻을 수 있습니다.
 ```bash
 + echo GIT_COMMIT 5ea853076a700e3387970eb69c1c6d567d7193de
 GIT_COMMIT 5ea853076a700e3387970eb69c1c6d567d7193de
@@ -218,7 +219,7 @@ GIT_AUTHOR_EMAIL testJenkins@testJenkins.com
 ---
 #### 1. [Pipeline](https://jenkins.io/doc/book/pipeline/)란?
 - 여러 빌드 Slave에 걸쳐있을 수있는 장기 실행 활동을 구성합니다. Pipeline(이전에는 워크 플로우라고 함)을 구축하거나 자유 작업 유형에 쉽게 들어 가지 않는 복잡한 활동을 구성하는 데 적합합니다.
-- Pipeline은 Jenkins 2.0부터 시작되었습니다. Pipeline은 스크립트를 통해 Pipeline의 흐름을 정의하는 기능입니다. Pipeline은 Groovy로 Script를 쉽게 정의할 수 있으며 Pipeline DSL을 통해 전달 파이프라인을 작성할 수 있습니다.
+- Pipeline은 Jenkins 2.0부터 시작되었습니다. Pipeline은 스크립트를 통해 Pipeline의 흐름을 정의하는 기능입니다. Pipeline은 [Groovy](http://groovy-lang.org/)로 쉽게 정의할 수 있으며 Pipeline DSL을 통해 전달 파이프라인을 작성할 수 있습니다.
 
 - 핵심 키워드
 	- Pipeline
@@ -238,20 +239,30 @@ GIT_AUTHOR_EMAIL testJenkins@testJenkins.com
  			- **SCM에서 Checkout 한 파일에서 작업을 수행 할 수있는 작업 영역(특정 Pipeline의 특정한 Directory)을 만듭니다.**
 
 #### 2. Pipeline project로 설정하기
-1. Build Trigger를 Github로 설정합니다.
+1. Pipeline Project 만들기
+<img src="../img/10-pipelineConfig1.jpg" width="970" height="600" alt="Build Trigger">
+
+2. Build Trigger를 Github hook trigger로 설정합니다. 여기에 체크하는 것이 Github에 Services에 등록한 것과 연결이 됩니다.
 <img src="../img/6-jenkinsGitConfig2.jpg" width="970" height="220" alt="Build Trigger">
 
-2. Github에서 Pipeline Trigger
+3. Github에서 Pipeline Trigger
 - [Pipeline SCM Step](https://jenkins.io/doc/pipeline/steps/workflow-scm-step/)은 여기서 더 알아볼 수 있습니다.
-<img src="../img/10-pipelineConfig.jpg" width="970" height="600" alt="Build Trigger">
+<img src="../img/10-pipelineConfig2.jpg" width="970" height="600" alt="Build Trigger">
+- Script Path에 Jenkinsfile로 Script를 정의했다고 알려주면, 해당 branch에 Jenkinsfile을 읽어 Script를 수행합니다.
 
-3. Jenkinsfile
+4. Jenkinsfile
 - Jenkinsfile은 Pipeline을 정의하기 위한 Jenkinsfile 형식입니다. Jenkinsfile은 Declaretive, Scripted 모두 지원하며 지속적으로 Pipelines들을 전달하여 손쉽게 CI환경을 구축할 수 있습니다.
-- 아래 `credentialsId`는 해당 job에서 credentials를 생성할 때 credentials에게 주어진 ID값입니다.
+- 아래 Script에 정의한 `credentialsId`는 해당 job에서 credentials를 생성할 때 credentials에게 정의한 ID값입니다.
+	- Private Repository의 경우 사용됩니다.
+<p>
+	- Credentials를 생성할 때 보이는 ID가 credeintalsId에 입력되는 값입니다.
+	<img src="../img/selectCredential.jpg" width="970" height="500" alt="Build Trigger">
+</p>
+
 ```groovy
 node {
     stage('Clone sources') {
-        git credentialsId: 'GithubUser',
+        git credentialsId: 'JenkinsGithubUser',
             url:'https://github.com/Seolhun/test-jenkins.git'
     }
     def gitValues = checkout scm
@@ -290,8 +301,12 @@ GIT_COMMITTER_EMAIL : testJenkins@testJenkins.com
 GIT_AUTHOR_EMAIL : testJenkins@testJenkins.com
 ```
 
-## Credential을 이용하여 Github 인증하기
-#### Credential 주의 사항
+## 7. 기타 및 추가사항
+#### 1. [Jenkins Blue Ocean](https://jenkins.io/projects/blueocean/)
+- Jenkins 작업에 대해 나타내주는 UI/UX를 최신으로 제공해줍니다.
+<img src="../img/7-etc-blueOcean.jpg" width="970" height="260" alt="BlueOcean">
+
+#### 2. Credential 주의 사항
 - 참고자료
 	- [Jenkins Git Plugin Credential Issue1](https://issues.jenkins-ci.org/browse/JENKINS-32417)
 	- [Jenkins Git Plugin Credential Issue2](https://groups.google.com/forum/#!msg/jenkinsci-users/MkSJvvNFQCk/DAYdcIKaCAAJ)
@@ -306,19 +321,17 @@ GIT_AUTHOR_EMAIL : testJenkins@testJenkins.com
 - 결론
 	- 인증 방법에 따라 System계층에서 적용되는 것이 있고, Job에만 적용되는 것이 있습니다. 예를 들어, Credentials 생성시 Username:Password는 Job 요청시에만 적용이 가능합니다. Secret Text(Token)은 Job에서 불가능하고 System 계층에서 사용가능합니다.
 	- System계층은 Jenkins서버에서 Jenkins 유저의 권한으로 다른서버에 권한을 요청할 떄 필요합니다. 예를들어, Github 서버에 System계층에서 Bash shell을 요청하면 System 계층에서의 권한이 필요해집니다.
-	- Secret Text 값을 Job에서 사용하고 싶으면 해당 Credential 값을 변수화하는 방법이 있습니다. Secret 값 파라미터화 하기 : [Injecting Secrets into Jenkins Build Jobs](https://support.cloudbees.com/hc/en-us/articles/203802500-Injecting-Secrets-into-Jenkins-Build-Jobs)
+	- Secret Text 값을 Job에서 사용하고 싶으면 해당 Credential 값을 변수화하는 방법이 있습니다. 
+		- Secret 값 파라미터화 하기 : [Injecting Secrets into Jenkins Build Jobs](https://support.cloudbees.com/hc/en-us/articles/203802500-Injecting-Secrets-into-Jenkins-Build-Jobs)
 
+#### 3. Credential을 이용하여 Github 인증하기(Private)
 - Jenkins는 Github Service에 등록하여 Webhooks와는 잘 연결이 되었습니다. 하지만, 추가적으로 Private Repository에 접근하기 위해서는 인증과정이 필요합니다. 인증방법에는 쉽게 이용할 수 있는 3가지 방법이 있습니다.
 
-- Credential 등록
-<img src="../img/8-credential.jpg" width="970" height="400" alt="Credential1">
-
-#### Private Repository에 대한 접근이 필요한 경우
 1. Username with Password
-**Username with Password** : Github 계정 아이디와와 비밀번호로 인증합니다.
-- Username과 Password는 가장 최후의 방법이라고 할 수 있습니다. 노출 시 바로 보안문제와 연결되기 떄문입니다.
+	- Github 계정 아이디(Eamil/Name)와 비밀번호로 인증합니다.
+	- Username과 Password는 가장 최후의 방법이라고 할 수 있습니다. 노출 시 바로 보안문제와 연결되기 때문입니다.
 - Jenkins Item(Job)에 설정하면 해당 Github Repository와의 연결을 인증할 수 있습니다.
-
+---
 2. Secret Text : Oauth2 Token 받기
 	1. Oauth2 Token 값 받기1
 	<img src="../img/8-oauth2Token1.jpg" width="970" height="300" alt="Oauth2 Token1">
@@ -326,7 +339,8 @@ GIT_AUTHOR_EMAIL : testJenkins@testJenkins.com
 	<img src="../img/8-oauth2Token2.jpg" width="970" height="300" alt="Oauth2 Token2">
 	3. Oauth2 Token 값 받기3
 	<img src="../img/8-oauth2Token3.jpg" width="970" height="500" alt="Oauth2 Token3">
-
+	- 해당 값을 credentials 생성시, `Secret Text` 값으로 입력하여줍니다.
+---
 3. Jenkins 서버 Github에 공개키로 만들기
 - Jenkins 유저의 이름으로 해당 서버를 해당 Repository에 Github 서버에 공개키로 만드는 방법입니다.
 - [Git 서버 - SSH 공개키 만들기](https://git-scm.com/book/ko/v1/Git-%EC%84%9C%EB%B2%84-SSH-%EA%B3%B5%EA%B0%9C%ED%82%A4-%EB%A7%8C%EB%93%A4%EA%B8%B0) 만드는 방법
@@ -341,18 +355,12 @@ $ cat id_rsa.pub
 
 - 생성한 SSH-Key Github Repository에 등록하기
 <img src="../img/9-publicKey.jpg" width="970" height="500" alt="PublicKey">
-
-## 7. 기타 및 추가사항
-1. [Jenkins Blue Ocean](https://jenkins.io/projects/blueocean/)
-	- Jenkins 작업에 대해 나타내주는 UI/UX를 최신으로 제공해줍니다.
-	- <img src="../img/7-etc-blueOcean.jpg" width="970" height="500" alt="BlueOcean">
+	
 
 ## 결론
-현재 지그재그는 CI(Continuouse Integration) 툴로 Jenkins를 사용하고 있습니다. Jenkins를 통해 Android, iOS, Server, Client 별 빌드/테스트를 통해 소프트웨어 품질 및 안정성을 높이기 위해 노력하고 있습니다.
+현재 지그재그 개발팀은 DevOps를 추구하고 있으며, CI(Continuouse Integration) 툴로 Jenkins를 사용하고 있습니다. 저희 개발팀은 현재까지 Jenkins를 통해 Android, iOS, Server, Client 별 `빌드/테스트` 및 코드리뷰/UI 테스트 등 직접 개발자가 리뷰/테스트 과정을 거치며 품질 및 안정성을 높이기 위해 노력하고 있습니다. DevOps를 추가하므로써, 배포는 코드리뷰와 UI테스트(UI 수정 시)가 문제가 없다면 각자 개발자들이 직접 배포할 수 있는 환경을 구축되어있습니다.
 
-지그재그 개발팀은 DevOps를 추구하고 있지만, 코드리뷰와 UI 테스트 등 직접 개발자가 리뷰/테스트 해야하는 과정을 거친 후 배포를 하기 때문에 CI 툴을 통한 100% 자동화 CD(Continuouse Delivery/Deploy)까지는 사용하지 않고 있습니다. 
-
-배포는 코드리뷰와 UI테스트(UI 수정 시)가 문제가 없다면 각자 개발자들이 직접 배포할 수 있는 환경을 구축하였습니다. 앞으로 지그재그 개발팀은 테스트 자동화 과정을 지속하여 확대하려고 노력하고 있습니다. 이와 관련된 내용은 개발팀 블로그를 통해 지속적으로 공유하도록 노력하겠습니다. 감사합니다.
+지그재그 팀은 앞으로도 CI 툴을 이용해 100% 자동화 CD(Continuouse Delivery/Deploy)까지는 사용하지 않고 있습니다. 코드리뷰와 UI 테스트처럼 직접 해야되는 부분이 있기 때문입니다. 이와 관련하여 지그재그 개발팀은 앞으로 테스트 자동화 과정을 지속하여 확대하려고 노력하고 있습니다. 이와 관련된 내용은 개발팀 블로그를 통해 지속적으로 공유하도록 노력하겠습니다. 해당 포스트가 도움이 되기를 바랍니다. 감사합니다.
 
 ## References
 - [Jenkins](https://jenkins.io/)
