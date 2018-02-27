@@ -1,4 +1,5 @@
 # GoF Design Pattern이란?(Gang of Four)
+- Author : [SeolHun](https://github.com/Seolhun/)
 
 ## Overview
 - 1994년 Erich Gamma, Richard Helm, Ralph Johnson 및 John Vlissides의 4명의 저자가 Software Design에서 Design Pattern에 대한 개념을 정리한 `Design Patterns - Elements of Reusable Object-Oriented Software`라는 책을 출간했습니다.

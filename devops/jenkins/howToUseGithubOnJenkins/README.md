@@ -149,8 +149,7 @@ sudo apt-get install git
 			- 새로운 방법에는 Jenkins를 해당 Github Repository 서비스로 등록해야 합니다.
 
 #### 1. Freestyle project란?
-- 어느 빌드 시스템과 어떠한 SCM(형상관리)로 묶인 프로젝트를 빌드할 수 있습니다.
-- GUI 시스템을 통해 대부분의 설정을 할 수 있습니다. 
+- GUI를 통해 Jenkins의 기본적인 Job을 설정할 수 있습니다. 
 
 #### 2. Freestyle project 설정하기
 ##### 1. Freestyle project를 만듭니다.
