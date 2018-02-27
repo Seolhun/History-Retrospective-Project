@@ -236,46 +236,46 @@ GIT_AUTHOR_EMAIL testJenkins@testJenkins.com
 - Jenkinsfile은 Pipeline을 정의하기 위한 Jenkinsfile 형식입니다. Jenkinsfile은 Declaretive, Scripted 모두 지원하며 지속적으로 Pipelines들을 전달하여 손쉽게 CI환경을 구축할 수 있습니다.
 ```groovy
 node {
-// 1번 Stage
-    stage('1. Clone sources with Git Plugin') {
-	def gitValues = git credentialsId: 'JenkinsGithubUser', url:'https://github.com/Seolhun/test-jenkins.git'
-        echo "GIT_COMMIT : ${gitValues.GIT_COMMIT}"
-        echo "GIT_PREVIOUS_COMMIT : ${gitValues.GIT_PREVIOUS_COMMIT}"
-        echo "GIT_PREVIOUS_SUCCESSFUL_COMMIT : ${gitValues.GIT_PREVIOUS_SUCCESSFUL_COMMIT}"
-        echo "GIT_BRANCH : ${gitValues.GIT_BRANCH}"
-        echo "GIT_LOCAL_BRANCH : ${gitValues.GIT_LOCAL_BRANCH}"
-        echo "GIT_COGIT_URLMMIT : ${gitValues.GIT_URL}"
-        echo "GIT_COMMITTER_NAME : ${gitValues.GIT_COMMITTER_NAME}"
-        echo "GIT_AUTHOR_NAME : ${gitValues.GIT_AUTHOR_NAME}"
-        echo "GIT_COMMITTER_EMAIL : ${gitValues.GIT_COMMITTER_EMAIL}"
-        echo "GIT_AUTHOR_EMAIL : ${gitValues.GIT_AUTHOR_EMAIL}"
-    }
-    // 2번 Stage
-    stage('2. Clone sources with SCM Step Plugin') {
-        def gitValues = checkout scm
-        echo "GIT_COMMIT : ${gitValues.GIT_COMMIT}"
-        echo "GIT_PREVIOUS_COMMIT : ${gitValues.GIT_PREVIOUS_COMMIT}"
-        echo "GIT_PREVIOUS_SUCCESSFUL_COMMIT : ${gitValues.GIT_PREVIOUS_SUCCESSFUL_COMMIT}"
-        echo "GIT_BRANCH : ${gitValues.GIT_BRANCH}"
-        echo "GIT_LOCAL_BRANCH : ${gitValues.GIT_LOCAL_BRANCH}"
-        echo "GIT_COGIT_URLMMIT : ${gitValues.GIT_URL}"
-        echo "GIT_COMMITTER_NAME : ${gitValues.GIT_COMMITTER_NAME}"
-        echo "GIT_AUTHOR_NAME : ${gitValues.GIT_AUTHOR_NAME}"
-        echo "GIT_COMMITTER_EMAIL : ${gitValues.GIT_COMMITTER_EMAIL}"
-        echo "GIT_AUTHOR_EMAIL : ${gitValues.GIT_AUTHOR_EMAIL}"
-    }
-    // 3번 Stage
-    stage('Build') {
-        echo 'Building...'
-    }
-    // 4번 Stage
-    stage('Test') {
-        echo 'Testing...'
-    }
-    // 5번 Stage
-    stage('Deploy') {
-        echo 'Deploying...'
-    }
+	// 1번 Stage
+	stage('1. Clone sources with Git Plugin') {
+		def gitValues = git credentialsId: 'JenkinsGithubUser', url:'https://github.com/Seolhun/test-jenkins.git'
+		echo "GIT_COMMIT : ${gitValues.GIT_COMMIT}"
+		echo "GIT_PREVIOUS_COMMIT : ${gitValues.GIT_PREVIOUS_COMMIT}"
+		echo "GIT_PREVIOUS_SUCCESSFUL_COMMIT : ${gitValues.GIT_PREVIOUS_SUCCESSFUL_COMMIT}"
+		echo "GIT_BRANCH : ${gitValues.GIT_BRANCH}"
+		echo "GIT_LOCAL_BRANCH : ${gitValues.GIT_LOCAL_BRANCH}"
+		echo "GIT_COGIT_URLMMIT : ${gitValues.GIT_URL}"
+		echo "GIT_COMMITTER_NAME : ${gitValues.GIT_COMMITTER_NAME}"
+		echo "GIT_AUTHOR_NAME : ${gitValues.GIT_AUTHOR_NAME}"
+		echo "GIT_COMMITTER_EMAIL : ${gitValues.GIT_COMMITTER_EMAIL}"
+		echo "GIT_AUTHOR_EMAIL : ${gitValues.GIT_AUTHOR_EMAIL}"
+	}
+	// 2번 Stage
+	stage('2. Clone sources with SCM Step Plugin') {
+		def gitValues = checkout scm
+		echo "GIT_COMMIT : ${gitValues.GIT_COMMIT}"
+		echo "GIT_PREVIOUS_COMMIT : ${gitValues.GIT_PREVIOUS_COMMIT}"
+		echo "GIT_PREVIOUS_SUCCESSFUL_COMMIT : ${gitValues.GIT_PREVIOUS_SUCCESSFUL_COMMIT}"
+		echo "GIT_BRANCH : ${gitValues.GIT_BRANCH}"
+		echo "GIT_LOCAL_BRANCH : ${gitValues.GIT_LOCAL_BRANCH}"
+		echo "GIT_COGIT_URLMMIT : ${gitValues.GIT_URL}"
+		echo "GIT_COMMITTER_NAME : ${gitValues.GIT_COMMITTER_NAME}"
+		echo "GIT_AUTHOR_NAME : ${gitValues.GIT_AUTHOR_NAME}"
+		echo "GIT_COMMITTER_EMAIL : ${gitValues.GIT_COMMITTER_EMAIL}"
+		echo "GIT_AUTHOR_EMAIL : ${gitValues.GIT_AUTHOR_EMAIL}"
+	}
+	// 3번 Stage
+	stage('Build') {
+		echo 'Building...'
+	}
+	// 4번 Stage
+	stage('Test') {
+		echo 'Testing...'
+	}
+	// 5번 Stage
+	stage('Deploy') {
+		echo 'Deploying...'
+	}
 }
 ```
 - Jenkinsfile 분석
@@ -349,35 +349,35 @@ GIT_AUTHOR_EMAIL : testJenkins@testJenkins.com
 	- [Credentials Binding Plugin](https://jenkins.io/doc/pipeline/steps/credentials-binding/)
 ```groovy
 node {
-    stage('1. Clone sources with Git Plugin') {
-	def gitValues = git credentialsId: 'JenkinsGithubUser', url:'https://github.com/Seolhun/test-jenkins.git'
-        echo "GIT_COMMIT : ${gitValues.GIT_COMMIT}"
-    }
-    stage('2. Clone sources with SCM Step Plugin') {
-        def gitValues = checkout scm
-        echo "GIT_COMMIT : ${gitValues.GIT_COMMIT}"
-    }
-    stage('Binding Credentials') {
-        // credentials block with Github Username/Password
-    	withCredentials([usernamePassword(credentialsId: 'JenkinsGithubUser', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
-    		echo "$GIT_USERNAME"
-    		echo "$GIT_PASSWORD"
-		}
+	stage('1. Clone sources with Git Plugin') {
+		def gitValues = git credentialsId: 'JenkinsGithubUser', url:'https://github.com/Seolhun/test-jenkins.git'
+		echo "GIT_COMMIT : ${gitValues.GIT_COMMIT}"
+	}
+	stage('2. Clone sources with SCM Step Plugin') {
+		def gitValues = checkout scm
+		echo "GIT_COMMIT : ${gitValues.GIT_COMMIT}"
+	}
+	stage('Binding Credentials') {
+		// credentials block with Github Username/Password
+		withCredentials([usernamePassword(credentialsId: 'JenkinsGithubUser', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+			echo "$GIT_USERNAME"
+			echo "$GIT_PASSWORD"
+	}
 
 		// credentials block with GithubToken
-        withCredentials([string(credentialsId: 'JenkinsGithubToken', variable: 'TOKEN')]) {
-        	echo "$TOKEN"
-        }
-    }
-    stage('Build') {
-        echo 'Building...'
-    }
-    stage('Test') {
-        echo 'Testing...'
-    }
-    stage('Deploy') {
-        echo 'Deploying...'
-    }
+		withCredentials([string(credentialsId: 'JenkinsGithubToken', variable: 'TOKEN')]) {
+			echo "$TOKEN"
+		}
+	}
+	stage('Build') {
+		echo 'Building...'
+	}
+	stage('Test') {
+		echo 'Testing...'
+	}
+	stage('Deploy') {
+		echo 'Deploying...'
+	}
 }
 ```
 - withCredentials를 통해 해당 블록에서 추가적인 Credentials를 적용할 수 있습니다.
