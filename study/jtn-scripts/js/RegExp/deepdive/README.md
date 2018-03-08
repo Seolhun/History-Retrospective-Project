@@ -17,3 +17,7 @@
 2. `*Daily Item*` 물결반지 :: RU034 (2 color) *8차입고*
 - Answer
 	- /^\*[\가-힣]+\*/g
+
+3. `['shun10114@gmai.com','shun10114@gmai.co.kr']`
+- Answer
+	- ^[A-z0-9]{1,30}+[@]+[A-z]+(.[A-z]{2,3}+(:?.[A-z]+))$
