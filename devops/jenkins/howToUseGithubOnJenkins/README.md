@@ -1,4 +1,3 @@
-
 # Continuous Integration with Jenkins and Github
 
 ## Intro

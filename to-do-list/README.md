@@ -8,13 +8,13 @@
 		- [X] AWS-Serverless
 			- [ ] AuthenticationManager
 				- [ ] passport.js
-			- [ ] InterceptorManager
-				- [ ] ContentValidator
-					- [ ] validator.js
-				- [ ] LogService
-					- [ ] lodash.js
+			- [ ] LogService
 			- [ ] FileManager
 			- [X] CRUD
+		- [ ] COMMON
+			- InterceptorManager
+				- [ ] Validator
+					- [ ] ContentValidator
 	- [ ] DynamoDB
 		- [ ] Author
 		- [ ] Content
