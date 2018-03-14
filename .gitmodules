@@ -10,7 +10,7 @@
 [submodule "devops/aws"]
 	path = devops/aws
 	url = https://github.com/Seolhun/aws.git
-[submodule "devops/docker"]
+[submodule "devops/docker-example"]
 	path = devops/docker
 	url = https://github.com/Seolhun/docker-example.git
 [submodule "study/java/java-example"]
