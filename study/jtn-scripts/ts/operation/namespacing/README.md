@@ -1,14 +1,15 @@
 +++
-date = "2018-03-06"
-title = "[Typescript] Namespace란? 그리고, 사용해보기."
-weight = 10
-categories = ["typescript"]
-categories_weight = 44
-tags = ["typescript", "namespace"]
-tags_weight = 22
+title = "[Javascript/Typescript] Namespace란?"
 type = "post"
+author = "[Seolhun](https://github.com/Seolhun)"
+date = "2018-03-08"
+weight = 10
+categories = ['javascript', 'typescript']
+categories_weight = 10
+tags = ['javascript', 'typescript', 'namespace', 'declare', 'module']
+tags_weight = 10
 +++
-- Author : [SeolHun](https://github.com/Seolhun/)
+Typescript의 라이브러리 모듈을 사용하다보면은 namespace를 자주 접하게 됩니다. 해당 module을 만들 수 있도록 도와주는 namespace에 대해 간단히 공부했습니다.
 
 ## Overview
 `namespaces`는 일정양의 코드를 조직화할 때 사용합니다. 이를 조직화하여 `Internal Modules`로 만드는 것이 주 목적입니다. 코드 묶음에 이름을 부여하여 해당 이름을 통해 어디서든 접근할 수 있게 만드는 것입니다.

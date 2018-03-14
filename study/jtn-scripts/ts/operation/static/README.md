@@ -1,5 +1,15 @@
-# JavaScript Static이란?
-- Author : [SeolHun](https://github.com/Seolhun/)
++++
+title = "[Javascript/Typescript] Static이란?"
+type = "post"
+author = "[Seolhun](https://github.com/Seolhun)"
+date = "2018-02-27"
+weight = 10
+categories = ['javascript', 'typescript']
+categories_weight = 10
+tags = ['javascript', 'typescript', 'static', 'singleton']
+tags_weight = 10
++++
+Singleton Pattern을 구현하면서 static이 Javascript에서는 어떻게 작동되는지 궁금하여 간단히 알아보았습니다.
 
 ## Goal
 - `static`의 작동원리와 활용법 이해

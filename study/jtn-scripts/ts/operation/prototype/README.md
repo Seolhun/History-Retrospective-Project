@@ -1,5 +1,15 @@
-# Javascript Prototype이란?
-- Author : [SeolHun](https://github.com/Seolhun/)
++++
+title = "[Javascript/Typescript] Prototype이란?"
+type = "post"
+author = "[Seolhun](https://github.com/Seolhun)"
+date = "2018-03-04"
+weight = 10
+categories = ['javascript', 'typescript']
+categories_weight = 10
+tags = ['prototype', 'javascript', 'typescript', 'class', 'module']
+tags_weight = 10
++++
+Typescript의 Class를 사용하면서 Javascript의 Prototype에 대한 개념이 중요할 것으로 판단했습니다. 그리고, Javascript의 Module Pattern을 공부하면서 Typescript의 접근제한자 개념이 어떻게 작동되는지에 대해서 알아보고자 합니다.
 
 ## Prototype Link와 Prototype Object
 자바스크립트에는 Prototype Link 와 Prototype Object라는 것이 존재합니다. 그리고 이 둘을 통틀어 Prototype이라고 부릅니다. 프로토타입을 좀 안다는 것은 이 둘을 완벽히 이해하고 갖고 놀 수준이 되었다는 뜻입니다.

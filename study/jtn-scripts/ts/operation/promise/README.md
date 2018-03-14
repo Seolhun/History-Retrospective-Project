@@ -143,7 +143,7 @@ class PromiseView {
 ```
 - 결론
 	- Promies와 Non-Promise의 차이는 결국, 비동기로 처리하되 해당 결과를 동기화시키는가 아닌가에 달려있습니다. 위에서 얘기했던 것처럼 `Promise는 비동기 메서드가 동기 메서드처럼 값을 반환하도록 합니다.`로 요약할 수 있습니다. 
-	- 즉, Non-promise는 해당 값을 시간이 지난 후 동기화해주지 못하기 떄문에, 해당 값을 사용하기 위해서는 promiseCreateCar안에서 해당 함수 값을 다시 호출하여 사용해야합니다.(CallBack Hell 문제 발생) 
+	- 즉, Non-promise는 해당 값을 시간이 지난 후 동기화해주지 못하기 때문에, 해당 값을 사용하기 위해서는 promiseCreateCar안에서 해당 함수 값을 다시 호출하여 사용해야합니다.(CallBack Hell 문제 발생) 
 
 2. Promise All
 ```typescript

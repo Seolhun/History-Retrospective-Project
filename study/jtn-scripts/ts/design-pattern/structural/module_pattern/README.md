@@ -1,5 +1,15 @@
-# Module Pattern이란?
-- Author : [SeolHun](https://github.com/Seolhun/)
++++
+title = "[Javascript/Typescript] Module Pattern이란?"
+type = "post"
+author = "[Seolhun](https://github.com/Seolhun)"
+date = "2018-03-08"
+weight = 10
+categories = ['javascript', 'typescript']
+categories_weight = 10
+tags = ['javascript', 'typescript', 'namespace', 'declare', 'module']
+tags_weight = 10
++++
+Typescript의 라이브러리 모듈을 사용하다보면은 namespace를 자주 접하게 됩니다. 해당 module을 만들 수 있도록 도와주는 namespace에 대해 간단히 공부했습니다.
 
 ## Intro
 모듈 패턴은 전통적인 소프트웨어 공학에서 클래스 사용에 **private 과 public 으로 나뉜 캡슐화를 제공하는 방법**입니다.
@@ -100,7 +110,7 @@ a.prototype //undefined
 1. Javascript는 public/private 같은 접근제한자를 제공해주지 않기 때문에 해당 함수 안에서 return을 통해 접근제한을 시킬 수 있습니다.
 
 2. 익명함수가 자동호출되며 해당 객체를 Module 객체를 받아 사용할 수 있습니다. 
-    - 함수 안에 return 되지 않은 객체에도 접근이 가능하기 떄문에 클로저의 특징도 가지고 있습니다.
+    - 함수 안에 return 되지 않은 객체에도 접근이 가능하기 때문에 클로저의 특징도 가지고 있습니다.
     - 익명함수 객체를 자동으로 받아 사용하기 때문에 Singleton 패턴의 특징도 가지고 있습니다.
 ```javascript
 var Module = (function () {

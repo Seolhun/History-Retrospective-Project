@@ -12,3 +12,10 @@
 		> [submodule "root/submodule"]
 		>	path = root/submodule
 		>	url = https://github.com/Seolhun/submodule.git
+
+1. First time git submoudle udpate
+	- git submodule update --init --recursive
+2. git Fetch submodule
+	- git submodule update --recursive --remote
+3. git pull submoudles
+	- git pull --recurse-submodules origin master

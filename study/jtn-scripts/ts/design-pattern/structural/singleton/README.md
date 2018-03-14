@@ -1,6 +1,17 @@
-# Singleton Pattern
-- Author : [SeolHun](https://github.com/Seolhun/)
++++
+title = "[Javascript/Typescript] Module Pattern이란?"
+type = "post"
+author = "[Seolhun](https://github.com/Seolhun)"
+date = "2018-03-08"
+weight = 10
+categories = ['javascript', 'typescript']
+categories_weight = 10
+tags = ['javascript', 'typescript', 'namespace', 'declare', 'module']
+tags_weight = 10
++++
 
+
+## Singleton Pattern이란?
 - 싱글턴 패턴(Singleton pattern)을 따르는 클래스는, 생성자가 여러 차례 호출되더라도 실제로 생성되는 객체는 하나이고 최초 생성 이후에 호출된 생성자는 최초의 생성자가 생성한 객체를 리턴한다. 이와 같은 디자인 유형을 싱글턴 패턴이라고 한다. 주로 공통된 객체를 여러개 생성해서 사용하는 DBCP(DataBase Connection Pool)와 같은 상황에서 많이 사용된다.
 - 싱글톤 패턴은 가장 단순한 디자인 패턴 중 하나입니다. 이 유형의 디자인 패턴은 오브젝트를 생성하는 가장 좋은 방법 중 하나를 제공하므로이 패턴은 Creational Patterns에 속해 있습니다. **이 패턴은 단일 객체 만 생성되도록하면서 객체를 만드는 단일 클래스를 포함합니다. 이 클래스는 클래스 객체를 인스턴스화하지 않고 직접 액세스 할 수있는 유일한 객체에 접근하는 방법을 제공합니다.**
 
