@@ -1,24 +1,23 @@
+
+
 # Push & Deploy of artifact
-msg="[Hugo]Rebuilding site - `date`"
+msg="[Study] Updated Today I lean contents"
 if [ $# -eq 1 ]
   then msg="$1"
 fi
 
-# Push & Deploy of original
+cd study/java/java-example
 git add .
 git commit -m "$msg"
 git push
 echo -e "========================="
-echo -e "Updated Original Blog"
+echo -e "Updated Java Example"
 echo -e "========================="
 
-# Build
-hugo
-cd docs
-
+cd ~/git/retrospective-diary
 git add .
 git commit -m "$msg"
-git push -f
+git push
 echo -e "========================="
-echo -e "Updated Github.io"
+echo -e "Updated Retrospective Project"
 echo -e "========================="
