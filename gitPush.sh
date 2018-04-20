@@ -26,14 +26,21 @@ if [ $# -eq 1 ]
   then msg="$1"
 fi
 
-cd study/java/java-example
-git add .
-git commit -m "$msg"
-git push
-echo -e "========================="
-echo -e "Updated Java Example"
-echo -e "========================="
-cd ~/git/retrospective-diary
+if git diff-index --quiet HEAD --; then
+  echo -e "========================="
+  echo -e "No changed Java Example"
+  echo -e "========================="
+else
+  cd study/java/java-example
+  git add .
+  git commit -m "$msg"
+  git push
+  echo -e "========================="
+  echo -e "Updated Java Example"
+  echo -e "========================="
+  cd ~/git/retrospective-diary
+fi
+
 
 cd study/python/python-example
 git add .
