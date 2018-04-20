@@ -26,70 +26,63 @@ if [ $# -eq 1 ]
   then msg="$1"
 fi
 
-if git diff-index --quiet HEAD --; then
-  echo -e "========================="
-  echo -e "No changed Java Example"
-  echo -e "========================="
-else
-  cd study/java/java-example
-  git add .
-  git commit -m "$msg"
-  git push
-  echo -e "========================="
-  echo -e "Updated Java Example"
-  echo -e "========================="
-  cd ~/git/retrospective-diary
-fi
+echo -e "========================="
+echo -e "Updated Java Example"
+echo -e "========================="
+cd study/java/java-example
+git add .
+git commit -m "$msg"
+git push
+cd ~/git/retrospective-diary
 
-
+echo -e "========================="
+echo -e "Updated Python Example"
+echo -e "========================="
 cd study/python/python-example
 git add .
 git commit -m "$msg"
 git push
-echo -e "========================="
-echo -e "Updated Python Example"
-echo -e "========================="
 cd ~/git/retrospective-diary
 
+echo -e "========================="
+echo -e "Updated Vue Example"
+echo -e "========================="
 cd study/vue/vue-example
 git add .
 git commit -m "$msg"
 git push
-echo -e "========================="
-echo -e "Updated Vue Example"
-echo -e "========================="
 cd ~/git/retrospective-diary
 
+echo -e "========================="
+echo -e "Updated Company Contents"
+echo -e "========================="
 cd company
 git add .
 git commit -m "$msg"
 git push
-echo -e "========================="
-echo -e "Updated Company Contents"
-echo -e "========================="
 cd ~/git/retrospective-diary
 
-cd devops/aws
-git add .
-git commit -m "$msg"
-git push
 echo -e "========================="
 echo -e "Updated Devops/aws"
 echo -e "========================="
-cd ~/git/retrospective-diary
-
 cd devops/aws
 git add .
 git commit -m "$msg"
 git push
+cd ~/git/retrospective-diary
+
 echo -e "========================="
 echo -e "Updated Devops/docker-example"
 echo -e "========================="
-cd ~/git/retrospective-diary
-
+cd devops/aws
 git add .
 git commit -m "$msg"
 git push
+cd ~/git/retrospective-diary
+
 echo -e "========================="
 echo -e "Updated Retrospective Project"
 echo -e "========================="
+git add .
+git commit -m "$msg"
+git push
