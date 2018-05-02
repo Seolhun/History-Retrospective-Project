@@ -36,6 +36,15 @@ git push
 cd ~/git/retrospective-diary
 
 echo -e "========================="
+echo -e "Updated Study/Algorithm"
+echo -e "========================="
+cd study/algorithm
+git add .
+git commit -m "$msg"
+git push
+cd ~/git/retrospective-diary
+
+echo -e "========================="
 echo -e "Updated Python Example"
 echo -e "========================="
 cd study/python/python-example

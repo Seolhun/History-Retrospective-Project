@@ -19,3 +19,6 @@
 [submodule "study/python/python-example"]
 	path = study/python/python-example
 	url = https://github.com/Seolhun/python-example.git
+[submodule "study/algorithm"]
+	path = study/algorithm
+	url = https://github.com/Seolhun/TIL-algorithm.git
