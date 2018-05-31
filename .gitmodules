@@ -11,7 +11,7 @@
 	path = company
 	url = https://github.com/Seolhun/company.git
 [submodule "devops/docker-example"]
-	path = devops/docker
+	path = devops/docker-example
 	url = https://github.com/Seolhun/docker-example.git
 [submodule "study/java/java-example"]
 	path = study/java/java-example
