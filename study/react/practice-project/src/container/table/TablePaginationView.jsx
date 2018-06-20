@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import TableList from '../../component/TableList';
-import Pagination from '../../component/Pagination';
+import TableList from '../../component/table';
+import Pagination from '../../component/pagination';
 
 import BusController from '../../api/BusController';
 

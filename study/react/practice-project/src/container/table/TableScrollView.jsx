@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import BusController from '../../api/BusController';
 
-import TableList from '../../component/TableList';
+import TableList from '../../component/table';
 
 import schema from './schema';
 
