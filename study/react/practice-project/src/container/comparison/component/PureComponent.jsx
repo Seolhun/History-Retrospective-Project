@@ -5,7 +5,6 @@ class PureComponent extends React.PureComponent {
 		super(props)
 		this.state = {
 			counter: 0,
-			renderCounter: 0,
 		}
 	}
 
@@ -35,11 +34,6 @@ class PureComponent extends React.PureComponent {
 					<div className='col-sm-12'>
 						{
 							`counter : ${this.state.counter}`
-						}
-					</div>
-					<div className='col-sm-12'>
-						{
-							`renderCounter : ${this.state.renderCounter}`
 						}
 					</div>
 				</div>

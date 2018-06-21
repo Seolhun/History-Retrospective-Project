@@ -11,12 +11,12 @@ class BasicComponent extends React.Component {
 
 	shouldComponentUpdate(nextProps, nextState) {
 		if (this.state.counter !== nextState.counter) {
-			this.setState({
-				renderCounter: this.state.renderCounter + 1,
-			})
-			return true;
+			// this.setState({
+			// 	renderCounter: this.state.renderCounter + 1,
+			// })
+			return false;
 		}
-		return false;
+		return true;
 	}
 
 	increaseCounter = () => {

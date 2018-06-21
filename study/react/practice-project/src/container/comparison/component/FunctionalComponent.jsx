@@ -8,8 +8,8 @@ const FunctionalComponent = (props) => {
 			<div className='row'>
 				<div className='col-sm-12'>
 					<div className='btn-group' role='group' aria-label='Basic example'>
-						<button type='button' className='btn btn-secondary btn-success' onClick={this.increaseCounter}>Increment</button>
-						<button type='button' className='btn btn-secondary btn-warning' onClick={this.decreaseCounter}>Decrement</button>
+						<button type='button' className='btn btn-secondary btn-success' onClick={props.increaseCounter}>Increment</button>
+						<button type='button' className='btn btn-secondary btn-warning' onClick={props.decreaseCounter}>Decrement</button>
 					</div>
 				</div>
 				<div className='col-sm-12'>
