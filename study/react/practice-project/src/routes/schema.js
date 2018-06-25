@@ -7,6 +7,8 @@ import BasicComponent from '../container/comparison/component/BasicComponent';
 import PureComponent from '../container/comparison/component/PureComponent';
 import FunctionalComponent from '../container/comparison/component/FunctionalComponent';
 
+import LifeCycleComponent from '../container/lifecycle/LifeCycleComponent';
+
 import NotFoundView from '../container/common/NotFoundView'
 
 const routes = [
@@ -16,6 +18,7 @@ const routes = [
 	routeCreator({ type: 1, color: 'success', path: '/comparison/functional', label: 'FunctionalComponent', component: FunctionalComponent }),
 	routeCreator({ type: 2, color: 'info', path: '/table/pagination', label: 'TablePagination', component: TableScrollView }),
 	routeCreator({ type: 2, color: 'info', path: '/table/scroll', label: 'TableScroll', component: TablePaginationView }),
+	routeCreator({ type: 0, color: 'primary', path: '/lifecycle', label: 'LifeCycleComponent', component: LifeCycleComponent }),
 	routeCreator({ type: 0, color: 'warning', path: '*', exact: false, label: 'NotFoundView', component: NotFoundView }),
 ]
 
