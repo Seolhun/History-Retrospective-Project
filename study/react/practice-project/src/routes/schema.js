@@ -10,6 +10,8 @@ import FunctionalContainer from '../container/comparison/component/FunctionalCon
 import BasicRxjsContainer from '../container/rxjs/BasicRxjsContainer';
 import ObservableEventFilterContainer from '../container/rxjs/ObservableEventFilterContainer';
 
+import LifeCycleComponent from '../container/lifecycle/LifeCycleComponent';
+
 import NotFoundView from '../container/common/NotFoundView'
 
 const routes = [
@@ -24,6 +26,8 @@ const routes = [
 	// RxJS
 	routeCreator({ type: 3, color: 'primary', path: '/rxjs/basic', label: 'BasicRxjsContainer', component: BasicRxjsContainer }),
 	routeCreator({ type: 3, color: 'primary', path: '/rxjs/filter', label: 'ObservableEventFilterContainer', component: ObservableEventFilterContainer }),
+	// LifeCycle
+	routeCreator({ type: 0, color: 'primary', path: '/lifecycle', label: 'LifeCycleComponent', component: LifeCycleComponent }),
 	// Error
 	routeCreator({ type: 0, color: 'warning', path: '*', exact: false, label: 'NotFoundView', component: NotFoundView }),
 ]
