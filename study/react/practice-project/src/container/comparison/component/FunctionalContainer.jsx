@@ -34,7 +34,7 @@ FunctionalComponent.propTypes = {
 	renderCounter: PropTypes.number.isRequired,
 }
 
-class WarpperFunctionalComponent extends React.Component {
+class WarpperFunctionalContainer extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -69,5 +69,5 @@ class WarpperFunctionalComponent extends React.Component {
 	}
 }
 
-export default WarpperFunctionalComponent;
+export default WarpperFunctionalContainer;
 

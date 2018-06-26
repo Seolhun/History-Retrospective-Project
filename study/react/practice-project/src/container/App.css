@@ -26,3 +26,11 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.row {
+	padding: 10px;
+}
+
+.router {
+	margin: 10px;
+}

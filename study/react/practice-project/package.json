@@ -17,5 +17,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "rxjs": "^6.2.1",
+    "rxjs-compat": "^6.2.1"
   }
 }

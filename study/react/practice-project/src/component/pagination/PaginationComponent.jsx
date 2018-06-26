@@ -4,9 +4,9 @@ import * as _ from 'lodash';
 
 import PropTypes from 'prop-types';
 
-import './Pagination.css';
+import './PaginationComponent.css';
 
-class Pagination extends Component {
+class PaginationComponent extends Component {
 	static propTypes = {
 		pageIndex: PropTypes.number.isRequired,
 		totalCount: PropTypes.number.isRequired,
@@ -73,4 +73,4 @@ class Pagination extends Component {
 	}
 }
 
-export default Pagination;
+export default PaginationComponent;

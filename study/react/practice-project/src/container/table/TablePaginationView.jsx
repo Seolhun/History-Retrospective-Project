@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import TableList from '../../component/table';
-import Pagination from '../../component/pagination';
+import TableComponent from '../../component/table';
+import PaginationComponent from '../../component/pagination';
 
 import BusController from '../../api/BusController';
 
@@ -50,14 +50,14 @@ class TablePaginationView extends Component {
 		return (
 			<section>
 				<div>
-					<Pagination
+					<PaginationComponent
 						pageIndex={this.state.pageIndex}
 						totalCount={this.state.totalCount}
 						onClick={this.handleChangePage}
 					/>
 				</div>
 				<div>
-					<TableList
+					<TableComponent
 						items={this.setPagingItems(this.state.pageIndex)}
 						schema={schema}
 					/>

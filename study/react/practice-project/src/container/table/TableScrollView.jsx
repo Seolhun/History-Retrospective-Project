@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import BusController from '../../api/BusController';
 
-import TableList from '../../component/table';
+import TableComponent from '../../component/table';
 
 import schema from './schema';
 
@@ -26,7 +26,7 @@ class TableScrollView extends Component {
 		return (
 			<section>
 				<div>
-					<TableList
+					<TableComponent
 						items={this.state.items}
 						schema={schema}
 						showScroll={true}

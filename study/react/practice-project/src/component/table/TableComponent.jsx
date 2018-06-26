@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 import PropTypes from 'prop-types';
 
-import './TableList.css';
+import './TableComponent.css';
 
-class TableList extends Component {
+class TableComponent extends Component {
 	renderHeader() {
 		return this.props.schema.map((schem) => {
 			return <th key={schem.id}>
@@ -51,7 +51,7 @@ class TableList extends Component {
 	}
 }
 
-TableList.propTypes = {
+TableComponent.propTypes = {
 	items: PropTypes.array.isRequired,
 	schema: PropTypes.array.isRequired,
 
@@ -59,9 +59,9 @@ TableList.propTypes = {
 	className: PropTypes.string,
 }
 
-TableList.defaultProps = {
+TableComponent.defaultProps = {
 	showScroll: false,
 	className: '',
 }
 
-export default TableList;
+export default TableComponent;

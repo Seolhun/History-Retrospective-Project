@@ -1,6 +1,6 @@
 import React from 'react';
 
-class PureComponent extends React.PureComponent {
+class PureContainer extends React.PureComponent {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -42,4 +42,4 @@ class PureComponent extends React.PureComponent {
 	}
 }
 
-export default PureComponent;
+export default PureContainer;

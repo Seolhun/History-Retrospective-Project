@@ -28,7 +28,7 @@ class App extends Component {
 										className='ml-2'
 									>
 										<Link
-											className={`btn btn-${route.color}`}
+											className={`btn btn-${route.color} router`}
 											to={route.path}
 										>
 											{route.label}

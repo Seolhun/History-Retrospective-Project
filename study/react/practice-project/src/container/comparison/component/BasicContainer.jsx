@@ -1,6 +1,6 @@
 import React from 'react';
 
-class BasicComponent extends React.Component {
+class BasicContainer extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -10,10 +10,10 @@ class BasicComponent extends React.Component {
 	}
 
 	shouldComponentUpdate(nextProps, nextState) {
+		if (this.state.renderCounter !== nextState.renderCounter) {
+			return true;
+		}
 		if (this.state.counter !== nextState.counter) {
-			// this.setState({
-			// 	renderCounter: this.state.renderCounter + 1,
-			// })
 			return false;
 		}
 		return true;
@@ -31,6 +31,18 @@ class BasicComponent extends React.Component {
 		})
 	}
 
+	rerenderIncreaseCounter = () => {
+		this.setState({
+			renderCounter: this.state.renderCounter + 1,
+		})
+	}
+
+	rerenderDecreaseCounter = () => {
+		this.setState({
+			renderCounter: this.state.renderCounter - 1,
+		})
+	}
+
 	render() {
 		return (
 			<section>
@@ -42,6 +54,16 @@ class BasicComponent extends React.Component {
 							<button type='button' className='btn btn-secondary btn-warning' onClick={this.decreaseCounter}>Decrement</button>
 						</div>
 					</div>
+				</div>
+				<div className='row'>
+					<div className='col-sm-12'>
+						<div className='btn-group' role='group' aria-label='Basic example'>
+							<button type='button' className='btn btn-secondary btn-success' onClick={this.rerenderIncreaseCounter}>Re-Render Increment</button>
+							<button type='button' className='btn btn-secondary btn-warning' onClick={this.rerenderDecreaseCounter}>Re-Render Decrement</button>
+						</div>
+					</div>
+				</div>
+				<div className='row'>
 					<div className='col-sm-12'>
 						{
 							`counter : ${this.state.counter}`
@@ -58,4 +80,4 @@ class BasicComponent extends React.Component {
 	}
 }
 
-export default BasicComponent;
+export default BasicContainer;

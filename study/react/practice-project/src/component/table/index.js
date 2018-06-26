@@ -1,3 +1,3 @@
-import TableList from './TableList';
+import TableComponent from './TableComponent';
 
-export default TableList;
+export default TableComponent;
