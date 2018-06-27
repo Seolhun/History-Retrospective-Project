@@ -1,5 +1,5 @@
 
-import HomeView from '../container/home/HomeView';
+import HomeContainer from '../container/home/HomeContainer';
 import TableScrollView from '../container/table/TableScrollView';
 import TablePaginationView from '../container/table/TablePaginationView';
 
@@ -7,15 +7,15 @@ import BasicContainer from '../container/comparison/component/BasicContainer';
 import PureContainer from '../container/comparison/component/PureContainer';
 import FunctionalContainer from '../container/comparison/component/FunctionalContainer';
 
-import BasicRxjsContainer from '../container/rxjs/BasicRxjsContainer';
+import CombineAllContainer from '../container/rxjs/CombineAllContainer';
 import ObservableEventFilterContainer from '../container/rxjs/ObservableEventFilterContainer';
 
-import LifeCycleComponent from '../container/lifecycle/LifeCycleComponent';
+import LifeCycleContainer from '../container/lifecycle/LifeCycleContainer';
 
 import NotFoundView from '../container/common/NotFoundView'
 
 const routes = [
-	routeCreator({ type: 0, color: 'primary', path: '/', label: 'Home', component: HomeView }),
+	routeCreator({ type: 0, color: 'primary', path: '/', label: 'Home', component: HomeContainer }),
 	// Comparison Function in React
 	routeCreator({ type: 1, color: 'success', path: '/comparison/basic', label: 'BasicComponent', component: BasicContainer }),
 	routeCreator({ type: 1, color: 'success', path: '/comparison/pure', label: 'PureComponent', component: PureContainer }),
@@ -24,10 +24,10 @@ const routes = [
 	routeCreator({ type: 2, color: 'info', path: '/table/pagination', label: 'TablePagination', component: TableScrollView }),
 	routeCreator({ type: 2, color: 'info', path: '/table/scroll', label: 'TableScroll', component: TablePaginationView }),
 	// RxJS
-	routeCreator({ type: 3, color: 'primary', path: '/rxjs/basic', label: 'BasicRxjsContainer', component: BasicRxjsContainer }),
+	routeCreator({ type: 3, color: 'primary', path: '/rxjs/basic', label: 'CombineAllContainer', component: CombineAllContainer }),
 	routeCreator({ type: 3, color: 'primary', path: '/rxjs/filter', label: 'ObservableEventFilterContainer', component: ObservableEventFilterContainer }),
 	// LifeCycle
-	routeCreator({ type: 0, color: 'primary', path: '/lifecycle', label: 'LifeCycleComponent', component: LifeCycleComponent }),
+	routeCreator({ type: 4, color: 'primary', path: '/lifecycle', label: 'LifeCycleContainer', component: LifeCycleContainer }),
 	// Error
 	routeCreator({ type: 0, color: 'warning', path: '*', exact: false, label: 'NotFoundView', component: NotFoundView }),
 ]

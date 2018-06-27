@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class HomeView extends Component {
+class HomeContainer extends Component {
 	render() {
 		return (
 			<section className='row'>
@@ -13,4 +13,4 @@ class HomeView extends Component {
 }
 
 
-export default HomeView;
+export default HomeContainer;

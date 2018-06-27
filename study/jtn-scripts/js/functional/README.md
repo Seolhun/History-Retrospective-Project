@@ -55,3 +55,7 @@ const result = tripleFn(
 )
 console.log(result);
 ```
+
+## Content List
+1. Basic Functional Example
+2. _filter, _map Example

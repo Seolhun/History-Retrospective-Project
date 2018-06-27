@@ -1,6 +1,6 @@
 import React from 'react';
 
-class LifeCycleComponent extends React.Component {
+class LifeCycleContainer extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -8,10 +8,6 @@ class LifeCycleComponent extends React.Component {
 		}
 		this.priorities = [];
 		this.priorities.push('constructor');
-	}
-
-	componentWillUnmount() {
-		this.priorities.push('componentWillReceiveProps');
 	}
 
 	componentDidMount() {
@@ -77,7 +73,7 @@ class LifeCycleComponent extends React.Component {
 	render() {
 		return (
 			<section>
-				<h2>LifeCycleComponent</h2>
+				<h2>LifeCycleContainer</h2>
 				<div className='row'>
 					<div className='col-sm-12'>
 						<button className='btn btn-primary' onClick={this.handleUpdate}>Update</button>
@@ -94,4 +90,4 @@ class LifeCycleComponent extends React.Component {
 	}
 }
 
-export default LifeCycleComponent;
+export default LifeCycleContainer;

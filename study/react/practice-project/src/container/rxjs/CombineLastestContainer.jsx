@@ -4,11 +4,9 @@ import { Observable } from 'rxjs';
 
 import dummy from './_dummy.json';
 
-class BasicRxjsContainer extends Component {
+class CombineLastestContainer extends Component {
 	constructor(props) {
 		super(props);
-
-		console.log(dummy);
 		this.sumObserver = {
 			sum: 0,
 			next(value) {
@@ -26,7 +24,7 @@ class BasicRxjsContainer extends Component {
 		return (
 			<Fragment>
 				<section>
-					<h2>BasicRxjsContainer</h2>
+					<h2>CombineLastestContainer</h2>
 					<div className='row'>
 						<div className='col-sm-12'>
 						</div>
@@ -37,4 +35,4 @@ class BasicRxjsContainer extends Component {
 	}
 }
 
-export default BasicRxjsContainer;
+export default CombineLastestContainer;

@@ -21,7 +21,7 @@ class App extends Component {
         <div className='container'>
 					<div className='row'>
 						{
-							routes.map((route) => {
+							routes.map((route, idx) => {
 								return (
 									<div
 										key={route.path}
