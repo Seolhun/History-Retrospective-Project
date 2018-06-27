@@ -30,6 +30,7 @@ echo -e "========================="
 echo -e "Updated Java Example"
 echo -e "========================="
 cd study/java/java-example
+git pull
 git add .
 git commit -m "$msg"
 git push
@@ -39,6 +40,7 @@ echo -e "========================="
 echo -e "Updated Study/Algorithm"
 echo -e "========================="
 cd study/algorithm
+git pull
 git add .
 git commit -m "$msg"
 git push
@@ -48,6 +50,7 @@ echo -e "========================="
 echo -e "Updated Python Example"
 echo -e "========================="
 cd study/python/python-example
+git pull
 git add .
 git commit -m "$msg"
 git push
@@ -57,6 +60,7 @@ echo -e "========================="
 echo -e "Updated Vue Example"
 echo -e "========================="
 cd study/vue/vue-example
+git pull
 git add .
 git commit -m "$msg"
 git push
@@ -66,6 +70,7 @@ echo -e "========================="
 echo -e "Updated Company Contents"
 echo -e "========================="
 cd company
+git pull
 git add .
 git commit -m "$msg"
 git push
@@ -75,6 +80,7 @@ echo -e "========================="
 echo -e "Updated Devops/aws"
 echo -e "========================="
 cd devops/aws
+git pull
 git add .
 git commit -m "$msg"
 git push
@@ -84,6 +90,7 @@ echo -e "========================="
 echo -e "Updated Devops/docker-example"
 echo -e "========================="
 cd devops/aws
+git pull
 git add .
 git commit -m "$msg"
 git push
@@ -92,6 +99,7 @@ cd ~/git/retrospective-diary
 echo -e "========================="
 echo -e "Updated Retrospective Project"
 echo -e "========================="
+git pull
 git add .
 git commit -m "$msg"
 git push

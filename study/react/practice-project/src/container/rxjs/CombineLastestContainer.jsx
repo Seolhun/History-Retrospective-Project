@@ -1,24 +1,29 @@
 import React, { Component, Fragment } from 'react';
 
-import { Observable } from 'rxjs';
-
-import dummy from './_dummy.json';
+import { timer } from 'rxjs';
+import { combineLatest } from 'rxjs/operators';
 
 class CombineLastestContainer extends Component {
 	constructor(props) {
 		super(props);
-		this.sumObserver = {
-			sum: 0,
-			next(value) {
-				console.log('Adding: ' + value);
-				this.sum = this.sum + value;
-			},
-			complete() {
-				console.log('Sum equals: ' + this.sum);
-			}
-		};
-		const test= Observable.of(1, 2, 3).subscribe(this.sumObserver);
+		this.state = {
+			result: [],
+		}
+
+		const timerOne = timer(1000, 4000);
+		const timerTwo = timer(2000, 4000);
+		const timerThree = timer(3000, 4000);
+		const combined = combineLatest(timerOne, timerTwo, timerThree);
+		const subscribe = combined.subscribe(([timerValOne, timerValTwo, timerValThree]) => {
+			console.log(`
+				Timer One Latest: ${timerValOne},
+				Timer Two Latest: ${timerValTwo},
+				Timer Three Latest: ${timerValThree}
+			`);
+		}
+);
 	}
+
 
 	render() {
 		return (
@@ -27,6 +32,13 @@ class CombineLastestContainer extends Component {
 					<h2>CombineLastestContainer</h2>
 					<div className='row'>
 						<div className='col-sm-12'>
+							{
+								this.state.result.map((result, idx) => {
+									return <div key={idx}>
+										{result}
+									</div>;
+								})
+							}
 						</div>
 					</div>
 				</section>
