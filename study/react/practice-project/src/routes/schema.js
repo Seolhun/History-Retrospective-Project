@@ -10,6 +10,7 @@ import FunctionalContainer from '../container/comparison/component/FunctionalCon
 import CombineAllContainer from '../container/rxjs/CombineAllContainer';
 import CombineLastestContainer from '../container/rxjs/CombineLastestContainer';
 import ObservableEventFilterContainer from '../container/rxjs/ObservableEventFilterContainer';
+import ObservableClickFromEventContainer from '../container/rxjs/ObservableClickFromEventContainer';
 
 import LifeCycleContainer from '../container/lifecycle/LifeCycleContainer';
 
@@ -28,6 +29,7 @@ const routes = [
 	routeCreator({ type: 3, color: 'primary', path: '/rxjs/combine-all', label: 'CombineAllContainer', component: CombineAllContainer }),
 	routeCreator({ type: 3, color: 'primary', path: '/rxjs/combine-lastest', label: 'CombineLastestContainer', component: CombineLastestContainer }),
 	routeCreator({ type: 3, color: 'primary', path: '/rxjs/filter', label: 'ObservableEventFilterContainer', component: ObservableEventFilterContainer }),
+	routeCreator({ type: 3, color: 'primary', path: '/rxjs/click', label: 'ObservableClickFromEventContainer', component: ObservableClickFromEventContainer }),
 	// LifeCycle
 	routeCreator({ type: 4, color: 'primary', path: '/lifecycle', label: 'LifeCycleContainer', component: LifeCycleContainer }),
 	// Error
