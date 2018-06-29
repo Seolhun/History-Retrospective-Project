@@ -34,7 +34,7 @@ typeof 연산자를 사용하면 문자열로 해당 타입을 반환합니다. 
 ```js
 typeof "text" // "string"
 typeof("text") // "string"
-typeof 100 // "string"
+typeof 100 // "number"
 typeof null // "object"
 ```
 
@@ -42,7 +42,6 @@ typeof null // "object"
 
 ## 부동소수점
 부동소수점은 앞에 정수를 사용하지 않아도 되지만, 정수 입력을 권장합니다.
-
 ```js
 let floatNumber = 1.1; 
 let floatNumber2 = .1; // 사용되지만 권장 X
