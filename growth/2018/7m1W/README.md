@@ -11,6 +11,8 @@
 	- JEST 테스트해보기(Method 단위)
 - Rx-Observable, Rx-JS
 	- 메소드 별 기능 분석하고 정리해보기
+		- switchMap
+		- map
 
 #### Hi-Cord
 - Scraper 다시 만들기
@@ -25,24 +27,20 @@
 ## 7월 1주차 작업리스트
 #### To do List
 - **ABR-289**
-	- 에러가 발생되지 않고, 에러 재현이 어려워 현재 티켓만 인지하고 있기.
+	- 에러가 발생되지 않고, 에러 재현이 어려워 티켓만 인지하고 있기.
 - **ABR-242**
 	- Add Manager, Add Agency 등 추가적인 기능들 테스트하기.
-	- siwtchMap을 사용하면 mapLastest의 기능처럼 구현할 수 있다는 블로그 확인
-		- 중복된 요청이 왔을 경우 어떻게 반응하는지 확인 후, 개선필요
+		- 400 에러, parameter를 요청해도 에러가 발생(?)
+	- siwtchMap을 사용하면 mapLastest의 기능처럼 구현할 수 있음
+		- `switchMap maintains only one inner subscription at a time`
+		- switchMap은 mergeMap과 달리 요청에 따라 항상 새로운 Observable을 1회만 반환한다.
+		- mergeMap => switchMap으로 변경
 	- 에러시 retry가 효율적인지도 테스트 해볼 필요 있음.
+	- Delete => List, Post => List 등 Sequencable한 요청에 대한 로직 추가
+- **[ABR-405](https://teamab180.atlassian.net/browse/ABR-405#add-comment)**
+	- Card 컴포넌트가 적용되지 않은 HTML들을 수정하기.
 - **ETC**
-	- TL; DR 템플레이트 수정하기
 	- FilterTable Component 만들기.
 		- TableScheleton => 여러 테이블 분기하기
-		- APP-LIST에 Filter Table 기능 도입고려
-
-#### Done
-- ddd
-
-
-
-
-
-
-
+			- TableHeader를 수정하는 것에 대한 어려움이 많음.
+			- 다국어 설정에 대한 확장성 부족 및 HeaderBlock이 Component가 너무 많아, 복잡하며 하나의 뿌리를 두고 있지 않음.
