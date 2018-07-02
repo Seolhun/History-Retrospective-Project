@@ -9,13 +9,11 @@ class CombineAllContainer extends Component {
 		this.state = {
 			result: [],
 		}
-
 		const source = interval(1000).pipe(take(2));
 		const example = source.pipe(map(val => interval(1000).pipe(map(i => `Result (${val}): ${i}`), take(5))));
 		const combined = example.pipe(combineAll());
 		const subscribe = combined.subscribe(val => this.setState({ result: [ ...this.state.result, val ]}));
 	}
-
 
 	render() {
 		return (

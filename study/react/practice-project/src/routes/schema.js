@@ -7,10 +7,8 @@ import BasicContainer from '../container/comparison/component/BasicContainer';
 import PureContainer from '../container/comparison/component/PureContainer';
 import FunctionalContainer from '../container/comparison/component/FunctionalContainer';
 
-import CombineAllContainer from '../container/rxjs/CombineAllContainer';
-import CombineLastestContainer from '../container/rxjs/CombineLastestContainer';
-import ObservableEventFilterContainer from '../container/rxjs/ObservableEventFilterContainer';
-import ObservableClickFromEventContainer from '../container/rxjs/ObservableClickFromEventContainer';
+
+import RenderRxJsContainer, { RxjsType } from '../container/rxjs/RenderRxJsContainer'
 
 import LifeCycleContainer from '../container/lifecycle/LifeCycleContainer';
 
@@ -26,10 +24,10 @@ const routes = [
 	routeCreator({ type: 2, color: 'info', path: '/table/pagination', label: 'TablePagination', component: TableScrollView }),
 	routeCreator({ type: 2, color: 'info', path: '/table/scroll', label: 'TableScroll', component: TablePaginationView }),
 	// RxJS
-	routeCreator({ type: 3, color: 'primary', path: '/rxjs/combine-all', label: 'CombineAllContainer', component: CombineAllContainer }),
-	routeCreator({ type: 3, color: 'primary', path: '/rxjs/combine-lastest', label: 'CombineLastestContainer', component: CombineLastestContainer }),
-	routeCreator({ type: 3, color: 'primary', path: '/rxjs/filter', label: 'ObservableEventFilterContainer', component: ObservableEventFilterContainer }),
-	routeCreator({ type: 3, color: 'primary', path: '/rxjs/click', label: 'ObservableClickFromEventContainer', component: ObservableClickFromEventContainer }),
+	routeCreator({ type: 3, color: 'primary', path: '/rxjs/combine-all', label: 'CombineAllContainer', component: RenderRxJsContainer(RxjsType.conbineAll) }),
+	routeCreator({ type: 3, color: 'primary', path: '/rxjs/combine-lastest', label: 'CombineLastestContainer', component: RenderRxJsContainer(RxjsType.combineLastest) }),
+	routeCreator({ type: 3, color: 'primary', path: '/rxjs/filter', label: 'ObservableEventFilterContainer', component: RenderRxJsContainer(RxjsType.filterFomEvent) }),
+	routeCreator({ type: 3, color: 'primary', path: '/rxjs/click', label: 'ObservableClickFromEventContainer', component: RenderRxJsContainer(RxjsType.fromEvent) }),
 	// LifeCycle
 	routeCreator({ type: 4, color: 'primary', path: '/lifecycle', label: 'LifeCycleContainer', component: LifeCycleContainer }),
 	// Error

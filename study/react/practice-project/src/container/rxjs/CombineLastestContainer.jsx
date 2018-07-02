@@ -20,10 +20,8 @@ class CombineLastestContainer extends Component {
 				Timer Two Latest: ${timerValTwo},
 				Timer Three Latest: ${timerValThree}
 			`);
-		}
-);
+		});
 	}
-
 
 	render() {
 		return (

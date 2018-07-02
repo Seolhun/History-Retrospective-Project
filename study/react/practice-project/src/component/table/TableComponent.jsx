@@ -57,11 +57,13 @@ TableComponent.propTypes = {
 
 	showScroll: PropTypes.bool,
 	className: PropTypes.string,
+	children: PropTypes.node,
 }
 
 TableComponent.defaultProps = {
 	showScroll: false,
 	className: '',
+	children: null,
 }
 
 export default TableComponent;
