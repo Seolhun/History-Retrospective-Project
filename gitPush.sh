@@ -97,6 +97,16 @@ git push
 cd ~/git/retrospective-diary
 
 echo -e "========================="
+echo -e "Updated React Practice Project"
+echo -e "========================="
+cd study/react/react-simple-components
+git pull
+git add .
+git commit -m "$msg"
+git push
+cd ~/git/retrospective-diary
+
+echo -e "========================="
 echo -e "Updated Retrospective Project"
 echo -e "========================="
 git pull
