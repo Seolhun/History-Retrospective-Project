@@ -1,4 +1,4 @@
-# 2018 6월 4주차 Tasks
+# 2018 6월 4주차
 - Author : [Seolhun](https://github.com/Seolhun)
 - Date : 20180625 ~ 20180629
 
