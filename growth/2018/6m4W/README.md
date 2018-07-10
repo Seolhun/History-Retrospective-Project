@@ -155,8 +155,6 @@
 - ARIA란 무엇인가
 - ARIA role에 대해 정리해보기
 	- [Using ARIA](https://developer.mozilla.org/ko/docs/Web/Accessibility/ARIA/ARIA_Techniques)
-- React에 적용해보기
-- Radio Button 이슈 확인해보기
 
 #### 참고자료
 - [MDN - ARIA](https://developer.mozilla.org/ko/docs/Web/Accessibility/ARIA)
