@@ -1,19 +1,8 @@
-# 2018 7월 1주차 Tasks
+# 2018 7월 1주차
 - Author : [Seolhun](https://github.com/Seolhun)
-- Date : 20180625 ~ 20180629
-
-## 주간 작업 리스트	
-- RxJS 사용법을 늘려보기
+- Date : 20180702 ~ 20180706
 
 ## 개인 작업 목표 리스트
-#### ABR
-- Storybook 
-	- JEST 테스트해보기(Method 단위)
-- Rx-Observable, Rx-JS
-	- 메소드 별 기능 분석하고 정리해보기
-		- switchMap
-		- map
-
 #### Hi-Cord
 - Scraper 다시 만들기
 	- Scraper에 대한 Robot.txt 관련사항 읽어보기
@@ -24,7 +13,14 @@
 - Materialize CSS를 이용하여 Static 사이트 만을기
 	- 강의 참조하고, 코드 분석해보기
 
-## 7월 1주차 작업리스트
+## ABR 작업 리스트
+- Storybook 
+	- JEST 테스트해보기(Method 단위)
+- Rx-Observable, Rx-JS
+	- 메소드 별 기능 분석하고 정리해보기
+		- switchMap
+		- map
+		
 #### To do List
 - **ABR-289**
 	- 에러가 발생되지 않고, 에러 재현이 어려워 티켓만 인지하고 있기.
