@@ -21,29 +21,26 @@
 - TableComponent 개선하기
 
 #### To do List
-- **ABR-289**
-  - 이전 데이터의 문제일 경우, SelectBox가 사라지는 문제.
-    - 의심가능성
-      1. 이전 트래킹링크 데이터에 문제가 있는 경우
-      2. 이전 데이터가 없는 경우
-        => 에러처리를 통해, 에러가 발생하면 Rendering에 문제 없도록 조치해야 할 필요가 있음.
-- **ABR-242**
+- [ ] **ABR-242**
   - Redux Type 분리
     - REQUEST, SUCCESS 두개는 확실히 분리하면 좋을 것으로 판단됨.
     - Action, Epics, Reducer를 분리하여 Epics 로직 개선하기.
-- **ABR-415**
+- [x] **ABR-415**
   - Raw Log Export API 개선
-    - Pagination(page, limit)
-    - Segmentation가지 인가? Filter까지 인가? 
-- **ABR-???** - 호택님 디자인 승낙 후(현재 미확정)
+    - Pagination(page, count, sortBy, orderBy)
+- [ ] **ABR-???** - 호택님 디자인 승낙 후(현재 미확정)
   - Sidebar FadeIn/Out으로 화면 넓히기
   - Android/IOS - App profile에 넣기
   - AppList 위치가 Nav로 변경
   - 다국어 설정 Icon 넣어서 변경되기.
-- **ETC**
-  - HoC로 Table 개선하기
-    - 현재 242에서 작업 중 => 분리 필요**(Ticket 번호 받기)**
-      - `Observable에 대한 변경사항을 바로 적용하기 어렵기 떄문`
+- [x] **ABR-432**
+  - CTIT 정렬 순서 바꾸기
+  - InAppEvent List 렌더링되지 않는 문제 해결
+    - ReceiveProps가 1번만 발생하여, 해당 데이터를 자식 Component에게 전달하지 못한 문제
+  - ~~Menu 수정~~
+    - Menu관련사항은 헌재님 요청에 따라 정지
+- [ ] **ABR-500**
+  - [x] HoC로 Table 개선하기
     - **Header**
       - OneFilter
         - One Data Filter
@@ -57,7 +54,7 @@
       - Absolute
         - Some Vertical Column is fixed.
 
-## Front-End 후기
+## 20180709 비전공유 - Front-End 후기
 - Responsive UX/UI
 - Optimazation performance through HTTP2
 - Data Visualization(Chart)
