@@ -21,13 +21,10 @@
 - TableComponent 개선하기
 
 #### To do List
-- [ ] **ABR-242**
+- [x] **ABR-242**
   - Redux Type 분리
     - REQUEST, SUCCESS 두개는 확실히 분리하면 좋을 것으로 판단됨.
     - Action, Epics, Reducer를 분리하여 Epics 로직 개선하기.
-- [x] **ABR-415**
-  - Raw Log Export API 개선
-    - Pagination(page, count, sortBy, orderBy)
 - [ ] **ABR-???** - 호택님 디자인 승낙 후(현재 미확정)
   - Sidebar FadeIn/Out으로 화면 넓히기
   - Android/IOS - App profile에 넣기
@@ -39,6 +36,13 @@
     - ReceiveProps가 1번만 발생하여, 해당 데이터를 자식 Component에게 전달하지 못한 문제
   - ~~Menu 수정~~
     - Menu관련사항은 헌재님 요청에 따라 정지
+- [] **ABR-415**
+  - CUSTOM_STATS 관련 PAGINATION 적용
+    - 해당 관련 Container, Component 분리
+      - Thunk와 Component, Container의 복잡함으로 코드 성능 부족 개선.
+    - Redux Thunk에서 Observable 분리
+      - CustomStats
+      - Pagination
 - [ ] **ABR-500**
   - [x] HoC로 Table 개선하기
     - **Header**
