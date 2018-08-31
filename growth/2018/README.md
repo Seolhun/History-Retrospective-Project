@@ -1,4 +1,4 @@
-# Seolhun SANTA-GROWTH
+# Seolhun GROWTH
 - Author : [SeolHun](https://github.com/Seolhun/)
 - Refer :[GROWTH-Histories](https://seolhun.github.io/tags/GROWTH/)
 

@@ -1,4 +1,4 @@
-# Seolhun SANTA-GROWTH
+# Seolhun GROWTH
 - Author : [SeolHun](https://github.com/Seolhun/)
 - Refer :[GROWTH-Histories](https://seolhun.github.io/tags/GROWTH/)
 
@@ -12,7 +12,6 @@
 #### 2. Action
 - RxJS
 - Functional Programming
-- D3를 이용한 ChartComponent 개발하기
 - [Docz](https://github.com/pedronauck/docz) 코드 분석해보기
   - Command와 MDX를 어떻게 확장시켰는지?
   - 프로젝트를 어떻게 분리하였는지 등
