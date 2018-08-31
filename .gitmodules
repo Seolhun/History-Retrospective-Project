@@ -4,9 +4,6 @@
 [submodule "study/vue/vue-example"]
 	path = study/vue/vue-example
 	url = https://github.com/Seolhun/vue-example.git
-[submodule "study/react/react-simple-components"]
-	path = study/react/react-simple-components
-	url = https://github.com/Seolhun/react-simple-components.git
 [submodule "devops/aws"]
 	path = devops/aws
 	url = https://github.com/Seolhun/aws.git

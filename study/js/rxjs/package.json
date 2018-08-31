@@ -1,0 +1,14 @@
+{
+  "name": "rxjs",
+  "version": "1.0.0",
+  "description": "- Author : [SeolHun](https://github.com/Seolhun/) - Created Date : 20180601",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shun10114 <shun10114@gmail.com> (“https://github.com/Seolhun/)",
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^6.3.0"
+  }
+}
