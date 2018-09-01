@@ -1,0 +1,8 @@
+{
+  "root": "./contents",
+  "title": "How to be WebFrontend Beginner",
+  "description": "",
+  "author": "[Seolhun](https://github.com/Seolhun)",
+  "language": "ko",
+  "gitbook": ">= 3.0.0"
+}
