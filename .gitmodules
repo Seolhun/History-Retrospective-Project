@@ -22,3 +22,6 @@
 [submodule "devops/docker-example"]
 	path = devops/docker-example
 	url = https://github.com/Seolhun/docker-example.git
+[submodule "study/basic-frontend-knowledge"]
+	path = study/basic-frontend-knowledge
+	url = https://github.com/Seolhun/basic-frontend-knowledge

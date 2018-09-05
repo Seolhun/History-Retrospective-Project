@@ -97,6 +97,16 @@ git push
 cd ~/git/retrospective-diary
 
 echo -e "========================="
+echo -e "Updated basic-frontend-knowledge"
+echo -e "========================="
+cd study/basic-frontend-knowledge
+git pull
+git add .
+git commit -m "$msg"
+git push
+cd ~/git/retrospective-diary
+
+echo -e "========================="
 echo -e "Updated Retrospective Project"
 echo -e "========================="
 git pull
