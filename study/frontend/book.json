@@ -3,6 +3,10 @@
   "title": "How to be WebFrontend Beginner",
   "description": "",
   "author": "[Seolhun](https://github.com/Seolhun)",
-  "language": "ko",
-  "gitbook": ">= 3.0.0"
+	"gitbook": ">= 3.0.0",
+	"structure": {
+		"readme": "README.md",
+		"summary": "SUMMARY.md",
+		"glossary": "GLOSSARY.md"
+	}
 }
