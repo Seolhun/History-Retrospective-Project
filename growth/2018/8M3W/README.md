@@ -3,7 +3,7 @@
 - Refer :[GROWTH-Histories](https://seolhun.github.io/tags/GROWTH/)
 
 ## INTO
-스프린트 3주차 기록
+2018년 8월 3주차 기록
 
 ## Study
 - 프론트엔드 개발자를 위한 JavaScript 완독/정리
