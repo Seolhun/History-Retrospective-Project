@@ -10,9 +10,8 @@
 4. MEM : Branch(for beq), MemRead(for lw), MemWrite(for sw)
 5. WB : MemtoReg, RegWrite
 
-#### References
+##### References
 - Computer Architecture 15-13
-
 
 ## Structural hazards
 - Conflict for use of a resource
@@ -22,5 +21,5 @@
 - Hence, pipelined datapaths require separate instruction/data memories
 	- Or separate instruction/data caches
 	
-#### References
+##### References
 - Computer Architecture 15-17

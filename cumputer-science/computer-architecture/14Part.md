@@ -9,7 +9,7 @@
 	4. Access an operand in data memory.
 	5. Write the result into a register.
 
-#### References
+##### References
 - Computer Architecture 14-5 ~ 6
 
 ## Pipelining Hazards
