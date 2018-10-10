@@ -1,0 +1,53 @@
+# VanillaJS Test README
+- Author : Seolhun
+
+## Reactive Programming by Vanilla JavaScript
+1. src/elements/index.js 코드 분석하기.
+2. src/elements/index.js에 있는 코드를 개선해보기, 혹은 자신이 더 고민해서 구현해보기.
+3. app.js에 `getUserList` 함수 구현해보기
+4. **모르면 검색하기, 그래도 모르면 검색하고 문서보기, 그래도 모르면 검색해서 질문하기.**
+
+## How to submit report
+1. Build commits in your github repository(Recommend `TIL`).
+2. Make a Branch(Never use master), and PR from `Working Branch` to `master`.
+3. Tell me PR URL, I will review your codes.
+4. Finish.
+
+## Pre-Requirement (Must download stable version)
+1. [NodeJS](https://nodejs.org/ko/download/)
+2. [Yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable)
+
+## How to run
+#### - Install
+```bash
+yarn install
+or 
+npm install
+```
+
+#### - Run Server
+```bash
+yarn dev
+or 
+npm run dev
+
+http://localhot:3000/user
+http://localhot:3000/users
+```
+
+#### - Run FrontEnd
+```bash
+yarn server 
+or 
+npm run server
+
+http://localhot:8080
+```
+
+## References
+0. [Vanilla-Js](http://vanilla-js.com/)
+1. [MDN - createElement](https://developer.mozilla.org/ko/docs/Web/API/Document/createElement)
+2. [MDN - setAttribute](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute)
+3. [MDN - Fetch_API](https://developer.mozilla.org/ko/docs/Web/API/Fetch_API)
+4. [AirBnb - JavaScriptGuid by Eslint](https://github.com/airbnb/javascript)
+5. [json-server](https://github.com/typicode/json-server)
