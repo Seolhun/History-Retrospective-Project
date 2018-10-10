@@ -4,8 +4,12 @@
 ## Reactive Programming by Vanilla JavaScript
 1. src/elements/index.js 코드 분석하기.
 2. src/elements/index.js에 있는 코드를 개선해보기, 혹은 자신이 더 고민해서 구현해보기.
-3. app.js에 `getUserList` 함수 구현해보기
-4. **모르면 검색하기, 그래도 모르면 검색하고 문서보기, 그래도 모르면 검색해서 질문하기.**
+3. app.js에 `getUserList` 함수 구현
+  1. fetch를 이용하여 localhost:3000/users 데이터 가져오기.
+  2. details에 렌더링되는 함수를 참고하여, 가져온 데이터를 사용하여 렌더링 시킬 Elements 구현하기.
+  3. index.html를 참고하여, `<section id='user-list'></section>` 안에 list 렌더링 하기.
+  4. style은 src/assets/form.css에 정의하기.
+4. **모르면 아래 참고사항 꼼꼼히 읽어보기, 그래도 모르면 검색하고 StackOverFlow 글 읽어보기, 또 모르면 검색/정리해서 질문하기.**
 
 ## How to submit report
 1. Build commits in your github repository(Recommend `TIL`).
