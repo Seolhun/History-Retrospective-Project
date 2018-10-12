@@ -35,7 +35,7 @@ yarn dev
 or 
 npm run dev
 
-http://localhot:3000/user
+http://localhot:3000
 http://localhot:3000/users
 ```
 
