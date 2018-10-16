@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "shun10114@gmail.com",
+      "password": "ThisIsPassword"
+    },
+    {
+      "email": "email.trim()",
+      "password": "email.trim()",
+      "id": 2
+    },
+    {
+      "email": "createElements",
+      "password": "createElements",
+      "id": 3
+    }
+  ]
+}

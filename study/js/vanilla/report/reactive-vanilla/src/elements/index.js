@@ -38,13 +38,14 @@ const createElements = ({
   if (Array.isArray(children) && children.length) {
     children.forEach((child) => {
       // Reculsive methods
-      const childEelement = createElements({
+      // 181016 HJW childEelement = createElements 오타발견. 수정
+      const childElement = createElements({
         tag: child.tag,
         attributes: child.attributes,
         content: child.content,
         children: child.children,
       });
-      element.appendChild(childEelement);
+      element.appendChild(childElement);
     });
   }
   return element;
