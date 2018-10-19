@@ -59,3 +59,63 @@ a {
   background-color: #f1f1f1;
   text-align: center;
 }
+
+
+/* Summary의 CSS를 정의한다 */
+
+summary {
+  font-size: 17px;
+  vertical-align: top;
+  background: #333;
+  color: #FFF;
+  border-radius: 3px;
+  padding: 5px 10px;
+  outline: none;
+}
+summary::-webkit-details-marker {
+    color: #69c773;
+    font-size: 200%;
+}
+
+details {
+  border-radius: 3px;
+  background: #EEE;
+}
+
+details[open] summary {
+  background: #69c773;
+  color: #333;
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+
+
+details summary:before {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  content: "";
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4621/treehouse-icon-sprite.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+/* Move the sprite image when the details box is open. */
+details[open] summary:before {
+  background-position: -18px 0;
+}
+
+
+/* 애니메이션을 적용한다 */
+
+details[open] summary ~ * {
+  animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep {
+  0%    {opacity: 0; margin-left: -10px}
+  100%  {opacity: 1; margin-left: 0px}
+}
