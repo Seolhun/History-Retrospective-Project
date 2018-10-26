@@ -1,0 +1,6 @@
+[submodule "website/build/seolhun.github.io"]
+	path = website/build/seolhun.github.io
+	url = https://github.com/Seolhun/seolhun.github.io.git
+[submodule "website/website/build/seolhun.github.io"]
+	path = website/website/build/seolhun.github.io
+	url = https://github.com/Seolhun/seolhun.github.io.git
