@@ -90,8 +90,6 @@ details summary::-webkit-details-marker {
   display: none;
 }
 
-
-
 details summary:before {
   display: inline-block;
   width: 18px;

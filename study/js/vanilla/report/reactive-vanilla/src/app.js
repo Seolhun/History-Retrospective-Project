@@ -4,7 +4,13 @@ import {
 
 import './assets/form.css';
 
-const Submitbutton = document.getElementById('submitButton');
+
+
+// 1. below code contains email Validation AND submit Event(CreateElement and POST Data)
+
+
+// below code contains email Validation AND submit Event(CreateElement and POST Data)
+/*const Submitbutton = document.getElementById('submitButton');
 const SubmitForm = () => {
   const form = document.getElementById('myForm');
   const email = form.elements.email.value;
@@ -54,19 +60,21 @@ const SubmitForm = () => {
   });
 };
 Submitbutton.addEventListener('click', SubmitForm);
+*/
 
 
-// Wrtie your codes here.
-
-
+/*
+//1.fetch를 이용하여 localhost:3000/users 데이터 가져오기. 
 const getDatabutton = document.getElementById('getdataButton');
 const getUserList = () => {
-  //1.fetch를 이용하여 localhost:3000/users 데이터 가져오기. MSDN 및 위의 코드 참조
 
   fetch('http://localhost:3000/users')
   .then(response => response.json())
   .then( json => {
     for(var key=0; key<json.length; key++){     
+
+          //2.details에 렌더링되는 함수를 참고하여, 가져온 데이터를 사용하여 렌더링 시킬 Elements 구현하기.
+
         createAndRenderElement({
           tag: 'div',
           attributes: [{
@@ -91,11 +99,6 @@ const getUserList = () => {
   });
 };
 getDatabutton.addEventListener('click', getUserList);
-  
 
-  //2.details에 렌더링되는 함수를 참고하여, 가져온 데이터를 사용하여 렌더링 시킬 Elements 구현하기.
-
-  //3.index.html를 참고하여, <section id='user-list'></section> 안에 list 렌더링 하기.
-
-  //4.style은 src/assets/form.css에 정의하기.
+*/
 

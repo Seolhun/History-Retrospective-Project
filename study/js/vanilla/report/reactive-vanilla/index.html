@@ -4,10 +4,212 @@
 <head>
   <meta charset="utf-8">
   <title>Reactive-vanilla</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .container {
+      padding: 16px;
+      background-color: white;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+
+    input {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+
+    input[type=text]:focus,
+    input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+
+    hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;
+    }
+
+    .registerbtn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+
+    .registerbtn:hover {
+      opacity: 1;
+    }
+
+    a {
+      color: dodgerblue;
+    }
+
+    .signin {
+      background-color: #f1f1f1;
+      text-align: center;
+    }
+
+
+    /* Summary의 CSS를 정의한다 */
+
+    summary {
+      font-size: 17px;
+      vertical-align: top;
+      background: #333;
+      color: #FFF;
+      border-radius: 3px;
+      padding: 5px 10px;
+      outline: none;
+    }
+
+    summary::-webkit-details-marker {
+      color: #69c773;
+      font-size: 200%;
+    }
+
+    details {
+      border-radius: 3px;
+      background: #EEE;
+    }
+
+    details[open] summary {
+      background: #69c773;
+      color: #333;
+    }
+
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details summary:before {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      margin-right: 8px;
+      content: "";
+      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4621/treehouse-icon-sprite.png);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+
+    /* Move the sprite image when the details box is open. */
+    details[open] summary:before {
+      background-position: -18px 0;
+    }
+
+
+    /* 애니메이션을 적용한다 */
+
+    details[open] summary~* {
+      animation: sweep .5s ease-in-out;
+    }
+
+    @keyframes sweep {
+      0% {
+        opacity: 0;
+        margin-left: -10px
+      }
+
+      100% {
+        opacity: 1;
+        margin-left: 0px
+      }
+    }
+  </style>
+
 </head>
 
 <body>
+
+
+  <script>
+
+    /* 1차 뻘짓! 만들어야 할 것 
+    
+      //  1. <form action="/users" method="POST" id='myForm'>
+      
+
+      //  1-1. <fieldset>
+      var myFieldset = document.createElement('fieldset');
+      //  1-1-1. <legend> 
+      var myLegend = document.createElement('legend');
+      myLegend.setAttribute("value", "새 계정 만들기");
+      //  1-1-2. <p>
+      var myParagraph = document.createElement('p');
+      myParagraph.setAttribute("value", "계정을 만들려면, 양식을 작성하십시오");
+      //  1-1-3. <input type="text" placeholder="Enter Email" name="email">
+      var myInput = document.createElement('input');
+      myInput.setAttribute("type", "text");
+      myInput.setAttribute("name", "email");    
+      myInput.setAttribute("placeholder", "Enter Email");
+      //  1-1-4. <label for="email">
+      var myLabel = document.createElement('label');
+      myLabel.setAttribute("for", "email");
+      //  1-1-4-1 <b>
+      //  1-1-4-1 <input>
+
+      myForm.appendChild(myFieldset);
+      myForm.appendChild(myLegend);
+      myForm.appendChild(myParagraph);
+      myForm.appendChild(myInput);
+      myForm.appendChild(myLabel);    
+    */
+
+    var myForm = document.createElement('form');
+    myForm.method = 'post';
+    myForm.action = '/user';
+    myForm.target = '_blank';
+    myForm.className = 'container';
+
+    myForm.innerHTML = [
+      "<fieldset>",
+      "<legend>새 계정 만들기</legend>",
+      "<p>계정을 만들려면, 양식을 작성하십시오</p>",
+      "<input type='text' placeholder='Enter Email' name='email'>",
+      "<label for='email'>",
+      "<b>Password</b>",
+      "<input type='password' placeholder='Enter Password' name='password'>",
+      "</label>",
+      "<label for='psw-repeat'>",
+      "<b>Repeat Password</b>",
+      "<input type='password' placeholder='Repeat Password' name='password-repeat'>",
+      "</label>",
+      "<hr>",
+      "<p>계정을 생성하면 <a href='#'>이용 약관 및 개인 정보 보호 정책</a>에 동의하게됩니다.</p>",
+      "<button type='button' class='registerbtn' id='submitButton'>Button</button>",
+      "<button type='button' class='registerbtn' id='getdataButton'>GetData</button>",
+      "<div class='container signin'>",
+      "<p>계정이 있으신가요? 그렇다면 <a href='#'>로그인하기</a></p>",
+      "</div>",
+      "</fieldset>"
+    ].join("");
+
+    document.body.appendChild(myForm);
+
+
+
+  </script>
   <section class='container'>
+
+    <!-- 1-1 Form을 삭제
     <form action="/users" method="POST" id='myForm'>
       <fieldset>
         <legend>새 계정 만들기</legend>
@@ -30,52 +232,57 @@
         </div>
       </fieldset>
     </form>
+    -->
+
+
   </section>
   <section class='container'>
     <details id='user-details' open>
-        <summary>세부정보</summary>
+      <summary>세부정보</summary>
 
 
     </details>
   </section>
   <section id='user-list' class='container'>
-      <details id='user-datas' open>
-        <summary>유저데이터 출력</summary>
-        <table>
-            <tr>
-                <th scope="row">Order Date</th>
-                <td>30th May 2003</td>
-            </tr>
-            <tr>
-                <th scope="row">Order Number</th>
-                <td>#24892105</td>
-            </tr>
-            <tr>
-                <th scope="row">Courier</th>
-                <td>Buy N Large Postal</td>
-            </tr>
-            <tr>
-                <th scope="row">Shipping Address</th>
-                <td>
-                    P. Sherman,<br>
-                    42 Wallaby Way,<br>
-                    Sydney,<br>
-                    Australia
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">Billing Address</th>
-                <td>
-                    P. Sherman,<br>
-                    42 Wallaby Way,<br>
-                    Sydney,<br>
-                    Australia
-                </td>
-            </tr>
-        </table>
-      </details>
+    <details id='user-datas' open>
+      <summary>유저데이터 출력</summary>
+      <table>
+        <tr>
+          <th scope="row">Order Date</th>
+          <td>30th May 2003</td>
+        </tr>
+        <tr>
+          <th scope="row">Order Number</th>
+          <td>#24892105</td>
+        </tr>
+        <tr>
+          <th scope="row">Courier</th>
+          <td>Buy N Large Postal</td>
+        </tr>
+        <tr>
+          <th scope="row">Shipping Address</th>
+          <td>
+            P. Sherman,<br>
+            42 Wallaby Way,<br>
+            Sydney,<br>
+            Australia
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Billing Address</th>
+          <td>
+            P. Sherman,<br>
+            42 Wallaby Way,<br>
+            Sydney,<br>
+            Australia
+          </td>
+        </tr>
+      </table>
+    </details>
 
   </section>
+
+
 </body>
 
 </html>

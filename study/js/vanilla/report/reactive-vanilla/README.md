@@ -1,7 +1,7 @@
 # VanillaJS Test README
-- Author : Seolhun
+- Author : Seolhun, Jaewoo
 
-## Reactive Programming by Vanilla JavaScript
+## previous
 1. src/elements/index.js 코드 분석하기.
 2. src/elements/index.js에 있는 코드를 개선해보기, 혹은 자신이 더 고민해서 구현해보기.
 3. app.js에 `getUserList` 함수 구현
@@ -10,6 +10,13 @@
     3. index.html를 참고하여, `<section id='user-list'></section>` 안에 list 렌더링 하기.
     4. style은 src/assets/form.css에 정의하기.
 4. **모르면 아래 참고사항 꼼꼼히 읽어보기, 그래도 모르면 검색하고 StackOverFlow 글 읽어보기, 또 모르면 검색/정리해서 질문하기.**
+
+
+## this week
+1. CreateElement부터 Rendering까지 직접구현
+    1. index.html에 있는 Form을 제거
+    2. Form과 1번 과제의 페이지의 기능을 순수 JS로 만들기
+     
 
 ## How to submit report
 1. Build commits in your github repository(Recommend `TIL`).
@@ -55,3 +62,7 @@ http://localhot:8080
 3. [MDN - Fetch_API](https://developer.mozilla.org/ko/docs/Web/API/Fetch_API)
 4. [AirBnb - JavaScriptGuid by Eslint](https://github.com/airbnb/javascript)
 5. [json-server](https://github.com/typicode/json-server)
+
+
+
+
