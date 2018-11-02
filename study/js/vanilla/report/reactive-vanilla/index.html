@@ -4,143 +4,20 @@
 <head>
   <meta charset="utf-8">
   <title>Reactive-vanilla</title>
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #f2f2f2;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    .container {
-      padding: 16px;
-      background-color: white;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    }
-
-    input {
-      width: 100%;
-      padding: 15px;
-      margin: 5px 0 22px 0;
-      display: inline-block;
-      border: none;
-      background: #f1f1f1;
-    }
-
-    input[type=text]:focus,
-    input[type=password]:focus {
-      background-color: #ddd;
-      outline: none;
-    }
-
-    hr {
-      border: 1px solid #f1f1f1;
-      margin-bottom: 25px;
-    }
-
-    .registerbtn {
-      background-color: #4CAF50;
-      color: white;
-      padding: 16px 20px;
-      margin: 8px 0;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-      opacity: 0.9;
-    }
-
-    .registerbtn:hover {
-      opacity: 1;
-    }
-
-    a {
-      color: dodgerblue;
-    }
-
-    .signin {
-      background-color: #f1f1f1;
-      text-align: center;
-    }
-
-
-    /* Summary의 CSS를 정의한다 */
-
-    summary {
-      font-size: 17px;
-      vertical-align: top;
-      background: #333;
-      color: #FFF;
-      border-radius: 3px;
-      padding: 5px 10px;
-      outline: none;
-    }
-
-    summary::-webkit-details-marker {
-      color: #69c773;
-      font-size: 200%;
-    }
-
-    details {
-      border-radius: 3px;
-      background: #EEE;
-    }
-
-    details[open] summary {
-      background: #69c773;
-      color: #333;
-    }
-
-    details summary::-webkit-details-marker {
-      display: none;
-    }
-
-    details summary:before {
-      display: inline-block;
-      width: 18px;
-      height: 18px;
-      margin-right: 8px;
-      content: "";
-      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4621/treehouse-icon-sprite.png);
-      background-repeat: no-repeat;
-      background-position: 0 0;
-    }
-
-    /* Move the sprite image when the details box is open. */
-    details[open] summary:before {
-      background-position: -18px 0;
-    }
-
-
-    /* 애니메이션을 적용한다 */
-
-    details[open] summary~* {
-      animation: sweep .5s ease-in-out;
-    }
-
-    @keyframes sweep {
-      0% {
-        opacity: 0;
-        margin-left: -10px
-      }
-
-      100% {
-        opacity: 1;
-        margin-left: 0px
-      }
-    }
-  </style>
-
+  <link rel="stylesheet" type="text/css" href="src/assets/form.css">
 </head>
 
 <body>
 
 
   <script>
+    function dynamicallyLoadScript(url) {
+    var script = document.createElement("script");  // create a script DOM node
+    script.src = './src/app.js';  // set its src to the provided URL
+    document.head.appendChild(script);  // add it to the end of the head section of the page (could change 'head' to 'body' to add it to the end of the body section instead)
+    } 
+    dynamicallyLoadScript();
+    
 
     /* 1차 뻘짓! 만들어야 할 것 
     
@@ -173,13 +50,12 @@
       myForm.appendChild(myLabel);    
     */
 
-    var myForm = document.createElement('form');
-    myForm.method = 'post';
-    myForm.action = '/user';
-    myForm.target = '_blank';
-    myForm.className = 'container';
 
-    myForm.innerHTML = [
+    var mySection = document.createElement('section');
+    mySection.className = 'container'
+
+    mySection.innerHTML = [
+      "<form action='/users' method='POST' id='myForm'>",
       "<fieldset>",
       "<legend>새 계정 만들기</legend>",
       "<p>계정을 만들려면, 양식을 작성하십시오</p>",
@@ -202,8 +78,7 @@
       "</fieldset>"
     ].join("");
 
-    document.body.appendChild(myForm);
-
+    document.body.appendChild(mySection);
 
 
   </script>

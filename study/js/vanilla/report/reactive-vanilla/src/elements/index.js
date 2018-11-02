@@ -70,8 +70,3 @@ const createAndRenderElement = ({
   }
   target.appendChild(element);
 };
-
-export {
-  isEmpty,
-  createAndRenderElement,
-};

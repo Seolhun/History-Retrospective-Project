@@ -1,16 +1,22 @@
-import {
-  createAndRenderElement,
-} from './elements';
+// babel이 없어서 인식을 못하는 것 같다.
+// [참조] https://stackoverflow.com/questions/950087/how-do-i-include-a-javascript-file-in-another-javascript-file
+// import {
+//   createAndRenderElement,
+// } from './elements';
 
-import './assets/form.css';
 
+//import './assets/form.css';
 
-
-// 1. below code contains email Validation AND submit Event(CreateElement and POST Data)
+function dynamicallyLoadScript(url) {
+  var script = document.createElement("script");  // create a script DOM node
+  script.src = 'src/elements/index.js';  // set its src to the provided URL
+  document.head.appendChild(script);  // add it to the end of the head section of the page (could change 'head' to 'body' to add it to the end of the body section instead)
+}
+dynamicallyLoadScript();
 
 
 // below code contains email Validation AND submit Event(CreateElement and POST Data)
-/*const Submitbutton = document.getElementById('submitButton');
+const Submitbutton = document.getElementById('submitButton');
 const SubmitForm = () => {
   const form = document.getElementById('myForm');
   const email = form.elements.email.value;
@@ -60,10 +66,10 @@ const SubmitForm = () => {
   });
 };
 Submitbutton.addEventListener('click', SubmitForm);
-*/
 
 
-/*
+
+
 //1.fetch를 이용하여 localhost:3000/users 데이터 가져오기. 
 const getDatabutton = document.getElementById('getdataButton');
 const getUserList = () => {
@@ -100,5 +106,5 @@ const getUserList = () => {
 };
 getDatabutton.addEventListener('click', getUserList);
 
-*/
+
 
