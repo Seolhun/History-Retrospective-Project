@@ -98,42 +98,30 @@ function curryN(fn){
 }
 ```
 
-## Nested Curry Wrapper
-우리는 함수의 특징을 이용하여 재귀적으로 curry될 수 있는 함수를 만들 것입니다.
-즉, 모든 함수에는 argument가 있어야 하기에 fn.length를 이용하여 현재 함수에 argument의 개수로 유효성 검사를 할 수 있습니다.
+## Completion Curry
+우리는 여기서 더 나아가 재귀로 함수를 호출 할 수 있도록 만들어보겠습니다.
+
+curry 내 모든 함수는 argument가 있어야 하기에 fn.length를 이용하여 현재 함수에 argument의 개수로 실행여부를 확인 할 수 있습니다.
 
 중첩된 curry의 depth(i)를 파악하여 현재 함수의 상태와 비교하여 실행할지 누적시킬지를 결정할 수 있습니다.
 만약, argument가 없어 누적되지 않을 경우 다음 함수에서 i와 fn.length가 같아짐으로써 현재까지 누적된 함수를 실행(클로저를 이용하여)할 수 있습니다.
 
 ```js
-function nest(fn, i) {
-  return (x) => {
-    if (i === fn.length) {
-      return fn(...);
-    }
-    return nest(fn, i + 1);
-  };
-}
 function curry(fn) {
-  return nest(fn, 1);
-}
-```
+  if (fn.length === 0) {
+    return fn;
+  }
 
-## Completion Curry
-```js
-function nest(fn, i, args){
-  return (x) => {
-    args.push(x);
-    if (i === fn.length) {
-      return fn(...args);
-    }
-    return nest(fn, i + 1, args);
-  };
-}
-
-function curry(fn) {
-  const args = [];
-  return nest(fn, 1, args);
+  function nest(i, args) {
+    return (value) => {
+      args.push(x);
+      if (i === fn.length) {
+        return fn(...args, value);
+      }
+      return nest(i - 1, ...args + value);
+    };
+  }
+  return nest(fn.length, []);
 }
 ```
 
