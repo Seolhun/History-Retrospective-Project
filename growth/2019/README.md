@@ -2,15 +2,22 @@
 - Author : [SeolHun](https://github.com/Seolhun/)
 - Refer :[GROWTH-Histories](https://seolhun.github.io/tags/GROWTH/)
 
-## - 2019
-- Books
+## Golas
+- 2019
+  - Books
+    - 프론트엔드 개발자를 위한 JavaScript 완독/정리
+    - JavaScript 함수형 프로그래밍 공부
+    - HTTP 완벽가이드 완독/정리
+  - Projects
+    - 개인 프로젝트(hi-cord) 개발/릴리즈
+    - Localize-Component 개발/릴리즈
+    - D3(vx 참고)를 이용한 Chart/TableComponent 개발/릴리즈
+- 2018
   - 프론트엔드 개발자를 위한 JavaScript 완독/정리
-  - JavaScript 함수형 프로그래밍 공부
   - HTTP 완벽가이드 완독/정리
-- Projects
-  - 개인 프로젝트(hi-cord) 개발/릴리즈
-  - Localize-Component 개발/릴리즈
-  - D3(vx 참고)를 이용한 Chart/TableComponent 개발/릴리즈
+  - JavaScript 함수형 프로그래밍 공부
+  - NginX 강의/정리/테스트
+
 
 ## Actions
 - Airbloc 
@@ -37,18 +44,11 @@
         - Info
         - ...
       - [Guideline](https://www.notion.so/ab180/Storybook-Guideline-d63aefa2efee4a1f8d75116ced7cecc7)
-  - Layout & Router V3 > V4 (ABR-1208)
+  - Router V3 > V4 (ABR-1208)
     - Why
       - Layout에서 HoC패턴으로 필요조건을 사전에 처리 하지 않는 문제
       - 해당 State의 변동에 따른 하위 Page에 랜더링이 반복되어 API가 여러번 호출되는 현상
     - How to
       - HoC Pattern
       - Layout 분기
-  - SignIn/Up Migration From Homepage to Airbridge (ABR-1210)
-    - Why
-      - SignIn의 처리를 Airbridge가 아닌 Landing에서 처리하므로써 Airbridge 내에서 컨트롤되지 않는 Redicrect가 발생
-      - 쿠키 및 다른 Stoage 값들이 외부 프로젝트에 의존되어 이를 직접 수정할 수 없음
-    - How to
-      - Migration SignIn/Up 
-      - Router 분기를 통한 Dynamic Router 분기
-  -  
+  - 
