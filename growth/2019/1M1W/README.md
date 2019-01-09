@@ -53,3 +53,30 @@
 #### - Weekly Checklist
 - [ ] 주간 할일/목표 기록
 - [ ] Growth 점검
+
+
+## What did I do for a week?
+- Layout & Router V3 > V4 (ABR-1208)
+  - Why
+    - Layout에서 HoC패턴으로 필요조건을 사전에 처리 하지 않는 문제
+    - 해당 State의 변동에 따른 하위 Page에 랜더링이 반복되어 API가 여러번 호출되는 현상
+    - 과거 Token의 Expired date가 존재하지 않음.
+    - 
+  - How to
+    - HoC Pattern
+    - Layout 분기
+    - expired date가 1일로 변경되고, 해당 값을 refreshed가 될 수 있도록 변경
+    - Layout > WrapperRouter (Auth > App > DashBoard)
+      - Layout (Auth > App)
+        - isLogined
+      - WrapperRouter (App > DashBoard)
+        - subdomain
+        - isValidPermission
+        - userPermission
+- SignIn/Up Migration From Homepage to Airbridge (ABR-1210)
+  - Why
+    - SignIn의 처리를 Airbridge가 아닌 Landing에서 처리하므로써 Airbridge 내에서 컨트롤되지 않는 Redicrect가 발생
+    - 쿠키 및 다른 Stoage 값들이 외부 프로젝트에 의존되어 이를 직접 수정할 수 없음
+  - How to
+    - Migration SignIn/Up 
+    - Router 분기를 통한 Dynamic Router 분기
