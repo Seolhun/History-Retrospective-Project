@@ -22,8 +22,8 @@
   - [ ] 2 주차
   - [ ] 4 주차
 - 주 2~3회 운동하기
-  - [x] 1
-  - [ ] 2
+  - [x] 1. 월요일
+  - [ ] 2. 
   - [ ] 3
 
 #### - Daily Checklist
@@ -37,12 +37,13 @@
   - [ ] 화
     - [ ] Static Goal 점검/회고
     - [ ] Growth 기록
-  - [ ] 수
-    - [ ] Static Goal 점검/회고
-    - [ ] Growth 기록
-  - [ ] 목
-    - [ ] Static Goal 점검/회고
-    - [ ] Growth 기록
+  - [x] 수
+    - [x] Static Goal 점검/회고
+    - [x] Growth 기록
+      - ReactRouter
+  - [x] 목
+    - [x] Static Goal 점검/회고
+    - [x] Growth 기록
   - [ ] 금
     - [ ] Static Goal 점검/회고
     - [ ] Growth 기록
@@ -54,9 +55,28 @@
 - [ ] 주간 할일/목표 기록
 - [ ] Growth 점검
 
-
 ## What did I do for a week?
-- Layout & Router V3 > V4 (ABR-1208)
+### [ ] Router v4/Authentication Migration Markdown SlideShow 만들기
+  - 코드 문제 - 나는 무엇을 처리하는가?
+    - Landing에 airbridge-front를 위한 HardCoding
+  - 배포 문제 - 나는 어디로 가는가?
+    - 로그인은 하나인데, DashBoard는 여러개(?), 그러나, 결국 데이터는 같다.
+      - 띠용? 절망, 이건 뭔 개소리야...
+  - Alert - 아직끝이 아니다.
+    - Slack - 아마 횟수를 적어달라고 할것이다...(?)
+      - 따용? 시발, 이건 너무 하잖아
+  - 해결책
+    - 없는 페이지는 Not-Found로
+    - 권한이 없어도 Not-Found로 - 보안 문제
+      - ex) github
+      - Google, 
+        - 너가 잘못했지만  고쳐줬어.
+      - 좋은 서비스는 잘못된 것을 알려주고 조언해주는 것.
+  - 결론
+    - 좋은 코드는 '분리', '명확', '추상화'
+      - 프로그래머는 “추상화에 의존해야지, 구체화에 의존하면 안된다.”
+    - 결론, 고쳐주지 말고 안전하고 안전하고 안전하게 알려주는 좋은 서비스를 만들자.
+### [ ] Layout & Router V3 > V4 (ABR-1208)
   - Why
     - Layout에서 HoC패턴으로 필요조건을 사전에 처리 하지 않는 문제
     - 해당 State의 변동에 따른 하위 Page에 랜더링이 반복되어 API가 여러번 호출되는 현상
@@ -72,7 +92,7 @@
         - subdomain
         - isValidPermission
         - userPermission
-- SignIn/Up Migration From Homepage to Airbridge (ABR-1210)
+### [ ] SignIn/Up Migration From Homepage to Airbridge (ABR-1210)
   - Why
     - SignIn의 처리를 Airbridge가 아닌 Landing에서 처리하므로써 Airbridge 내에서 컨트롤되지 않는 Redicrect가 발생
     - 쿠키 및 다른 Stoage 값들이 외부 프로젝트에 의존되어 이를 직접 수정할 수 없음
