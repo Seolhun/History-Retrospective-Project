@@ -60,11 +60,7 @@ Landing에서 SignUp/In을 해결하고 이를 Airbridge로 redirect 시키는 �
 5. ![Fifth](img/alert-5.png)
 6. ![Sixth](img/alert-6.png)
 
-[![Video Label](http://img.youtube.com/vi/VIJsEjEVPis/0.jpg)](https://www.youtube.com/watch?v=VIJsEjEVPis) Video Label
-
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=VIJsEjEVPis
-" target="_blank"><img src="http://img.youtube.com/vi/VIJsEjEVPis/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+[![Video Label](http://img.youtube.com/vi/VIJsEjEVPis/0.jpg)](https://www.youtube.com/watch?v=VIJsEjEVPis)
 
 ---
 ## What to do
@@ -90,59 +86,61 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 	- 코드로 보면, 위아래 코드가 조건에 따라 랜더링을 다르게 함.
 		```jsx
 		// Hello, I'm not authorized client
-		if (!isLogined) {
-			return (
-				<main id='authentication-layout'>
-					<HashRouter>
-						<Switch>
-							{getFilteredRoutes({
-								isLogined,
-								displayedDepth: 1,
-							}).map((route, idx) => (
-								<Route
-									key={`${`${route.path}-${idx}`}`}
-									component={route.component}
-									exact={route.exact}
-									path={route.path}
-									render={route.render}
-								/>
-							))}
-						</Switch>
-					</HashRouter>
-				</main>
-			);
-		}
+    if (!isLogined) {
+      return (
+        <main id='authentication-layout'>
+          <div className='authentication-container'>
+            <HashRouter>
+              <Switch>
+                {getFilteredRoutes({
+                  isLogined,
+                  displayedDepth: 1,
+                }).map((route, idx) => (
+                  <Route
+                    key={`${`${route.path}-${idx}`}`}
+                    component={route.component}
+                    exact={route.exact}
+                    path={route.path}
+                    render={route.render}
+                  />
+                ))}
+              </Switch>
+            </HashRouter>
+          </div>
+        </main>
+      );
+    }
 
-		return (
-			// Hello, I'm authorized client
-			<main id='ab180-layout'>
-				<HashRouter>
-					<section>
-						<LayoutNav
-							isLogined={isLogined}
-							pathname={pathname}
-							selectedApp={selectedApp}
-							subdomain={subdomain}
-						/>
-						<Switch>
-							{getFilteredRoutes({
-								isLogined,
-								displayedDepth: 2,
-							}).map((route, idx) => (
-								<Route
-									key={`${`${route.path}-${idx}`}`}
-									component={route.component}
-									exact={route.exact}
-									path={route.path}
-									render={route.render}
-								/>
-							))}
-						</Switch>
-					</section>
-				</HashRouter>
-				<LayoutFooter />
-			</main>
-		);
+		// Hello, I'm authorized client
+    return (
+      <main
+        id='ab180-layout'
+        style={{
+          cursor: `${progressBar.visible
+            ? 'wait'
+            : 'auto'
+          }`,
+        }}
+      >
+        <HashRouter>
+          <Switch>
+            {getFilteredRoutes({
+              isLogined,
+              displayedDepth: 2,
+            }).map((route, idx) => (
+              <Route
+                key={`${`${route.path}-${idx}`}`}
+                component={route.component}
+                exact={route.exact}
+                path={route.path}
+                render={route.render}
+              />
+            ))}
+          </Switch>
+        </HashRouter>
+        <LayoutFooter />
+      </main>
+    );
 		```
 - 2 계층(Apps)에 대한 HoC 추가를 고민하는 중...
 
@@ -169,25 +167,25 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 			/**
 			* displayedDepthes: [1],
 			*/
-			buildRoute({
-				path: '/email-recovery',
-				render: renderAuthenticationRoute(SearchPasswordView),
-				// displayedDepthes: [1], default values
-			}),
-			buildRoute({
-				render: () => <Redirect to='/' />,
-				displayedDepthes: [1],
-			}),
+		  buildRoute({
+		    exact: true,
+		    path: '/',
+		    component: SignInView,
+		  }),
+		  buildRoute({
+		    path: '/signup',
+		    component: SignUpView,
+		  }),
 			/**
 			* displayedDepthes: [2],
 			*/
-			buildRoute({
-				exact: true,
-				path: '/app',
-				render: renderDashboardRoute(HomePage),
-				requireAuth: true,
-				displayedDepthes: [2],
-			}),
+		  buildRoute({
+		    exact: true,
+		    path: '/myinfo',
+		    component: withAuthenticationRoute(withDashboardRoute(MyInfoPage)())(),
+		    requireAuth: true,
+		    displayedDepthes: [2],
+		  }),
 		];
 		```
 
@@ -195,19 +193,33 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 - React Router 앞에 HoC 구조를 둠으로써 해당 Views에 필요한 로직/데이터 분리하기
 	- Layout > HoC > Views 구조에서 각각의 계층에 맞는 필요한 데이터를 HoC구조를 통해 해결
 		```jsx
-		// Dashboard Routes
-		// Not dispatched required data
-		if (selectedApp.isFetching) {
-			return (
-				<Spinner />
-			);
-		}
+    // Orderized 1
+    if (me.hasError) {
+      return (
+        <NotFoundView>
+          <InternalLink
+            className='secondary description'
+            to='/app'
+          >
+            {intl.formatMessage(i18n.toApps)}
+          </InternalLink>
+        </NotFoundView>
+      );
+    }
 
-		return (
-			<div className='layout-container'>
-				{children}
-			</div>
-		);
+    // Orderized 2
+    if ((me.isFetching || !me.response.email)) {
+      return (
+        <Spinner />
+      );
+    }
+
+    // Orderized 3
+    return (
+      <RouteComponent
+        {...this.props}
+      />
+    );
 		```
 - 필요한 데이터를 가져오기 전에는 다음 계층으로 넘어가지 않는다.
 	- 다음 계층을 보여주는 방법에 따라 코드는 조금 변할 수 있다.
@@ -236,3 +248,4 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 3. Skeleton Rendering || Split Rendering으로 UI 개선하기
 	- 기존 Action Redux Sequence 처리 로직 개선
 	- Router Structure에 따른 필수 데이터를 가져오는 과정에서 UI/UX를 매끄럽게 보여주기 위함.
+    - Sidebar...
