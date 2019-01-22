@@ -6,7 +6,7 @@
 ## References
 - [Task Tickets - Jira](https://teamab180.atlassian.net/browse/ABR-1208)
 - [Router Structure - SpreadSheet](https://docs.google.com/spreadsheets/d/1dwiO4Rz6CwedhUIyRqaBE2nCJ4dKOOe7M4jP7UKc9QY)
-- [Release Docs - SpreadSheet](https://docs.google.com/spreadsheets/u/1/d/1jlf01hdKmcwRTGBQ09KFTTZlsiGls149nFeZYObKTus/edit?usp=sheets_web)
+- [Release Docs - SpreadSheet](https://docs.google.com/spreadsheets/d/1jlf01hdKmcwRTGBQ09KFTTZlsiGls149nFeZYObKTus)
 - [Airbridge Front - Surge](http://airbridge-abr-1208.surge.sh)
 
 ---

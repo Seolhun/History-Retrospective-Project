@@ -7,12 +7,12 @@
   - 개인 프로젝트(hi-cord) 개발/릴리즈
   - Localize-Component 개발/릴리즈
   - D3(vx 참고)를 이용한 Chart/TableComponent 개발/릴리즈
-  
+
 ## The Growth Goals
 #### - Static Goal
 - 매일 1시간씩 책 독서하기
-  - [ ] 일
-  - [ ] 월
+  - [x] 일
+  - [x] 월
   - [ ] 화
   - [ ] 수
   - [ ] 목
@@ -31,25 +31,14 @@
   - [ ] 일
     - [ ] Static Goal 점검/회고
     - [ ] Growth 기록
-  - [ ] 월
-    - [ ] Static Goal 점검/회고
-    - [ ] Growth 기록
-  - [ ] 화
-    - [ ] Static Goal 점검/회고
-    - [ ] Growth 기록
-  - [ ] 수
-    - [ ] Static Goal 점검/회고
-    - [ ] Growth 기록
-  - [ ] 목
-    - [ ] Static Goal 점검/회고
-    - [ ] Growth 기록
-  - [ ] 금
-    - [ ] Static Goal 점검/회고
-    - [ ] Growth 기록
   - [ ] 토
     - [ ] Static Goal 점검/회고
     - [ ] Growth 기록
 
-#### - Weekly Checklist
-- [ ] 주간 할일/목표 기록
-- [ ] Growth 점검
+## What did I do for a week?
+### HelperUtils 개선
+- Array, Object
+	- ECMA Default ProtoType을 상속받아 Value를 기준으로 설계
+
+### CircleCI Process 개선
+- CircleCI Configuration 개선
