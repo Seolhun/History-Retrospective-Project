@@ -15,7 +15,7 @@
   - [x] 월
   - [ ] 화
   - [ ] 수
-  - [ ] 목
+  - [x] 목
   - [ ] 금
   - [ ] 토
 - 격주 1회 블로그 작성하기
@@ -40,9 +40,9 @@
   - [ ] 수
     - [ ] Static Goal 점검/회고
     - [ ] Growth 기록
-  - [ ] 목
-    - [ ] Static Goal 점검/회고
-    - [ ] Growth 기록
+  - [x] 목
+    - [x] Static Goal 점검/회고
+    - [x] Growth 기록
   - [ ] 금
     - [ ] Static Goal 점검/회고
     - [ ] Growth 기록
@@ -56,6 +56,13 @@
 
 
 ## What did I do for a week?
+- FormGroup, FormLine (BuilderPattern)
+  - Why
+    - Form 관련을 유기적으로 생성/관리/검사 할 수 있는 코드가 존재하지 않음
+    - Form을 만들 때마다, 코드를 계속 생성해야되는 불편함이 생김.
+  - How to
+    - Form의 값을 기본적으로 설정할 수 있는 함수 제공
+    - 해당 함수를 통해 UI와 연결하여 자동 생성/관리/검사/UI 프로덕트 제공
 - Layout & Router V3 > V4 (ABR-1208)
   - Why
     - Layout에서 HoC패턴으로 필요조건을 사전에 처리 하지 않는 문제
