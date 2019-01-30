@@ -98,7 +98,7 @@ function curryN(fn){
 }
 ```
 
-## Completion Curry
+## Recursive Curry
 우리는 여기서 더 나아가 재귀로 함수를 호출 할 수 있도록 만들어보겠습니다.
 
 curry 내 모든 함수는 argument가 있어야 하기에 fn.length를 이용하여 현재 함수에 argument의 개수로 실행여부를 확인 할 수 있습니다.
@@ -119,6 +119,22 @@ function curry(fn) {
         return fn(...args, value);
       }
       return nest(i - 1, ...args + value);
+    };
+  }
+  return nest(fn.length, []);
+}
+```
+
+## Completion Curry
+
+```js
+function curry(fn) {
+  function nest(N, args) {
+    return (...xs) => {
+      if (N - xs.length <= 0) {
+        return fn(...args, ...xs);
+      }
+      return nest(N - xs.length, [...args, ...xs]);
     };
   }
   return nest(fn.length, []);
