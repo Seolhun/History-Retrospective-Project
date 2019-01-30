@@ -17,6 +17,8 @@
 
 ## Summary
 
+#### Version 0.0.1
+
 | Bracn Name     | Master               | Develop          | Stage/*                | Feature/*          |
 | ---------------| ---------------      | ---------------  | -----------------      | -------------------|
 | Description    | **Required Stage/*** | Not yet          | **Required Feature/*** | Task Branch        |
@@ -24,3 +26,18 @@
 |                | Surge Remove         |                  | Test - Cypress         | Build Plan         |
 |                |                      |                  | Storybook              | Good & Hard Review |
 |                |                      |                  | Surge Deploy           | Notice Others      | 
+
+#### Version 0.0.2
+
+| Bracn Name     | Master               | Develop          | Feature/*               |
+| ---------------| ---------------      | ---------------  | ------------------------|
+| What To do     | Deploy Prod          |                  | Test - Jest             |
+|                | Surge Remove(Not Yet)|                  | Test - Cypress(Not Yet) |
+|                |                      |                  | Deploy Storybook        |
+|                |                      |                  | Deploy Surge            |
+
+## Required Develop Branch
+- Stage Branch는 너무 관리 어려움이 있어보임.
+- Feature의 작업환경을 위해 Develop이 필요
+	- Feature에서 Test/QA를 모두 끝낸 것만 Develop으로 가는게 제일 나을것으로 판담됨.
+- Develop을 어떻게 관리할 것인가에 대한 부분이 얘기가 되어야 함.
