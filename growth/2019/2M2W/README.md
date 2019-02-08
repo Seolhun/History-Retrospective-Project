@@ -12,17 +12,17 @@
 #### - Static Goal
 - 매일 1시간씩 책 독서하기
   - [x] 일
-  - [x] 월
+  - [ ] 월
   - [ ] 화
-  - [ ] 수
-  - [ ] 목
+  - [x] 수
+  - [x] 목
   - [ ] 금
   - [ ] 토
 - 격주 1회 블로그 작성하기
   - [ ] 2 주차
   - [ ] 4 주차
 - 주 2~3회 운동하기
-  - [ ] 1
+  - [x] 1
   - [ ] 2
   - [ ] 3
 
@@ -36,11 +36,8 @@
     - [ ] Growth 기록
 
 ## What did I do for a week?
-#### [ ] HelperUtils 개선
-- Array, Object
-	- ~~ECMA Default ProtoType을 상속받아 Value를 기준으로 설계~~
+#### [ ] HelperUtils 개선 (ABR-1089)
+- Array
   - 방어적인 코드 작성으로 Native prototype을 확장 할 예정.
 
-#### [x] CircleCI Process 개선
-- [x] CircleCI Configuration 개선
-  - 현재 PR 완료하였으나, 다른 작업과 브랜치 전략에 따라 Pending...
+### [ ] HelperUtils Test 코드 작성

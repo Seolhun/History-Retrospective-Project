@@ -36,9 +36,9 @@
     - [ ] Growth 기록
 
 ## What did I do for a week?
-### HelperUtils 개선
+#### HelperUtils 개선
 - Array, Object
 	- ECMA Default ProtoType을 상속받아 Value를 기준으로 설계
 
-### CircleCI Process 개선
+#### CircleCI Process 개선
 - CircleCI Configuration 개선

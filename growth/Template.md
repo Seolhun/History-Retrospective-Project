@@ -34,3 +34,7 @@
   - [ ] 토
     - [ ] Static Goal 점검/회고
     - [ ] Growth 기록
+
+## What did I do for a week?
+### [ ] - 
+- 
