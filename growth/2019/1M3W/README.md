@@ -18,9 +18,7 @@
   - [ ] 목
   - [ ] 금
   - [ ] 토
-- 격주 1회 블로그 작성하기
-  - [ ] 2 주차
-  - [ ] 4 주차
+- [ ] 월 1회 블로그 작성하기
 - 주 2~3회 운동하기
   - [x] 1. 월요일
   - [ ] 2.
@@ -52,7 +50,7 @@
     - [ ] Growth 기록
 
 ## What did I do for a week?
-#### [ ] Router v4/Authentication Migration Markdown SlideShow 만들기
+### [ ] Router v4/Authentication Migration Markdown SlideShow 만들기
 - 코드 문제 - 나는 무엇을 처리하는가?
   - Landing에 airbridge-front를 위한 HardCoding
 - 배포 문제 - 나는 어디로 가는가?
@@ -73,7 +71,7 @@
     - 프로그래머는 “추상화에 의존해야지, 구체화에 의존하면 안된다.”
   - 결론, 고쳐주지 말고 안전하고 안전하고 안전하게 알려주는 좋은 서비스를 만들자.
     
-#### [x] Layout & Router V3 > V4 (ABR-1208)
+### [x] Layout & Router V3 > V4 (ABR-1208)
 - Why
   - Layout에서 HoC패턴으로 필요조건을 사전에 처리 하지 않는 문제
   - 해당 State의 변동에 따른 하위 Page에 랜더링이 반복되어 API가 여러번 호출되는 현상
@@ -90,7 +88,7 @@
       - isValidPermission
       - userPermission
 
-#### [x] SignIn/Up Migration From Homepage to Airbridge (ABR-1210)
+### [x] SignIn/Up Migration From Homepage to Airbridge (ABR-1210)
 - Why
   - SignIn의 처리를 Airbridge가 아닌 Landing에서 처리하므로써 Airbridge 내에서 컨트롤되지 않는 Redicrect가 발생
   - 쿠키 및 다른 Stoage 값들이 외부 프로젝트에 의존되어 이를 직접 수정할 수 없음

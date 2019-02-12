@@ -18,9 +18,7 @@
   - [ ] 목
   - [ ] 금
   - [ ] 토
-- 격주 1회 블로그 작성하기
-  - [ ] 2 주차
-  - [ ] 4 주차
+- [x] 월 1회 블로그 작성하기
 - 주 2~3회 운동하기
   - [ ] 1
   - [ ] 2
@@ -36,11 +34,11 @@
     - [ ] Growth 기록
 
 ## What did I do for a week?
-#### [ ] HelperUtils 개선
+### [ ] HelperUtils 개선
 - Array, Object
 	- ~~ECMA Default ProtoType을 상속받아 Value를 기준으로 설계~~
   - 방어적인 코드 작성으로 Native prototype을 확장 할 예정.
 
-#### [x] CircleCI Process 개선
+### [x] CircleCI Process 개선
 - [x] CircleCI Configuration 개선
   - 현재 PR 완료하였으나, 다른 작업과 브랜치 전략에 따라 Pending...

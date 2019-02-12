@@ -12,7 +12,7 @@
 #### - Static Goal
 - 매일 1시간씩 책 독서하기
   - [x] 일
-  - [x] 월
+  - [ ] 월
   - [ ] 화
   - [ ] 수
   - [ ] 목
@@ -27,16 +27,21 @@
 #### - Daily Checklist
 - 할 일과 한 일 비교 점검/회고
   - [ ] 일
-    - [ ] Static Goal 점검/회고
-    - [ ] Growth 기록
+    - [ ] 이번주 Growth 기록
   - [ ] 토
-    - [ ] Static Goal 점검/회고
-    - [ ] Growth 기록
+    - [ ] 저번주 Static Goal 점검/회고
 
 ## What did I do for a week?
-### HelperUtils 개선
-- Array, Object
-	- ECMA Default ProtoType을 상속받아 Value를 기준으로 설계
+### HelperUtils 개선 (ABR-1089)
+#### Array
+방어적인 코드 작성으로 Native prototype을 확장 할 예정.
 
-### CircleCI Process 개선
-- CircleCI Configuration 개선
+- Private Methods - **해당 코드는 HelperUtils 내부 혹은 외부 임시 편의를 위한 함수로서 Product 코드에 eslint 에러로 확인될 수있게 _를 prefix로 추가.**
+  - [x] _log
+- Public Methods
+  - [x] removeDuplication
+  - [x] uniq
+
+### HelperUtils Test 코드 작성
+- [x] removeDuplication
+- [x] uniq

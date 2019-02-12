@@ -16,11 +16,9 @@
   - [ ] 화
   - [x] 수
   - [x] 목
-  - [ ] 금
-  - [ ] 토
-- 격주 1회 블로그 작성하기
-  - [ ] 2 주차
-  - [ ] 4 주차
+  - [x] 금
+  - [x] 토
+- [ ] 월 1회 블로그 작성하기
 - 주 2~3회 운동하기
   - [x] 1
   - [ ] 2
@@ -36,8 +34,16 @@
     - [ ] Growth 기록
 
 ## What did I do for a week?
-#### [ ] HelperUtils 개선 (ABR-1089)
-- Array
-  - 방어적인 코드 작성으로 Native prototype을 확장 할 예정.
+### [x] HelperUtils 개선 (ABR-1089)
+#### Array
+방어적인 코드 작성으로 Native prototype을 확장 할 예정.
 
-### [ ] HelperUtils Test 코드 작성
+- Private Methods - **해당 코드는 HelperUtils 내부 혹은 외부 임시 편의를 위한 함수로서 Product 코드에 eslint 에러로 확인될 수있게 _를 prefix로 추가.**
+  - _log
+- Public Methods
+  - removeDuplication
+  - uniq
+
+### [x] HelperUtils Test 코드 작성
+- removeDuplication
+- uniq

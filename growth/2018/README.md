@@ -3,10 +3,10 @@
 - Refer :[GROWTH-Histories](https://seolhun.github.io/tags/GROWTH/)
 
 ## - 2018 Golas
-- 프론트엔드 개발자를 위한 JavaScript 완독/정리
-- HTTP 완벽가이드 완독/정리
-- JavaScript 함수형 프로그래밍 공부
-- NginX 강의/정리/테스트
+- [x] 프론트엔드 개발자를 위한 JavaScript 완독
+- [x] JavaScript 함수형 프로그래밍 공부
+- [ ] HTTP 완벽가이드 완독/정리
+- [ ] NginX 강의/정리/테스트
 
 ## Tickets
 - Airbridge
