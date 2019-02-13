@@ -25,3 +25,6 @@
 [submodule "study/basic-frontend-knowledge"]
 	path = study/basic-frontend-knowledge
 	url = https://github.com/Seolhun/basic-frontend-knowledge
+[submodule "retrospective-interview"]
+	path = retrospective-interview
+	url = https://github.com/Seolhun/retrospective-interview.git
