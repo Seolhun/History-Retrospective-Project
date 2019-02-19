@@ -24,7 +24,7 @@
   - [ ] 2
   - [ ] 3
 
-#### - Daily Checklist
+#### - Weekly Checklist
 - 할 일과 한 일 비교 점검/회고
   - [ ] 일
     - [ ] Static Goal 점검/회고

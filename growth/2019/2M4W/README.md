@@ -11,14 +11,16 @@
 ## The Growth Goals
 #### - Static Goal
 - 매일 1시간씩 책 독서하기
-  - [x] 일
-  - [x] 월
-  - [ ] 화
+  - [ ] 일
+  - [ ] 월
+  - [x] 화
   - [ ] 수
   - [ ] 목
   - [ ] 금
   - [ ] 토
-- [ ] 월 1회 블로그 작성하기
+- 격주 1회 블로그 작성하기
+  - [ ] 2 주차
+  - [ ] 4 주차
 - 주 2~3회 운동하기
   - [ ] 1
   - [ ] 2
@@ -27,16 +29,13 @@
 #### - Weekly Checklist
 - 할 일과 한 일 비교 점검/회고
   - [ ] 일
-    - [ ] Static Goal 점검/회고
-    - [ ] Growth 기록
+    - [ ] 이번주 Growth 기록
   - [ ] 토
-    - [ ] Static Goal 점검/회고
-    - [ ] Growth 기록
+    - [ ] 저번주 Static Goal 점검/회고
 
 ## What did I do for a week?
-### HelperUtils 개선
-- Array, Object
-	- ECMA Default ProtoType을 상속받아 Value를 기준으로 설계
+### [ ] - Rebased ABR-1258
+- 
 
-### CircleCI Process 개선
-- CircleCI Configuration 개선
+### [ ] - Rebased Cypress
+- 
