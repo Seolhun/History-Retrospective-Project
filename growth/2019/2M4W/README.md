@@ -34,8 +34,34 @@
     - [ ] 저번주 Static Goal 점검/회고
 
 ## What did I do for a week?
-### [ ] - Rebased ABR-1258
-- 
+### [x] - ABR-1208/1210
+- Rebase
+  - Actual Report와 그 외 다수 변화사항이 많아 Merge로 해결
+- [ ] Release Doc 작성하기
+  - [ ] 페이지 랜더링 속도 계산하기
+    - 네트워크 지연시간, 페이지 로드 시간, 로드 전체과정
+    ```js
+      // https://developer.mozilla.org/ko/docs/Security/MixedContent
+      console.log(`lazy : ${performance.timing.responseEnd - performance.timing.fetchStart}`);
+      console.log(`loadTime : ${performance.timing.loadEventEnd - performance.timing.responseEnd}`);
+      console.log(`allLoadTime : ${performance.timing.loadEventEnd - performance.timing.navigationStart}`);
+    ```
+  - [ ] 개인정보 수정 확인하기
+  - [ ] Error, Un-authroized, Not Found 개선하기
 
-### [ ] - Rebased Cypress
-- 
+### [x] - Rebased Cypress
+- Actual Report와 그 외 다수 변화사항이 많아 Merge로 해결
+
+### [x] ABR-1208 랜더링 속도 비교
+- [ABR-1208 랜더링 속도 비교](https://docs.google.com/spreadsheets/d/1HbduNMEMQVl4G0nPHAWQHDnaxWthiV3tWmcHL8irLHg/edit#gid=0)
+
+#### 전제 조건
+- Surge 이용하기
+  - Cloud Front가 있는 airbridge.io와 비교하는 것은 조건이 적합하지 않아. 둘다 서지에 배포하여 테스트
+- 배달의 민족 Default Actaul Report 사용
+- 로그인한 유저가 `/d/#/app/BaedalMinjok2/reports/actual`에 바로 들어올 때의 속도 측정
+
+#### Refs
+- [Performance Analysis Reference](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference)
+- [자바스크립트 실행 속도 개선](https://developers.google.com/web/tools/chrome-devtools/rendering-tools/js-execution)
+- [네비게이션 타이밍을 이용한 페이지 로딩 속도 측정하기](https://www.html5rocks.com/ko/tutorials/webperformance/basics/)
