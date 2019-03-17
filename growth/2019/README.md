@@ -26,15 +26,6 @@
 
 ### Airbridge
 
-#### [x] HelperUtils 개선 (ABR-1089)
-- Array
-  - 방어적인 코드 작성으로 Native prototype을 확장 할 예정.
-  - Functions
-    - _log
-    - removeDuplication
-    - uniqWith
-    - ...
-
 #### [x] Storybook (ABR-1214)
 - Why
   - UI Prototype과 정보제공
@@ -54,6 +45,7 @@
 - How to
   - HoC Pattern
   - Layout 분기
+  - Error handling
 
 #### [x] SignIn/Up Migration From Homepage to Airbridge (ABR-1210)
 - Why
@@ -63,16 +55,36 @@
   - Migration SignIn/Up
   - Router 분기를 통한 Dynamic Router 분기
 
-#### [x] CircleCI Process 개선 (No-Tickets)
-- [x] CircleCI Configuration 개선
-	- 현재 PR 완료하였으나, 다른 작업과 브랜치 전략에 따라 Pending...
-	- Based on Branch and driven Test
-
 #### [x] i18n Management and Enhancement (ABR-1305)
 - For management i18n wordings easily. 
 - For sharing and managing Airbridge Dashboard wording materials.
 
-[i18n Management SpreadSheet - 1.0.0 Beta](https://docs.google.com/spreadsheets/d/1DgvZZxqG81rS7Q8zhwwnZ8qPPc_7Bd3znqGP-frPuLA/edit#gid=0)
+> [i18n Management SpreadSheet - 1.0.0 Beta](https://docs.google.com/spreadsheets/d/1DgvZZxqG81rS7Q8zhwwnZ8qPPc_7Bd3znqGP-frPuLA/edit#gid=0)
+
+#### [x] Exception Page (ABR-1307)
+- Error, NotFound, Un-authorized를 구분하여 처리
+- Action CallBack이 필요하여 Redux Observable에 setState 함수와 비슷한 액션 구성.
+
+#### [x] HelperUtils 개선 (ABR-1089)
+- Array
+- 방어적인 코드 작성으로 Native prototype을 확장 할 예정.
+  - Functions
+    - _log
+    - removeDuplication
+    - uniqWith
+
+
+#### [ ] CircleCI Process 개선 (No-Tickets)
+- [x] CircleCI Configuration 개선
+  - 현재 PR 완료하였으나, 다른 작업과 브랜치 전략에 따라 Pending...
+  - Based on Branch and driven Test
+
+---
+
+### [x] AB180 Landing
+- Slide Page
+- Responsive Web app
+- Progressive Web app
 
 ---
 

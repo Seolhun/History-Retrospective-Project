@@ -1,5 +1,5 @@
 ## - 2019 Golas
-- Periods : 190225 ~ 190301
+- Periods : 1900310 ~ 190316
 
 ---
 
@@ -16,18 +16,18 @@
 #### - Static Goal
 - 매일 1시간씩 책 독서하기
   - [ ] 일
-  - [ ] 월
+  - [x] 월
   - [ ] 화
   - [ ] 수
-  - [ ] 목
+  - [x] 목
   - [ ] 금
   - [ ] 토
 - 격주 1회 블로그 작성하기
   - [ ] 2 주차
   - [ ] 4 주차
 - 주 3회 운동하기
-  - [ ] 1
-  - [ ] 2
+  - [x] 1
+  - [x] 2
   - [ ] 3
 
 #### - Daily Checklist
@@ -40,22 +40,8 @@
     - [ ] Growth 기록
 
 ## What did I do for a week?
-### Airbridge
-- 
-
-### Hi-Cord 
-#### - API
-- [x] Develop and Deploy `Post` API
-- [ ] Deployment (Considering `Serverless(SaaS) or Instance(PaaS)`)
-  - [ ] How to manage Scraper `Cron and Instances, Cluster`
-- [ ] Consider `Token Module`...(What kind of Token We need)
-- [ ] Develop and Deploy `User and Github API Module`
-
-#### - Engines
-- [x] Scraper bind Post API.
-
-#### - Frontend
-- [ ] Develop Hi-Cord Homepage
-- [ ] Develop Hi-Cord
-
-### Localized Component
+### [AB180] - AB180 Landing 
+- AB180-Landing
+  - Data Json 이해
+  - Style 사항 JS 분리
+  - 다국어 설정 정의

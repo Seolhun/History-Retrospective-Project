@@ -1,5 +1,5 @@
 ## - 2019 Golas
-- Periods : 190225 ~ 190301
+- Periods : 190317 ~ 190323
 
 ---
 
@@ -15,7 +15,7 @@
 ## The Growth Goals
 #### - Static Goal
 - 매일 1시간씩 책 독서하기
-  - [ ] 일
+  - [x] 일
   - [ ] 월
   - [ ] 화
   - [ ] 수
@@ -32,16 +32,22 @@
 
 #### - Daily Checklist
 - 할 일과 한 일 비교 점검/회고
-  - [ ] 일
-    - [ ] Static Goal 점검/회고
-    - [ ] Growth 기록
+  - [x] 일
+    - [x] Static Goal 점검/회고
+    - [x] Growth 기록
   - [ ] 토
     - [ ] Static Goal 점검/회고
     - [ ] Growth 기록
 
 ## What did I do for a week?
-### Airbridge
-- 
+### AirBridge
+- ABR/1089 배포하기 
+  - Rebase
+  - 테스트코드 확인
+
+- [] 배포하기 
+  - Rebase
+  - 테스트코드 확인
 
 ### Hi-Cord 
 #### - API
@@ -57,5 +63,3 @@
 #### - Frontend
 - [ ] Develop Hi-Cord Homepage
 - [ ] Develop Hi-Cord
-
-### Localized Component

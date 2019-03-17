@@ -1,5 +1,5 @@
 ## - 2019 Golas
-- Periods : 190225 ~ 190301
+- Periods : 190304 ~ 190310
 
 ---
 
@@ -25,7 +25,7 @@
 - 격주 1회 블로그 작성하기
   - [ ] 2 주차
   - [ ] 4 주차
-- 주 3회 운동하기
+- 주 2~3회 운동하기
   - [ ] 1
   - [ ] 2
   - [ ] 3
@@ -40,22 +40,14 @@
     - [ ] Growth 기록
 
 ## What did I do for a week?
-### Airbridge
+### [ ] - 
 - 
 
-### Hi-Cord 
-#### - API
-- [x] Develop and Deploy `Post` API
-- [ ] Deployment (Considering `Serverless(SaaS) or Instance(PaaS)`)
+### Hi-Cord API with Scraper
+- [ ] Develop and Deploy `Post` API
+  - Deployment (Considering `Serverless(SaaS) or Instance(PaaS)`)
+- [ ] Scraper bind Post API.
   - [ ] How to manage Scraper `Cron and Instances, Cluster`
 - [ ] Consider `Token Module`...(What kind of Token We need)
 - [ ] Develop and Deploy `User and Github API Module`
-
-#### - Engines
-- [x] Scraper bind Post API.
-
-#### - Frontend
-- [ ] Develop Hi-Cord Homepage
-- [ ] Develop Hi-Cord
-
-### Localized Component
+- [ ] Develop Hi-Cord FrontEnd
