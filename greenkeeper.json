@@ -1,0 +1,19 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "old/UNUSED_seolhun-blog/website/package.json",
+        "study/js/rxjs/package.json",
+        "study/js/vanilla/report/reactive-vanilla/package.json",
+        "study/react/redux-saga/example/async/package.json",
+        "study/react/redux-saga/example/cancellable-counter/package.json",
+        "study/react/redux-saga/example/counter-vanilla/package.json",
+        "study/react/redux-saga/example/counter/package.json",
+        "study/react/redux-saga/example/error-demo/package.json",
+        "study/react/redux-saga/example/real-world/package.json",
+        "study/react/redux-saga/example/sagaMonitor/package.json",
+        "study/react/redux-saga/example/shopping-cart/package.json"
+      ]
+    }
+  }
+}
