@@ -1,4 +1,7 @@
 # Retrospective-Project
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Seolhun/retrospective-diary.svg)](https://greenkeeper.io/)
+
 - Author : [SeolHun](https://github.com/Seolhun/)
 
 ## Background
