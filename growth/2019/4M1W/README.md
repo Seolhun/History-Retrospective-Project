@@ -19,8 +19,8 @@
   - [ ] 월
   - [ ] 화
   - [ ] 수
-  - [ ] 목
-  - [ ] 금
+  - [x] 목
+  - [x] 금
   - [ ] 토
 - 격주 1회 블로그 작성하기
   - [ ] 2 주차
@@ -32,19 +32,24 @@
 
 #### - Daily Checklist
 - 할 일과 한 일 비교 점검/회고
-  - [ ] 일
-    - [ ] Static Goal 점검/회고
-    - [ ] Growth 기록
-  - [ ] 토
-    - [ ] Static Goal 점검/회고
-    - [ ] Growth 기록
+  - [x] 일
+    - [x] Static Goal 점검/회고
+    - [x] Growth 기록
+  - [x] 토
+    - [x] Static Goal 점검/회고
+    - [x] Growth 기록
 
 ## What did I do for a week?
 ### Airbridge
+- DashBoard
+  - [ ] Authentication Check
+    - [x] withAuthentication
+    - [ ] withDashboard 
 - AB180 Landing Page
-  - [ ] Slides
+  - [x] Slides
+  - [x] Content Container padding / margin 개선
+  - [x] Content Container padding / margin 개선
   - [ ] Carousel Detail Gallery
-  - [ ] Content Container padding /margin 개선
 
 ### Hi-Cord 
 #### - API
