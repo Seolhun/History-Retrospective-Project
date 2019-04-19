@@ -42,9 +42,9 @@
 ## What did I do for a week?
 ### Airbridge
 - AB180 Landing Page
-  - [ ] Slides
-  - [ ] Carousel Detail Gallery
-  - [ ] Content Container padding /margin 개선
+  - [[AL] Versining goals Management](notion://www.notion.so/ab180/Brand-Identity-Revamp-23f8e0e7afce4b959cc650e91dfdbeab#e486c36c172646d78fdf8f28941687b9)
+  - [[AL] Translation Management](https://docs.google.com/spreadsheets/d/1EiZp1XFy_ifzSfONGRCbcLGF5qYVOw4tglfwI6OMTfs/edit#gid=1023491713)
+  - [[AL] GTM Management](https://docs.google.com/spreadsheets/d/1uQUh2rQhqCC8-mw5q2doouePPmtZc5xXUrP7UBbjyXs/edit?usp=sharing)
 
 ### Hi-Cord 
 #### - API

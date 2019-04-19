@@ -1,5 +1,5 @@
 ## - 2019 Golas
-- Periods : 190408 ~ 1904014
+- Periods : 190415 ~ 190421
 
 ---
 
@@ -19,8 +19,8 @@
   - [ ] 월
   - [ ] 화
   - [ ] 수
-  - [ ] 목
-  - [ ] 금
+  - [x] 목
+  - [x] 금
   - [ ] 토
 - 격주 1회 블로그 작성하기
   - [ ] 2 주차
@@ -35,17 +35,36 @@
   - [x] 일
     - [x] Static Goal 점검/회고
     - [x] Growth 기록
-  - [ ] 토
-    - [ ] Static Goal 점검/회고
-    - [ ] Growth 기록
+  - [x] 토
+    - [x] Static Goal 점검/회고
+    - [x] Growth 기록
 
 ## What did I do for a week?
 ### Airbridge
 - AB180 Landing Page
-  - [x] Slides
-  - [x] Content Container padding / margin 개선
-  - [x] Content Container padding / margin 개선
-  - [x] Carousel Detail Gallery
+  - [X] 언어 설정
+    - Mobile Sidebar 메뉴 수정
+
+  - [X] Intercom, GTM, GA 화면 정의
+      - Intercom 보이는 시점에 대한 정의
+          - 상시 노출
+          - SubPage에서만 제거
+
+      - GTM
+          - Seminar Button
+          - Menu(Sidebar, MobileSidebar)
+          - Demo Button
+          - Solutions Logo Tab
+
+  - [x] Font based on Locale
+    - View Key variable 정의하기
+
+  - [x] i18n 추가본 Excel
+    - [[AL] i18n Managements](https://docs.google.com/spreadsheets/d/1EiZp1XFy_ifzSfONGRCbcLGF5qYVOw4tglfwI6OMTfs/edit#gid=1023491713)
+
+  - [ ] FLEX:FLEX IE 지원 코드 수정
+  - [ ] SVG IE 지원하기
+    - https://github.com/Modernizr/Modernizr
 
 ### Hi-Cord 
 #### - API

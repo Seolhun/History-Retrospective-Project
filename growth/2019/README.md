@@ -56,19 +56,19 @@
 - 불필요한 함수들 사용하지 않는 함수들 정리
 - 테스트 코드 작성하여 안정성 도모 및 문서화
 
-#### [ ] CircleCI Process 개선 (No-Tickets)
+#### [x] CircleCI Process 개선 (No-Tickets)
 - [x] CircleCI Configuration 개선
   - 현재 PR 완료하였으나, 다른 작업과 브랜치 전략에 따라 Pending...
   - Branch 전략에 따른 배포가 될 수 있도록 구성
 
-#### [ ] TimeLag Minor Fixed
+#### [x] TimeLag Minor Fixed
 - Drawer 설정 관련 코드 통일
 - TimeLag 속도 개선 25% (비동기호출 병렬화)
 
 #### AB180 Landing
-- AB180 랜딩페이지 설계 및 구축
-- 공통 모듈 개발 및 전체적인 설정 개발 주도
-- 현범님이랑 같이 작업하며 작업 팀 리드
+- [[AL] Versining goals Management](notion://www.notion.so/ab180/Brand-Identity-Revamp-23f8e0e7afce4b959cc650e91dfdbeab#e486c36c172646d78fdf8f28941687b9)
+- [[AL] Translation Management](https://docs.google.com/spreadsheets/d/1EiZp1XFy_ifzSfONGRCbcLGF5qYVOw4tglfwI6OMTfs/edit#gid=1023491713)
+- [[AL] GTM Management](https://docs.google.com/spreadsheets/d/1uQUh2rQhqCC8-mw5q2doouePPmtZc5xXUrP7UBbjyXs/edit?usp=sharing)
 
 ### Airbloc
 - Hermes (Project) - **DEPRECATED**
