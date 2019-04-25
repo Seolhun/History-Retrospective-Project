@@ -41,6 +41,12 @@
 
 ## What did I do for a week?
 ### Airbridge
+#### Airbridge Dasgboard
+- Migration Observable to Saga
+  1. Remove Legacy API Controller
+  2. Remove Legacy Action Type
+  3. Epic To Saga
+
 #### AB180 Landing Page
 - [[AL] Versining goals Management](notion://www.notion.so/ab180/Brand-Identity-Revamp-23f8e0e7afce4b959cc650e91dfdbeab#e486c36c172646d78fdf8f28941687b9)
 - [[AL] Translation Management](https://docs.google.com/spreadsheets/d/1EiZp1XFy_ifzSfONGRCbcLGF5qYVOw4tglfwI6OMTfs/edit#gid=1023491713)
