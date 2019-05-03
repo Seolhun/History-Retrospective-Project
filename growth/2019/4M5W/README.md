@@ -1,5 +1,5 @@
 ## - 2019 Golas
-- Periods : 190401 ~ 190407
+- Periods : 190429 ~ 190505
 
 ---
 
@@ -47,10 +47,29 @@
 - ✅ Is Done
 
 ### Airbridge
-- [ ] 
+#### Airbridge Dasgboard
+- ✅ Migration Observable to Saga
+  - ✅ ~Remove Legacy API Controller~ > API Controller is required.
+  - ✅ Remove Common Action
+  - ✅ Remove Legacy Action Type
+  - ✅ Epic To Saga
+    - Authentication
+    - TimeLag
+    - Reinstall
+    - Common
+- ⬛️ Redux Saga test code.
+  - Test Docs
+- ✅ Sharing What is current redux action Problem.
 
 ### AB180 Landing Page
-- [ ] Fix IE flex error
+
+### Hi-Cord 
+#### - API
+- ✅ Develop and Deploy `Post` API
+- ⚪️ Deployment (Considering `Serverless(SaaS) or Instance(PaaS)`)
+  - ⚪️ How to manage Scraper `Cron and Instances, Cluster`
+- ⬛️ Consider `Token Module`...(What kind of Token We need)
+- ⬛️ Develop and Deploy `User and Github API Module`
 
 ### Hi-Cord 
 #### - API

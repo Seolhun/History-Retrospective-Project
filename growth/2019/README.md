@@ -64,6 +64,7 @@
 #### [x] TimeLag Minor Fixed
 - Drawer 설정 관련 코드 통일
 - TimeLag 속도 개선 25% (비동기호출 병렬화)
+- Redux Observable > Saga
 
 #### AB180 Landing
 - [[AL] Versining goals Management](notion://www.notion.so/ab180/Brand-Identity-Revamp-23f8e0e7afce4b959cc650e91dfdbeab#e486c36c172646d78fdf8f28941687b9)
