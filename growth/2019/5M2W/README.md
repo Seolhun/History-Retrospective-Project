@@ -32,11 +32,12 @@
 
 #### - Daily Checklist
 - 할 일과 한 일 비교 점검/회고
-  - [ ] Growth 기록
-  - [ ] Static Goal 점검/회고
-    
-
----
+  - [ ] 일
+    - [ ] Static Goal 점검/회고
+    - [ ] Growth 기록
+  - [ ] 토
+    - [ ] Static Goal 점검/회고
+    - [ ] Growth 기록
 
 ## What did I do for a week?
 #### Task State
@@ -45,10 +46,11 @@
 - 🔴 Pending
 - ✅ Is Done
 
+### Airbridge
+- [ ] 
 
---- 
-
-## My part
+### AB180 Landing Page
+- [ ] Fix IE flex error
 
 ### Hi-Cord 
 #### - API
@@ -57,27 +59,6 @@
   - ⚪️ How to manage Scraper `Cron and Instances, Cluster`
 - ⬛️ Consider `Token Module`...(What kind of Token We need)
 - ⬛️ Develop and Deploy `User and Github API Module`
-
-### Hi-Cord-Scrapers
-#### - Scrapers
-- ⬛️ 
-
-#### - API
-- ✅ Develop and Deploy `Post` API
-- ⚪️ Deployment (Considering `Serverless(SaaS) or Instance(PaaS)`)
-  - ⚪️ How to manage Scraper `Cron and Instances, Cluster`
-- ⬛️ Consider `Token Module`...(What kind of Token We need)
-- ⬛️ Develop and Deploy `User and Github API Module`
-
-#### - Carlo(UI)
-- ⬛️ 
-
-#### - Utils
-- ⬛️ FileUtils
-  - ⬛️ Response to JSON 
-  - ⬛️ Converting JSON to CSV or reversing.
-  - ⬛️ 
-
 
 #### - Engines
 - ✅ Scraper bind Post API.
@@ -92,14 +73,3 @@
 - ⬛️ Carousel
 - ⬛️ Form Group
 - ⬛️ Typing
-
-
----
-
-## Company part
-
-### Airbridge
-- [ ] 
-
-### AB180 Landing Page
-- [ ] Fix IE flex error

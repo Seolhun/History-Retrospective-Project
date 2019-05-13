@@ -26,18 +26,14 @@
   - [ ] 2 주차
   - [ ] 4 주차
 - 주 3회 운동하기
-  - [ ] 1
+  - [x] 1
   - [ ] 2
   - [ ] 3
 
 #### - Daily Checklist
 - 할 일과 한 일 비교 점검/회고
-  - [ ] 일
-    - [ ] Static Goal 점검/회고
-    - [ ] Growth 기록
-  - [ ] 토
-    - [ ] Static Goal 점검/회고
-    - [ ] Growth 기록
+  - [x] Static Goal 점검/회고
+  - [x] Growth 기록
 
 ## What did I do for a week?
 #### Task State
@@ -59,17 +55,10 @@
     - Common
 - ⬛️ Redux Saga test code.
   - Test Docs
-- ✅ Sharing What is current redux action Problem.
+- ✅ Form test code.
+  - Enzyme, sinon, Jest
 
 ### AB180 Landing Page
-
-### Hi-Cord 
-#### - API
-- ✅ Develop and Deploy `Post` API
-- ⚪️ Deployment (Considering `Serverless(SaaS) or Instance(PaaS)`)
-  - ⚪️ How to manage Scraper `Cron and Instances, Cluster`
-- ⬛️ Consider `Token Module`...(What kind of Token We need)
-- ⬛️ Develop and Deploy `User and Github API Module`
 
 ### Hi-Cord 
 #### - API
