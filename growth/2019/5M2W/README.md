@@ -1,5 +1,5 @@
 ## - 2019 Golas
-- Periods : 190401 ~ 190407
+- Periods : 190512 ~ 190518
 
 ---
 
@@ -16,7 +16,7 @@
 #### - Static Goal
 - 매일 1시간씩 책 독서하기
   - [ ] 일
-  - [ ] 월
+  - [x] 월
   - [ ] 화
   - [ ] 수
   - [ ] 목
@@ -26,9 +26,9 @@
   - [ ] 2 주차
   - [ ] 4 주차
 - 주 3회 운동하기
-  - [ ] 1
-  - [ ] 2
-  - [ ] 3
+  - [x] 1
+  - [x] 2
+  - [x] 3
 
 #### - Daily Checklist
 - 할 일과 한 일 비교 점검/회고
@@ -47,7 +47,13 @@
 - ✅ Is Done
 
 ### Airbridge
-- [ ] 
+- [x] Refactoring Redux
+  - Authentication
+  - TimeLag
+  - Reinstall
+  - Common Action
+- [x] Refactoring Form
+  - Write documentation
 
 ### AB180 Landing Page
 - [ ] Fix IE flex error

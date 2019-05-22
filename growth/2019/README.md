@@ -117,12 +117,10 @@
   - ✅ Remove Common Action
   - ✅ Remove Legacy Action Type
   - ✅ Epic To Saga
-    - Authentication
-    - TimeLag
-    - Reinstall
-    - Common
-- ⬛️ Redux Saga test code.
-  - Test Docs
+    ✅ Authentication
+    ✅ TimeLag
+    ✅ Reinstall
+    ✅ Common
 - ✅ Form test code.
   - Enzyme, sinon, Jest
 
