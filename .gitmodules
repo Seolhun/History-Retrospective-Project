@@ -19,9 +19,6 @@
 [submodule "study/algorithm"]
 	path = study/algorithm
 	url = https://github.com/Seolhun/TIL-algorithm.git
-[submodule "devops/docker-example"]
-	path = devops/docker-example
-	url = https://github.com/Seolhun/docker-example.git
 [submodule "retrospective-interview"]
 	path = retrospective-interview
 	url = https://github.com/Seolhun/retrospective-interview.git
