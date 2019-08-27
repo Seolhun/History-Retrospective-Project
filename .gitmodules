@@ -1,27 +1,30 @@
-[submodule "study/vue/kr-study-incheon"]
-	path = study/vue/kr-study-incheon
-	url = https://github.com/Seolhun/kr-study-incheon.git
-[submodule "study/vue/vue-example"]
-	path = study/vue/vue-example
-	url = https://github.com/Seolhun/vue-example.git
-[submodule "devops/aws"]
-	path = devops/aws
-	url = https://github.com/Seolhun/aws.git
 [submodule "company"]
 	path = company
-	url = https://github.com/Seolhun/company.git
+	url = git@github.com:Seolhun/company.git
+[submodule "study/vue/kr-study-incheon"]
+	path = study/vue/kr-study-incheon
+	url = git@github.com:Seolhun/kr-study-incheon.git
+[submodule "study/vue/vue-example"]
+	path = study/vue/vue-example
+	url = git@github.com:Seolhun/vue-example.git
+[submodule "devops/aws"]
+	path = devops/aws
+	url = git@github.com:Seolhun/aws.git
 [submodule "study/java/java-example"]
 	path = study/java/java-example
-	url = https://github.com/Seolhun/java-example.git
+	url = git@github.com:Seolhun/java-example.git
+[submodule "devops/docker-example"]
+	path = "devops/docker-example"
+	url = git@github.com:Seolhun/docker-example.git
 [submodule "study/python/python-example"]
 	path = study/python/python-example
-	url = https://github.com/Seolhun/python-example.git
+	url = git@github.com:Seolhun/python-example.git
 [submodule "study/algorithm"]
 	path = study/algorithm
-	url = https://github.com/Seolhun/TIL-algorithm.git
+	url = git@github.com:Seolhun/TIL-algorithm.git
 [submodule "retrospective-interview"]
 	path = retrospective-interview
-	url = https://github.com/Seolhun/retrospective-interview.git
+	url = git@github.com:Seolhun/retrospective-interview.git
 [submodule "study/frontend"]
 	path = study/frontend
 	url = git@github.com:Seolhun/frontend.git
