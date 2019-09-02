@@ -1,15 +1,26 @@
 # Docker
 
 ## Build
-docker build --build-arg NODE_ENV=development . -t test
-docker build . -t [tag] -f /path/to/Dockerfile
+docker build . -t ${TagName}
+docker build --build-arg NODE_ENV=development . -t ${TagName}
+docker build . -t ${TagName} -f /path/to/Dockerfile
 
 ## Run
 docker run -d tag
 docker run -d -p 4000:3060 ${IMAGE_ID}
 
-## Stop
+## Container 
+### Stop
 docker stop ${CONTAINER_ID}
+
+### Delete
+docker rm -f ${CONTAINER_ID}
+
+### List
+docker ps -al
+
+### Logs
+docker logs ${ContainerID}
 
 ## Remove
 docker rmi $(docker images -q)
