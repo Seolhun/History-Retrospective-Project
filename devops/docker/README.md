@@ -9,21 +9,49 @@ docker build . -t ${TagName} -f /path/to/Dockerfile
 docker run -d tag
 docker run -d -p 4000:3060 ${IMAGE_ID}
 
+---
+
+## Images
+#### Remove
+docker rmi $(docker images -q)
+
+---
+
 ## Container 
-### Stop
+#### Stop all containers:
+docker kill $(docker ps -q)
+
+#### Remove all containers
+docker rm $(docker ps -a -q)
+
+#### Stop
 docker stop ${CONTAINER_ID}
 
-### Delete
+#### Delete
 docker rm -f ${CONTAINER_ID}
 
-### List
+#### List
 docker ps -al
 
-### Logs
+#### Logs
 docker logs ${ContainerID}
 
-## Remove
-docker rmi $(docker images -q)
+---
+
+## Compose
+#### Build
+docker-compose build
+
+#### Start
+docker-compose up
+
+#### Stop
+docker-compose down
+
+#### Remove
+docker-compose down -v
+
+---
 
 # Dockerfile
 [CMD vs RUN vs ENTRYPOINT](https://stackoverflow.com/questions/37461868/difference-between-run-and-cmd-in-a-docker-file)
