@@ -29,6 +29,10 @@
 - 주 2회 운동하기
 - 개발사항 Changed Log 작성하기
 
+---
+
+## What did I do for a month?
+
 #### Ticket State
 
 - ⬛️ Not Yet

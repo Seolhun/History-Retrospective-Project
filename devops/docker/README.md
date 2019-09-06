@@ -43,7 +43,7 @@ docker logs ${ContainerID}
 docker-compose build
 
 #### Start
-docker-compose up
+docker-compose up -d
 
 #### Stop
 docker-compose down
