@@ -33,4 +33,5 @@
 
 ## CHANGE LOGS
 
-- **20190906** - Change period from week to month -
+- **20190906**
+  - Change period from week to month -

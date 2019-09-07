@@ -1,6 +1,6 @@
 ## - 2019 Golas
 
-- Periods : 190902 ~ 190908
+- Periods : 190902 ~ 190930
 
 ---
 
@@ -58,7 +58,8 @@
 #### Google Spread
 
 - ✅ Google Spread Client interface
-- ⚪️️️️
+- ⚪️️️️ DataParser - Intl JSON Parsing to data
+- ⚪️️️️ DataBuilder - Create/Copy to Drive with Intl files 
 
 ---
 
