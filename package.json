@@ -1,0 +1,28 @@
+{
+  "name": "retrospective-diary",
+  "author": {
+    "name": "Seolhun",
+    "email": "shun10116@gmail.com",
+    "url": "https://github.com/Seolhun"
+  },
+  "version": "1.0.0",
+  "description": "To record all my histories",
+  "scripts": {
+    "sb:init": "git submodule init",
+    "sb:update": "git submodule update",
+    "sb:push": "git push --recurse-submodules=on-demand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Seolhun/retrospective-diary.git"
+  },
+  "keywords": [
+    "seolhun",
+    "hisotry"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Seolhun/retrospective-diary/issues"
+  },
+  "homepage": "https://github.com/Seolhun/retrospective-diary#readme"
+}
