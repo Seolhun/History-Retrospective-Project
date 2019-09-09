@@ -1,4 +1,4 @@
-## - 2019 Golas
+# - 2019 Golas
 
 - Periods : 190902 ~ 190930
 
@@ -22,7 +22,7 @@
   - Localize-Component 개발/릴리즈
   - D3(vx 참고)를 이용한 Chart/TableComponent 개발/릴리즈
 
-#### - Routine Key Results
+### - Routine Key Results
 
 - 매일 1시간씩 책 독서하기
 - 월 1회 블로그 작성/정리하기
@@ -31,87 +31,76 @@
 
 ---
 
-## What did I do for a month?
+## Company part
 
-#### Ticket State
+### 디자인 & 프론트엔드 Theme 미팅
 
-- ⬛️ Not Yet
-- ⚪️ In progress
-- 🔴 Pending
-- ✅ Is Done
+#### 2W
 
----
+- Profile
+  - [ ] Profile Meeting (16 ~ 15)
+- Google Spread - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/34)
+  - [x] Google Spread Client interface
+  - [x] DataParser - Intl JSON Parsing to Google Spread
+  - [x] DataBuilder - Create Interface variables with Google Spread
+  - [ ] Google Spread range function 재정의
 
-# Company part
+#### 1W
 
-#### 디자인 & 프론트엔드 Theme 미팅
-
-- ✅ 미팅 내용 정리
-- ✅ 채널과 Notion에 공유
-- ✅ Color System on Storybook
-
-#### Grid 개선
-
-- ✅ Offset 적용
-- ✅ 모바일용 Display none 추가
-
-#### Google Spread
-
-- ✅ Google Spread Client interface
-- ⚪️️️️ DataParser - Intl JSON Parsing to data
-- ⚪️️️️ DataBuilder - Create/Copy to Drive with Intl files 
+- [ ] JSCONF
+  - [ ] JS-CONF Summary 작성/공유하기
+- [x] Color 미팅 내용 정리 - [Issue Link](https://github.com/ejnkr/bd-ui/issues/116)
+  - [x] 채널과 Notion에 공유
+  - [x] Color System on Storybook
+- [x] Grid 개선 - [Issue Link](https://github.com/ejnkr/bd-ui/issues/107)
+  - [x] Offset 적용
+  - [x] 모바일용 Display none 추가
 
 ---
 
-# My part
+## Localized Component
+
+- [x] Grid System
+- [x] Shadow Box
+- [ ] Carousel
+- [ ] Form Group
+- [ ] Typing
+
+## Seolhun blog
+
+- [ ] Renewal Main Pages
+- [ ] Add canvas for variety figures
+
+---
 
 ## Hi-Cord
 
-#### - API
+### - API
 
-- ✅ Develop and Deploy `Post` API
-- ⚪️ Deployment (Considering `Serverless(SaaS) or Instance(PaaS)`)
-  - ⚪️ How to manage Scraper `Cron and Instances, Cluster`
-- ⬛️ Consider `Token Module`...(What kind of Token We need)
-- ⬛️ Develop and Deploy `User and Github API Module`
+- [x] Develop and Deploy `Post` API
+- [ ] Deployment (Considering `Serverless(SaaS) or Instance(PaaS)`)
+  - [ ] How to manage Scraper `Cron and Instances, Cluster`
+- [ ] Consider `Token Module`...(What kind of Token We need)
+- [ ] Develop and Deploy `User and Github API Module`
 
-#### - Frontend
+### - Frontend
 
-- ⚪️ Develop Hi-Cord Homepage
-- ⬛️ Develop Hi-Cord Engines
+- [ ]Develop Hi-Cord Homepage
+- [ ] Develop Hi-Cord Engines
 
 ## Hi-Cord-Scrapers
 
-#### - Scrapers
+### - Engines
 
-- ⬛️
+- [x] Scraper with Post API.
+- [ ] Test Cron jobs
 
-#### - API
+### - Carlo Window UI
 
-- ✅ Develop and Deploy `Post` API
-- ⚪️ Deployment (Considering `Serverless(SaaS) or Instance(PaaS)`)
-  - ⚪️ How to manage Scraper `Cron and Instances, Cluster`
-- ⬛️ Consider `Token Module`...(What kind of Token We need)
-- ⬛️ Develop and Deploy `User and Github API Module`
+- [ ] Carlo UI를 통한 윈도우 앱 개선
 
-#### - Carlo(UI)
+### - Utils
 
-- ⬛️ Carlo UI를 통한 윈도우 앱 개선
-
-#### - Utils
-
-- ⬛️ FileUtils
-  - ⬛️ Response to JSON
-  - ⬛️ Converting JSON to CSV or reversing.
-
-#### - Engines
-
-- ✅ Scraper with Post API.
-
-### Localized Component
-
-- ⚪️ Grid System
-- ⚪️ Shadow Box
-- ⬛️ Carousel
-- ⬛️ Form Group
-- ⬛️ Typing
+- [ ] FileUtils
+  - [ ] Response to JSON
+  - [ ] Converting JSON to CSV or reversing.

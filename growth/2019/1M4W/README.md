@@ -1,4 +1,4 @@
-## - 2019 Golas
+# - 2019 Golas
 - Books
   - 프론트엔드 개발자를 위한 JavaScript 완독/정리
   - JavaScript 함수형 프로그래밍 공부
