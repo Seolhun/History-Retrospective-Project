@@ -37,13 +37,30 @@
 
 #### 2W
 
-- Profile
-  - [ ] Profile Meeting (16 ~ 15)
-- Google Spread - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/34)
-  - [x] Google Spread Client interface
-  - [x] DataParser - Intl JSON Parsing to Google Spread
-  - [x] DataBuilder - Create Interface variables with Google Spread
-  - [ ] Google Spread range function 재정의
+- GraphQL 모델링 및 사용 개선 - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/38)
+  - [ ] Update GraphQL Models in Client -> BDGraphQLModel
+  - [ ] Queries, Fragments, Mutations
+- Router Paths 변경에 대한 토론 및 개선 - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/37)
+  - [ ] Change Paths based on User
+  - [ ] Check the side effects comparing past products
+- Profile 개발 - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/36)
+  - [x] Profile Meeting (16 ~ 15)
+  - [ ] Profile main page development
+    - [ ] 필요한 API 정리하기
+      - ProfileMain
+        - [ ] 구독중인 대회
+        - [ ] 최근 대회 기록
+        - [ ] 태깅된 영상
+        - [ ] 유저가 등록한 경기(없으면 최근 3경기)
+    - [ ] Component 분리하기
+  - [ ] Etc...
+- 언어 추출 Google Spread 기능 개발 - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/34)
+  - [x] DataController - Google Spread Client interface - Google API 호출용
+  - [x] DataParser - JSON 파일을 Google Spread 형식으로 파싱
+  - [x] DataBuilder - Create Interface variables fuctions with Google Spread
+  - [ ] Google Spread 데이터 범위를 나타내는 range function 재정의
+- JSCONF
+  - [ ] JS-CONF Summary 작성/공유하기
 
 #### 1W
 
