@@ -46,7 +46,7 @@
 - Profile 개발 - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/36)
   - [x] Profile Meeting (16 ~ 15)
   - [ ] Profile main page development
-    - [ ] 필요한 API 정리하기
+    - [x] 필요한 API 정리하기
       - ProfileMain
         - [ ] 구독중인 대회
         - [ ] 최근 대회 기록
@@ -60,16 +60,14 @@
   - [x] DataBuilder - Create Interface variables fuctions with Google Spread
   - [ ] Google Spread 데이터 범위를 나타내는 range function 재정의
 - JSCONF
-  - [ ] JS-CONF Summary 작성/공유하기
+  - [x] JS-CONF Summary 작성/공유하기
 
 #### 1W
 
-- [ ] JSCONF
-  - [ ] JS-CONF Summary 작성/공유하기
-- [x] Color 미팅 내용 정리 - [Issue Link](https://github.com/ejnkr/bd-ui/issues/116)
+- Color 미팅 내용 정리 - [Issue Link](https://github.com/ejnkr/bd-ui/issues/116)
   - [x] 채널과 Notion에 공유
   - [x] Color System on Storybook
-- [x] Grid 개선 - [Issue Link](https://github.com/ejnkr/bd-ui/issues/107)
+- Grid 개선 - [Issue Link](https://github.com/ejnkr/bd-ui/issues/107)
   - [x] Offset 적용
   - [x] 모바일용 Display none 추가
 
@@ -85,8 +83,10 @@
 
 ## Seolhun blog
 
-- [ ] Renewal Main Pages
+- [x] Renewal Main Pages
 - [ ] Add canvas for variety figures
+- [ ] Split Grid components
+- [ ] Add FormGroup Builder Scripts
 
 ---
 
