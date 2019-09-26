@@ -35,30 +35,36 @@
 
 ### 디자인 & 프론트엔드 Theme 미팅
 
-#### 2W
+
+#### 2W ~ 3W
 
 - GraphQL 모델링 및 사용 개선 - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/38)
-  - [ ] Update GraphQL Models in Client -> BDGraphQLModel
-  - [ ] Queries, Fragments, Mutations
+  - [x] Update GraphQL Models in Client -> BDGraphQLModel
+  - [x] Queries, Fragments, Mutations
+  - [ ] GraphQL 모든 파일 변경
 - Router Paths 변경에 대한 토론 및 개선 - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/37)
-  - [ ] Change Paths based on User
-  - [ ] Check the side effects comparing past products
+  - [x] Check the side effects comparing past products
+  - [ ] Change Route Paths based on User
 - Profile 개발 - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/36)
   - [x] Profile Meeting (16 ~ 15)
   - [ ] Profile main page development
     - [x] 필요한 API 정리하기
-      - ProfileMain
-        - [ ] 구독중인 대회
-        - [ ] 최근 대회 기록
-        - [ ] 태깅된 영상
-        - [ ] 유저가 등록한 경기(없으면 최근 3경기)
-    - [ ] Component 분리하기
-  - [ ] Etc...
+      - ProfileMain - API를 제외한 UI
+        - [x] 구독중인 대회
+        - [x] 최근 대회 기록
+        - [x] 태깅된 영상
+        - [x] 유저가 등록한 경기(없으면 최근 3경기)
+    - [ ] Component bd-ui로 분리하기
+- Embed Share Code  - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/44)
+  - [ ] 기존 프로덕트에서 Embed Code Migration
+  - [ ] Migration 완료 후 코드/스타일 수정
+  - [ ] 대회 페이지 Route 변경
 - 언어 추출 Google Spread 기능 개발 - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/34)
   - [x] DataController - Google Spread Client interface - Google API 호출용
   - [x] DataParser - JSON 파일을 Google Spread 형식으로 파싱
   - [x] DataBuilder - Create Interface variables fuctions with Google Spread
   - [ ] Google Spread 데이터 범위를 나타내는 range function 재정의
+  - [ ] CSV > JSON으로 변경하는 리버스파서 만들기
 - JSCONF
   - [x] JS-CONF Summary 작성/공유하기
 
