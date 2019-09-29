@@ -1,7 +1,6 @@
 # W1
 
 Date: Sep 09, 2019 → Sep 14, 2019
-Tags: W1
 
 ## Learning Notes
 
