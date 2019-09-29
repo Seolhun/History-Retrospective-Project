@@ -8,37 +8,46 @@ Date: Sep 23, 2019 → Sep 29, 2019
 
 - **Hoon**
 
-## Designing software from the bottom up
+## 5장 - 자, 뭘 써야 할까?
 
 ### - Moments
-- **Identify the nouns and verbs** of your problem space
-- They continue to explore these ideas for a while, but the outcomes do not reveal much of anything about the simula‐ tor’s design.
-- poke holes in anything if you look for weird enough edge cases; but if you stay within the realms of reason and run into problems, it may be a sign of a problem that needs to be addressed sooner rather than later.
+- 글을 써보는 것보다 먼저 사물이나 사상을 세세하게 관찰하는 습관을 붙인다.
+  - 원래 모습을 소재로서 최대한 현상에 가까운 형태로 생생하게 담아두는 것
+- 써야 할것을 갖고 있지 않다는 것은, 반대로 무엇이든 자유롭게 쓸 수 있다.
+- 부석침목(浮石沈木) - 바위가 물위에 뜨고, 나무가 가라앉는다 => 일어날 수 없는 일이 일어난다.
+  - 예술 세계에서는 역전현상이 자주 일어난다.
+  - `지속적 창조성`이 부석침목의 현상을 만들어 낸다.
 
 ### - Inspired
-- 매번 얘기하지만, 개발은 문제의정의에서 시작된다. 즉 현재의 문제를 직면한 시점에서 문제에 대한 용어(단어, 동사 등)에 대한 정의를 올바르게 진행해야 한다. 여기서 가장 중요한 것은 **현재의 문제를 올바르게 정의하고 앞으로 해결하기 위한 방법과 결과물에 대해서 올바르게 정의한다는 것이 가장 중요한 포인트**라고 생각한다. 이러한 과정은 우리가 방향성으로 나가가고 있음을 확인할 수 있으며, 올바르게 가고 있는지에 대한 지표가 된다.
-- 이러한 과정은 모든 문제를 해결하는데 도움이 된다. 즉, 문제를 향해 나아갈 때 이성적인 기준이 존재한다는 것은 문제를 올바르게 해결하는 과정이라고 할 수 있다. 이러한 과정은 시간이 지나면서 순간순간 우리가 위치한 상황을 인지할 수 있게 해주며, 시간을 역추적하는 회고를 통해서도 무엇이 잘못되었는지를 파악하는데 큰 도움이 될 수 있다. 매 순간 측정과 문제 해결에 대한 결과물을 확인할 수 있으며, 이를 점검하고 수정하는데 좋은 기준이 될 것이다.
+이번화에서 지속적으로 성취를 만들어내기 위해서는 세상을 세심하게 관찰/기록하여 정리하는 것이라고 저자는 말한다. 이러한 노력이 부석침목을 만들어낸다고 한다.
+
+이 부분에 더 생각해보자. 개발자에게도 어느정도 교집합이 존재한다. 작은 단위의 프로젝트가 모여서 하나의 큰 프로젝트에 기여되기도 하고, 어떠한 큰 프로젝트가 다른 프로젝트의 핵심 기능을 담당하기도 한다. 즉, 개발자에게는 지속적 창조성이 부석침목을 넘어서 `다른 바위가 나의 바위를 뜨게 만들 수 도 있고, 다른 나무가 나의 나무를 가라앉힐 수 있다.` 지속적 창조성이 뭉쳐서 하나의 오픈소스 문화가 만들어지며, 이러한 오픈소스 문화를 통해서 우리는 지속적으로 바위를 띄울 수 있는 문화가 형성되었음에 감사함을 다시 한번 느낀다.
+
+이번 챕터를 통해서 나 또한 Repository를 되돌아보면서 지속적 창조성을 발휘할 수 있는 것들을 정리해보았다. 이러한 작은 것들을 지속적으로 창조/공유하여 부석침목이 되고 함께 성장할 수 있기를 바래본다.
 
 ### - Applying
-- Team OKR과 개인의 OKR을 작성하여보자.
-- 현재 진행하는 Project의 RoadMap과 Versioning을 작성해보자. 그리고 비교해보자.
-- 팀원들과 해당 문제에 대해서 깊게 토론하고 테스트하고, 회고하여 우리가 생각하는 것처럼 진행되었는지 진단해보자.
+- Github Repo 정리하고 지속적으로 재사용할 수 있는 코드 만들기
+- 글로서 기록하고 라벨링하여 정리하기
+- 기록/정리 된 글을 다듬어서 자유로운 블로그 글 써보기
 
-
-## Data modeling in an imperfect world
+## 6장 - 시간을 내 편으로 만든다 (장편소설 쓰기)
 
 ### - Moments
-- You illustrate your point by showing a table with the two work session records and how they would need to change:
-- Assuming that all pending changes are clearly marked, timesheets and other reports can be immediately updated to reflect the requested changes rather than continuing to display incomplete or inaccurate information.
-- If a request needs to be modified, then that too will be updated in real time and visible to everyone who needs to see it.
-- Notifications about accepted and declined changes could be automated, prevent‐ ing the possibility of a decision being made without it being communicated.
-- applying the event sourcing pattern in your data models can simplify things a bit.
+- 나는 기본적으로 혹은 최종적으로 나 자신을 장편소설 작가로 간주합니다.
+- 하루에 200자 원고지 20매를 쓰는 것을 규칙으로 삼고 있습니다.
+  - 이사크 디네센은, '나는 희망도 절망도 없이 매일매일 조금씩 씁니다'
+- '잘 썼다', '완벽하다'고 해도 발전의 가능성이 있습니다.
+- 비평과 조언은 가능한 한 허심탄회하고 겸허하게 반영하려고 노력합니다.
+- '해야 할 일을 똑 부러지게 했다'는 확실한 실감만 있으면 기본적으로 아무것도 두려워할 게 없습니다.
+- 다른 무엇보다 자신의 '실감'을 믿기로 합시다.
 
 ### - Inspired
-- 이번 챕터에서 기억에 남는 키워드는 **자동화, 실시간 반영, 모든사람과 공유, 비동기 의사소통**이라고 생각한다. 즉, 데이터와 관련된 변경사항들은 실시간으로 공유되고 프로세스화하여 관리할 수 있게 만들어야 한다.
-- 데이터의 변경은 조금씩 최소한으로 바꿔야 하며, 이에 대한 문서를 실시간으로 반영하여 제안하는 형식으로 진행되는 것이 수월하다. 즉, 프로덕트의 안정성을 고려해서 반영되어야 하며, 이러한 제안사항들은 다른사람이 시각적으로 쉽게 이해하고 볼 수 있게 제안되어야 한다.
+직업으로서의 소설가라는 책을 읽다보면, 저자는 프로세스화가 잘 되어 있다고 생각한다. 특히, 본인의 업과 장점을 잘 이해하고 있으며, 규칙을 세우고 지켜나가는 훈련이 잘 되어 있기 때문이다. 특히, 하루에 200자 원고지를 쓴다는 규칙을 지켜나간다는 것이 크게 인상이 깊었다. 매일 조금씩 꾸준히 처럼 매일 자신의 업을 조금씩 해나가는 것이 프로로서의 기본 자세가 아닐까라고 나도 다시 한 번 생각해본다.
+
+이러한 노력 외에도 다양한 사람들의 리뷰와 비평 등을 허심탄회하고 겸허하게 받아들인다는 것이 대단하다. 반대로, 본인의 실감을 항상 노력하고 만족하기 위해 노력한다는 부분이 직업에 대한 이해도와 프로로서의 훌륭한 태도를 겸비했다고 생각하게 만든다.
+
+나를 돌이켜보면 코드 리뷰를 통해서도 토론도 했지만, 상대방의 의견을 겸허히 받아들이지 못했던 적도 많이 있었다고 생각한다. 그러한 부분 없이 실감을 많이 의존했던 고집이 있었던 부분을 반성하게 된 계기가 된다. 조심해야 할것은 저자의 말처럼 다른 사람의 의견을 겸허히 받아들이면서도 본인의 실감을 항상 유지하고 지켜야 된다는 이야기가 아주 와닿는다. 가장 중요한 것은 겸허히 받아들이되 본인의 생각까지 바뀌지 말아야 한다는 것이다. 프로로서 책임지고 실천하는 삶에 대해 다시 한번 생각해보는 좋은 시간이 되었다.
 
 ### - Applying
-- 구글문서에 제안과 버저닝을 활용하여 문제에 사항들을 정리/공유/작성 하기
-- Github Issue에 문서를 더 잘 작성하고 다른 사람에게 제안하여 토론문화 만들기
-- 데이터를 자동화 할 수 있는 파이프라인에 대해서 문서화제안하기
+- 코드리뷰에 대해서 겸허히 생각해보고 의견 나누어보기
+- Versioning과 Roadmap을 작성하여 매일 코드 작성의 조금씩 실천하기
