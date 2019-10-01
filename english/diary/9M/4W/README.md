@@ -1,13 +1,12 @@
-2019.09
-# 4W
-# English Diary
 
-## Meta
-- Author : Seolhun
+# 4W - English Diary
 
-## Story
+## Meta
+- Author : Seolhun
 
-### Two reading clubs
+## Story
+
+### Two reading clubs
 
 We made reading clubs with previous company colleages. The club name is DDA.DDO.HAM, 
 In paraphrase, This means Splitting and Together. We made plan sharing and meeting rules.
@@ -22,16 +21,16 @@ The other club is in my company. This is not getting started yet because someone
 Anyway, we will start this club this week. I suggested and we selected 'Thinking about thought' book. I expect read this soon.
 
 
-### Excersise is not first job to me anymore
+### Excersise is not first job to me anymore
 
-I try to up muscle and down weight then before. I spent doing this about 4 ~ 50 minutes three times a week.
-When I was young, I spend much times about 2 hours everyday. But now, I don't need to muscle to work and spend much times for it.
+I try to up muscle and down weight then before. I spent doing this about 4 ~ 50 minutes three times a week.
+When I was young, I spend much times about 2 hours everyday. But now, I don't need to muscle to work and spend much times for it.
 
 The reason I changed my attitude is that I changed my major after graduation. It's so best choice so far, but too difficult. I restarted to study math and something logical thoughts. It took 3 years to adapt. I'm not good at them, but I try to up them everyday. 
 
 Thanks to this, I felt that my skills improved over time. And it makes me try everything, Even if I'm not get a good result. I know that all is fine. Important things are that I learned them and from others and record all things I did for 4 years. Sometimes, I write post on my blog based on them. The Writing is so good to memorize and understand deeply what I did or how this works. I recommend them for you. Thnaks. :)
 
-### Business card design
+### Business card design
 
 I designed my business card. Someday I have a plan to work as freelancer or in my work house.
 so, I want to make a business card that introduces me, not a company.
