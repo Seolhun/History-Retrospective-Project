@@ -1,3 +1,4 @@
+- [ ]  이미지 Cropper 구현
 # - 2019 Golas
 
 - Periods : 190902 ~ 190930
@@ -45,53 +46,95 @@
 - Router Paths 변경에 대한 토론 및 개선 - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/37)
   - [x] Check the side effects comparing past products
   - [ ] Change Route Paths based on User
-- Profile 개발 - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/36)
-  - [x] Profile Meeting (16 ~ 15)
-  - [ ] Profile main page development
-    - [ ] 새로운 URL 변경안 적용하기
-    - [ ] Profile Form 및 Link Detail 구현하기
+- **Components - (BD-UI)**
+    - [x]  이미지 Cropper 구현
+        - [ ]  BD-UI로 옮기기
+    - [x]  Radio Button
+- **대회 접수 페이지**
+    - [x]  페이지 및 데이터 확인
+    - [x]  작업물 산출
+    - [ ]  접수 페이지 개발
+        - [ ]  약관 동의
+        - [ ]  개인전
+        - [ ]  개인전 신청 확인
+        - [ ]  참가 접수
+            - [ ]  팀전 - 팀 선택
+            - [ ]  팀원
+            - [ ]  팀 생성
+            - [ ]  팀 생성 후 참가
+            - [ ]  팀전 확인
+        - [ ]  개인전
+        - [ ]  개인전 정보 수정
+            - [ ]  취소 팝업
+            - [ ]  수정 불가
+        - [ ]  개인전 체크인
+            - [ ]  진행
+            - [ ]  체크인 전
+            - [ ]  체크인 후
+        - [ ]  참가 접수 관리
+            - [ ]  팀장
+            - [ ]  팀 관리 팝업
+            - [ ]  팀 정보 수정
+            - [ ]  팀원
+            - [ ]  팀 탈퇴
+        - [ ]  대회 진행 정보 - 영빈님과 상의
+- **Profile 개발 - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/36)**
+    - [x]  Profile Meeting (16 ~ 15)
+    - [ ]  Profile main page development
+        - [x]  새로운 URL 변경안 적용하기
+        - [x]  Profile Form 및 Link Detail 구현하기
+    - [ ]  Profile 관련 Component bd-ui로 분리하기 (Container는 제외)
     - [ ]  Profile Pages
-      - [ ]  참여자 프로필 페이지 (메인 페이지)
-        - [x]  구독중인 대회
-        - [x]  최근 대회 기록
-        - [x]  태깅된 영상
-        - [x]  유저가 등록한 경기(없으면 최근 3경기)
-        - [ ]  예외 페이지
-          - [ ]  에러 경우
-          - [ ]  데이터 없는 경우
-          - [ ]  비공개인 경우
-          - [ ]  기존 유저 프로필 작성 유도 Confirm 창
-      - [ ]  주최자 페이지
-        - [ ]  진행중인 대회
-        - [ ]  지난 대회
-        - [ ]  예외 페이지
-          - [ ]  에러 경우
-          - [ ]  데이터 없는 경우
-      - [ ]  프로필 입력/수정 Form
-        - [ ]  개인 프로필
-          - [ ]  대표대회 5개 Confirm 창
-          - [ ]  SNS/Stream 최대 3개 Confirm 창
-        - [ ]  주최자 프로필
-          - [ ]  대회 진행시 삭제 불가 Confirm 창
-          - [ ]  주최자 프로필 삭제시 계정 삭제 안내 Confirm 창
-          - [ ]  권한 양도 Confirm 창
-        - [ ]  알림 설정
-        - [ ]  개인 정보/보안
-          - [ ]  회원 탈퇴 페이지
-          - [ ]  회원 탈퇴 Confirm 창
-    - [ ] Component bd-ui로 분리하기
-    - [x] 필요한 API 정리하기
-- Embed Share Code  - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/44)
-  - [x] 기존 프로덕트에서 Embed Code Migration
-  - [x] Migration 완료 후 코드/스타일 수정
-  - [x] 대회 페이지 Route 변경
-  - [ ] 대진표 코드 정리 이후 Embed Share 마무리하기
+        - [ ]  각 계정에 대한 **수정 권한 확인 로직 개선**
+        - [ ]  참여자 프로필 페이지 (메인 페이지)
+            - [x]  구독중인 대회
+            - [x]  최근 대회 기록
+            - [x]  태깅된 영상
+            - [x]  유저가 등록한 경기(없으면 최근 3경기)
+            - [x]  예외 페이지
+                - [x]  에러 경우
+                - [x]  데이터 없는 경우
+                - [ ]  비공개인 경우
+                    - [ ]  **비공개  Profile Column 추가되어야 함**
+                - [x]  기존 유저 프로필 작성 유도 Confirm 창
+                    - [x]  **프로필 작성 여부 정의 -** @Sang Hyun Bing
+        - [ ]  주최자 페이지
+            - [x]  진행중인 대회
+            - [x]  지난 대회
+            - [x]  예외 페이지
+                - [x]  에러 경우
+                - [x]  데이터 없는 경우
+        - [ ]  프로필 입력/수정 Form
+            - [x]  개인 프로필
+                - [x]  이미지 Cropper 구현
+                    - [x]  **Cropper Component로 구현한 뒤에 적용**
+                - [x]  대표대회 5개 Confirm 창
+                - [x]  SNS/Stream 최대 3개 Confirm 창
+            - [ ]  주최자 프로필
+                - [x]  대회 진행시 삭제 불가 Confirm 창
+                - [x]  주최자 프로필 삭제시 계정 삭제 안내 Confirm 창
+                - [x]  권한 양도 Confirm 창
+            - [ ]  알림 설정
+                - [ ]  API 확인
+            - [x]  개인 정보/보안
+                - [x]  회원 탈퇴 페이지
+                - [x]  회원 탈퇴 Confirm 창
+                - [ ]  API 확인
+
+- **Embed Share Code - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/44)**
+    - [x]  기존 프로덕트에서 Embed Code Migration
+    - [x]  Migration 완료 후 코드/스타일 수정
+    - [x]  대회 페이지 Route 변경
+    - [ ]  대진표 코드 정리 이후 Embed Share 마무리하기
+        - 대진표 코드 개선은 영빈님이 진행 예정 중
+
 - 언어 추출 Google Spread 기능 개발 - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/34)
   - [x] DataController - Google Spread Client interface - Google API 호출용
   - [x] DataParser - JSON 파일을 Google Spread 형식으로 파싱
   - [x] DataBuilder - Create Interface variables fuctions with Google Spread
   - [ ] Google Spread 데이터 범위를 나타내는 range function 재정의
   - [ ] CSV > JSON으로 변경하는 리버스파서 만들기
+
 - JSCONF
   - [x] JS-CONF Summary 작성/공유하기
 
