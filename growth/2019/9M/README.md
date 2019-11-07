@@ -33,18 +33,15 @@
 
 ## Company part
 
-### 디자인 & 프론트엔드 Theme 미팅
+#### BackLog
+- None
 
+#### InProgress
 
-#### 2W ~ 3W
-
-- GraphQL 모델링 및 사용 개선 - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/38)
-  - [x] Update GraphQL Models in Client -> BDGraphQLModel
-  - [x] Queries, Fragments, Mutations
-  - [ ] GraphQL 모든 파일 변경
 - Router Paths 변경에 대한 토론 및 개선 - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/37)
   - [x] Check the side effects comparing past products
   - [ ] Change Route Paths based on User
+
 - Profile 개발 - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/36)
   - [x] Profile Meeting (16 ~ 15)
   - [ ] Profile main page development
@@ -58,21 +55,24 @@
         - [x]  유저가 등록한 경기(없으면 최근 3경기)
     - [ ] Component bd-ui로 분리하기
     - [x] 필요한 API 정리하기
+
 - Embed Share Code  - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/44)
   - [x] 기존 프로덕트에서 Embed Code Migration
   - [x] Migration 완료 후 코드/스타일 수정
   - [x] 대회 페이지 Route 변경
   - [ ] 대진표 코드 정리 이후 Embed Share 마무리하기
+
 - 언어 추출 Google Spread 기능 개발 - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/34)
   - [x] DataController - Google Spread Client interface - Google API 호출용
   - [x] DataParser - JSON 파일을 Google Spread 형식으로 파싱
   - [x] DataBuilder - Create Interface variables fuctions with Google Spread
   - [ ] Google Spread 데이터 범위를 나타내는 range function 재정의
   - [ ] CSV > JSON으로 변경하는 리버스파서 만들기
+
+#### Done
+
 - JSCONF
   - [x] JS-CONF Summary 작성/공유하기
-
-#### 1W
 
 - Color 미팅 내용 정리 - [Issue Link](https://github.com/ejnkr/bd-ui/issues/116)
   - [x] 채널과 Notion에 공유

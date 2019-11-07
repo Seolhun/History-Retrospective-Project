@@ -1,7 +1,7 @@
 - [ ]  이미지 Cropper 구현
 # - 2019 Golas
 
-- Periods : 1901001 ~ 191031
+- Periods : 1901101 ~ 1901130
 
 ---
 
@@ -49,7 +49,10 @@
     - [x]  대회 페이지 Route 변경
     - [ ]  대진표 코드 정리 이후 Embed Share 마무리하기
 
-- **Layout Style 변경**
+- **검색 페이지**
+  - [ ] 게임 명품관 페이지
+
+- Layout 스타일 개선
   - Fixed Layout시 footer와 header의 영향을 받아 스타일링이 깨지는 문제가 발생
     - [ ] Style Hierarchy 문제를 해결하고 zIndex에 대한 값 정의 필요
     - [ ] Padding으로 Content Body의 양을 조절하는 부분 수정 필요
@@ -57,10 +60,29 @@
 #### InProgress
 
 - **Components - (BD-UI)**
-    - [x] 이미지 Cropper 구현
-    - [x] Radio Button
-    - [ ] BDDropdownSearch
-    - [ ] BD 
+    - [x] BDSpinner
+    - [x] BDCropper
+    - [x] BDRadioButton
+    - [x] BDDropdownSearch
+    - [x] BDDatePicker
+
+- **검색 페이지**
+  - [ ] 검색 Dropdown
+    - [x] 검색 추천 아이템
+      - [x] 게임
+      - [x] 대회
+      - [x] 유저
+      - [x] 주최자
+  - [x] 대회 검색
+    - [x] 검색 조건
+    - [x] 대회 리스트
+  - [x] 검색 페이지
+    - [x] 게임 카테고리 카드
+    - [x] 대회 카드
+    - [ ] 유저 카드
+    - [ ] 주최자 카드
+  - [ ] 검색 반응형 UI 수정 필요
+    - Layout의 계층, 스타일 등에 문제로 구현의 어려움이 있음, Layout의 개선으로 수정 필요
 
 - **대회 접수 페이지**
     - [x]  페이지 및 데이터 확인
@@ -79,12 +101,12 @@
         - [x]  개인전 정보 수정
             - [x]  취소 팝업
             - [x]  수정 불가
-        - [ ]  개인전 체크인
-            - [ ]  진행
-            - [ ]  체크인 전
-            - [ ]  체크인 후
-        - [ ]  참가 접수 관리
-            - [ ]  팀장
+        - [x]  개인전 체크인
+            - [x]  진행
+            - [x]  체크인 전
+            - [x]  체크인 후
+        - [x]  참가 접수 관리
+            - [x]  팀장
             - [x]  팀 관리 팝업
             - [x]  팀 정보 수정
             - [x]  팀원
@@ -134,17 +156,63 @@
                 - [x]  회원 탈퇴 Confirm 창
                 - [ ]  API 확인
 
+- **하이라이트 페이지 개발** - [3일]
+  - [ ] 하이라이트 메인 페이지
+    - [ ] 하이라이트 카드 개발
+  - [ ] 하이라이트 
+  - [ ] 하이라이트 업로드 페이지
+    - [ ] 하이라이트 영상 수정
+    - [ ] 하이라이트 영상 업로드
+
+- Validation Form Hook 만들기 - [1일]
+  - formik hooks 사용
+    - [ ] 접수 페이지 개선
+    - [ ] 하이라이트 페이지 개선
+
+- 대회 진행 관리 - [1 + 1 + 1 + 2 + 1 + 5 + 3 = 14일 + @]
+  - 공통 사용 - [1일]
+    - [ ] 관리자 모드 버튼
+    - [ ] 대회 진행 관리 페이지
+    - [ ] 대회 기간 정보 Container
+    - [ ] 대회 진행 Controller Container
+  - 대회 상태 별 페이지
+    - [ ] 대회 준비 중 - [1일] 
+      - [ ] 대회 기간 정보/수정
+      - [ ] 대회 진행 Controller
+      - [ ] 대회 관리자 및 대회 수정 Text Button Container
+    - [ ] 참가 접수 중 - [1일]
+      - [ ] 대회 기간 정보/수정/비활성화
+      - [ ] 트게더 광고 베너 만들기
+      - [ ] 접수 돌아가기, 강제진행 경고만들기
+        - [ ] 데이터 Create/Update/Delete(Cancel) 확인/요청하기
+    - [ ] 대회 시작 대기 중 - [2일]
+      - 대진표 작성 완료 전
+        - [ ] Match 만들기/수정/확인 Text Button Container
+        - [ ] 돌아가기(접수 재시작) / 대진표 확인 / 시드 확인 등 프로세스 경고창
+          - [ ] 데이터 Create/Update/Delete(Cancel) 확인/요청하기
+      - 대진표 작성 완료 및 체크인 상태
+        - 체크인 리스트
+    - [ ] 대회 시작 - [1일]
+      - [ ] 대회 시작 전 마지막 체크 사항
+        - [ ] 대진표 바로가기
+        - [ ] 시드 설정 바로가기
+        - [ ] 공지사항 바로가기
+      - [ ] 대회 시작 경고 팝업 (대회 시작은 일정에 맞게만 진행 가능)
+    - [ ] **대회 진행 중 페이지** - [5일]
+      - [ ] 링크 복사
+      - [ ] 대진표 보기
+      - [ ] 매치목록 보기
+        - [ ] **대진표/매치목록 상세보기/입력 팝업**
+          - 채팅 기능
+          - 이미지 업로드
+          - 시스템 메세지
+      - [ ] 스테이지 진행
+        - 대회 스테이지 진행 팝업
+    - [ ] **대회 점수 입력** - [3일]
+      - [ ] 각 대회 종류 별 입력
+
 #### Done
-
-- GraphQL 모델링 및 사용 개선 - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/38)
-  - [x] Update GraphQL Models in Client -> BDGraphQLModel
-  - [x] Queries, Fragments, Mutations
-  - [x] GraphQL 모든 파일 변경
-
-- Route Paths 변경에 대한 토론 및 개선 - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/37)
-  - [x] 모델 기반의 도메인 URL 변경
-  - [x] Check the side effects comparing past products
-  - [x] Change Route Paths based on User
+- None
 
 ---
 
