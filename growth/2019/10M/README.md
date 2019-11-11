@@ -1,4 +1,3 @@
-- [ ]  이미지 Cropper 구현
 # - 2019 Golas
 
 - Periods : 1901001 ~ 191031
