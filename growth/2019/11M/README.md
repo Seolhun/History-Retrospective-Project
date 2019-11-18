@@ -54,6 +54,10 @@
 - TimeZone 기능
   - Region, My Time, Localization 등에 대한 논의가 필요
 
+- Game Content Quration - Trffic Drivent By CEO (Chanjae Park)
+  - Issue Content
+    - 롤드컵이 끝났다던가 등에 대한 것
+
 #### InProgress
 
 - **Components - (BD-UI)**
@@ -63,44 +67,32 @@
   - [x] BDDatePicker
   - [x] BDDrawer
   - [x] BDProgress
+    - [ ] Gradient Path and Stop
   - [ ] BDCropper
-    - 원래 사진에서 각각의 영역을 선택할 수 있는 방법으로 변경할 필요가 있다.
+    - 원래 사진에서 각각의 영역을 선택할 수 있는 방법으로 변경할 필요가 있다
 
-- **Embed Share Code - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/44)**
+- **Embed Share Code - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/44)** - [2일]
   - [x] 기존 프로덕트에서 Embed Code Migration
   - [x] Migration 완료 후 코드/스타일 수정
   - [x] 대회 페이지 Route 변경
-  - [ ] 대진표 코드 정리 이후 Embed Share 마무리하기
-    - [ ] 대회 모바일 Mobile경우 Share에 해당되는 Dom영역이 사라지므로 모바일에서 사용되는 영역에 Modal을 추가로 넣어줘야 함
-      - [ ] 모바일 용 영빈님 대회 페이지 진행사항 파악하기
+  - [x] 대진표 코드 정리 이후 Embed Share 마무리하기
+    - [x] 대회 모바일 Mobile경우 Share에 해당되는 Dom영역이 사라지므로 모바일에서 사용되는 영역에 Modal을 추가로 넣어줘야 함
+
+- Validation Form Hook 만들기 - [1일]
+  - **formik hooks 기반**
+    - [ ] UI & Validation Hooks Functions
+  - 수정 페이지
+    - [ ] 접수 페이지 개선
+    - [ ] 하이라이트 페이지 개선
 
 - **하이라이트 페이지 개발** - [3일]
-  - [ ] 하이라이트 메인 페이지
-  - [ ] 하이라이트 카드 개발
-  - [ ] 하이라이트 대시보드(?) 페이지
-    - [ ] 하이라이트 업로드 페이지
-      - [ ] 하이라이트 영상 수정
-      - [ ] 하이라이트 영상 업로드
+  - [x]  하이라이트 메인 페이지
+  - [x]  하이라이트 카드 개발
+  - [ ]  하이라이트 대시보드(업로드/수정) 페이지
+    - [ ]  하이라이트 영상 수정
+    - [ ]  하이라이트 영상 업로드
 
-- **검색 페이지**
-  - [ ] 검색 Dropdown
-    - [x] 검색 추천 아이템
-      - [x] 게임
-      - [x] 대회
-      - [x] 유저
-      - [x] 주최자
-  - [x] 대회 검색
-    - [x] 검색 조건
-    - [x] 대회 리스트
-  - [x] 검색 페이지
-    - [x] 게임 카테고리 카드
-    - [x] 대회 카드
-    - [ ] 유저 카드
-    - [ ] 주최자 카드
-  - [ ] 검색 반응형 UI 수정 필요
-    - Layout의 계층, 스타일 등에 문제로 구현의 어려움이 있음, Layout의 개선으로 수정 필요
-
-- **대회 접수 페이지**
+- **대회 접수 페이지** - [4일]
   - [x] 페이지 및 데이터 확인
   - [x] 작업물 산출
   - [x] 접수 페이지 개발
@@ -129,7 +121,25 @@
           - [x] 팀 탈퇴
       - [ ] 대회 진행 정보
 
-- **Profile 개발 - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/36)**
+- **검색 페이지** - [4일]
+  - [ ] 검색 Dropdown
+    - [x] 검색 추천 아이템
+      - [x] 게임
+      - [x] 대회
+      - [x] 유저
+      - [x] 주최자
+  - [x] 대회 검색
+    - [x] 검색 조건
+    - [x] 대회 리스트
+  - [x] 검색 페이지
+    - [x] 게임 카테고리 카드
+    - [x] 대회 카드
+    - [ ] 유저 카드
+    - [ ] 주최자 카드
+  - [ ] 검색 반응형 UI 수정 필요
+    - Layout의 계층, 스타일 등에 문제로 구현의 어려움이 있음, Layout의 개선으로 수정 필요
+
+- **Profile 개발 - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/36)** - [5일]
   - [x] Profile Meeting (16 ~ 15)
   - [ ] Profile main page development
     - [x] 새로운 URL 변경안 적용하기
@@ -171,13 +181,6 @@
             - [x] 회원 탈퇴 페이지
             - [x] 회원 탈퇴 Confirm 창
             - [ ] API 확인
-
-- Validation Form Hook 만들기 - [1일]
-  - **formik hooks 기반**
-    - [ ] UI & Validation Hooks Functions
-  - 수정 페이지
-    - [ ] 접수 페이지 개선
-    - [ ] 하이라이트 페이지 개선
 
 - 대회 진행 관리 - [1 + 1 + 1 + 2 + 1 + 5 + 3 = 14일 + @]
   - 공통 사용 - [1일]
