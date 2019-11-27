@@ -61,3 +61,31 @@ docker-compose down -v
 - `CMD` is the command the container executes by default when you launch the built image. A Dockerfile can only have one CMD. The CMD can be overridden when starting a container with docker run $image $other_command.
 
 - `ENTRYPOINT` is also closely related to CMD and can modify the way a container starts an image.
+
+
+---
+
+### Third party 
+
+Docker Container volumes
+
+#### Mariadb
+/var/lib/mysql
+
+#### Jenkins
+/var/jenkins_home
+
+1. create folder for Jenkins
+
+> mkdir -p /volume1/docker/jenkins
+> sudo chown -R 1000:1000 /volume1/docker/jenkins
+> > -v /volume1/docker/jenkins:/var/jenkins_home
+
+3. grant rights to "host" docker
+
+> sudo ln -s /var/run/docker.sock /volume1/docker/docker.sock
+> sudo chown -R 1000:1000 /var/run/docker.sock
+> > -v /volume1/docker/docker.sock:/var/run/docker.sock
+
+4. Docker run
+docker run --restart always --name blueocean jenkinsci/blueocean:latest

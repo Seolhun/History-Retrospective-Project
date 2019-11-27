@@ -78,51 +78,51 @@
   - [x] 대진표 코드 정리 이후 Embed Share 마무리하기
     - [x] 대회 모바일 Mobile경우 Share에 해당되는 Dom영역이 사라지므로 모바일에서 사용되는 영역에 Modal을 추가로 넣어줘야 함
 
-- Validation Form Hook 만들기 - [1일]
-  - **formik hooks 기반**
-    - [ ] UI & Validation Hooks Functions
-  - 수정 페이지
-    - [ ] 접수 페이지 개선
-    - [ ] 하이라이트 페이지 개선
-
 - **하이라이트 페이지 개발** - [3일]
   - [x]  하이라이트 메인 페이지
+    - [ ] 나의 하이라이트 페이지
   - [x]  하이라이트 카드 개발
-  - [ ]  하이라이트 대시보드(업로드/수정) 페이지
-    - [ ]  하이라이트 영상 수정
-    - [ ]  하이라이트 영상 업로드
+  - [x]  하이라이트 대시보드(업로드/수정) 페이지
+    - [x]  하이라이트 영상 수정
+    - [x]  하이라이트 영상 업로드
+
+- **Form을 formik hooks로 만들기** - [1일]
+  - [x] UI & Validation Hooks Functions
+  - 수정 페이지
+    - [x] 하이라이트 페이지 개선
+    - [ ] 접수 페이지 개선
 
 - **대회 접수 페이지** - [4일]
   - [x] 페이지 및 데이터 확인
   - [x] 작업물 산출
   - [x] 접수 페이지 개발
-      - [x] 약관 동의
-      - [x] 개인전
-      - [x] 개인전 신청 확인
-      - [x] 참가 접수
-          - [x] 팀전 - 팀 선택
-          - [x] 팀원
-          - [x] 팀 생성
-          - [x] 팀 생성 후 참가
-          - [x] 팀전 확인
-      - [x] 개인전
-      - [x] 개인전 정보 수정
-          - [x] 취소 팝업
-          - [x] 수정 불가
-      - [x] 개인전 체크인
-          - [x] 진행
-          - [x] 체크인 전
-          - [x] 체크인 후
-      - [x] 참가 접수 관리
-          - [x] 팀장
-          - [x] 팀 관리 팝업
-          - [x] 팀 정보 수정
-          - [x] 팀원
-          - [x] 팀 탈퇴
-      - [ ] 대회 진행 정보
+    - [x] 약관 동의
+    - [x] 개인전
+    - [x] 개인전 신청 확인
+    - [x] 참가 접수
+      - [x] 팀전 - 팀 선택
+      - [x] 팀원
+      - [x] 팀 생성
+      - [x] 팀 생성 후 참가
+      - [x] 팀전 확인
+    - [x] 개인전
+    - [x] 개인전 정보 수정
+      - [x] 취소 팝업
+      - [x] 수정 불가
+    - [x] 개인전 체크인
+      - [x] 진행
+      - [x] 체크인 전
+      - [x] 체크인 후
+    - [x] 참가 접수 관리
+      - [x] 팀장
+      - [x] 팀 관리 팝업
+      - [x] 팀 정보 수정
+      - [x] 팀원
+      - [x] 팀 탈퇴
+    - [x] 대회 진행 정보
 
 - **검색 페이지** - [4일]
-  - [ ] 검색 Dropdown
+  - [x] 검색 Dropdown
     - [x] 검색 추천 아이템
       - [x] 게임
       - [x] 대회
@@ -139,7 +139,7 @@
   - [ ] 검색 반응형 UI 수정 필요
     - Layout의 계층, 스타일 등에 문제로 구현의 어려움이 있음, Layout의 개선으로 수정 필요
 
-- **Profile 개발 - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/36)** - [5일]
+- **Profile 개발** - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/36) - [5일]
   - [x] Profile Meeting (16 ~ 15)
   - [ ] Profile main page development
     - [x] 새로운 URL 변경안 적용하기
@@ -229,15 +229,24 @@
 
 ---
 
-## Localized Component
+## Repositories
+
+### Localized Component
 
 - [x] Grid System
 - [x] Shadow Box
 - [x] Typing
 - [ ] Carousel
 - [ ] Form Group
+  - [x] Dropdown(Select)
+  - [x] DropdownSearch
+  - [ ] Input 수정
+  - [ ] Checkbox 수정
+    - [ ] Checkbox Group
+  - [ ] Radio 수정
+    - [ ] Radio Group
 
-## Seolhun blog
+### Seolhun.github.io - Blog
 
 - [x] Renewal Main Pages
 - [ ] Add canvas for variety figures
@@ -265,8 +274,8 @@
 
 ### - Engines
 
-- [x] Scraper with Post API.
-- [ ] Test Cron jobs
+- [x] Attching API
+- [x] Cron jobs
 
 ### - Carlo Window UI
 
