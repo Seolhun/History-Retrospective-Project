@@ -1,24 +1,28 @@
-# - 2019 Golas
+# - 2020 Golas
 
-- Periods : 2019.01.01 ~ 2020.12.31
+- Periods : 2020.01.01 ~ 2020.12.31
 
 ---
 
 ## The Growth Objectives
 
 - Books
-  - [x] 프론트엔드 개발자를 위한 JavaScript 완독
-  - [x] JavaScript 함수형 프로그래밍 완독
-  - HTTP 완벽가이드 완독/정리
+  - [ ] HTTP 완벽가이드 완독
+  - [ ] 운영체제 완독
 - Projects
   - hi-cord 개발/릴리즈
+    - Devops
+      - [ ] Kubernates On GCP
+        - Dashboard
+        - Deployment
     - Backend API
-      - Auth
-      - Post
-      - Recomendation
+      - [ ] Auth
+      - [ ] Tours
+      - [ ] Calendars
     - FrontEnd
-      - Homepage
-      - Dashboard
+      - [ ] Homepage
+      - [ ] Dashboard
+      - [ ] Web Platform
   - Localize-Component 개발/릴리즈
   - D3(vx 참고)를 이용한 Chart/TableComponent 개발/릴리즈
 
@@ -27,7 +31,7 @@
 - 매일 1시간씩 책 독서하기
 - 월 1회 블로그 작성/정리하기
 - 주 2회 운동하기
-- 개발사항 Changed Log 작성하기
+- **개발사항 Changed Log 작성하기**
 
 ---
 
