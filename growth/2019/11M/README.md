@@ -48,11 +48,12 @@
 
 - Layout 스타일 개선
   - Fixed Layout시 footer와 header의 영향을 받아 스타일링이 깨지는 문제가 발생
-    - [ ] Style Hierarchy 문제를 해결하고 zIndex에 대한 값 정의 필요
-    - [ ] Padding으로 Content Body의 양을 조절하는 부분 수정 필요
+    - [x] Style Hierarchy 문제를 해결하고 zIndex에 대한 값 정의 필요
+    - [x] Padding으로 Content Body의 양을 조절하는 부분 수정
+  - [ ] Transformm로 인한 해당 영역 안에 `position: fixed;`가 동작되지 않는 문제
 
 - TimeZone 기능
-  - Region, My Time, Localization 등에 대한 논의가 필요
+  - [ ] Region, My Time, Localization 등에 대한 논의가 필요
 
 - Game Content Quration - Trffic Drivent By CEO (Chanjae Park)
   - Issue Content
@@ -69,7 +70,7 @@
   - [x] BDProgress
     - [ ] Gradient Path and Stop
   - [ ] BDCropper
-    - 원래 사진에서 각각의 영역을 선택할 수 있는 방법으로 변경할 필요가 있다
+    - [ ] 이미지내에서 해당 영역 선택가능하게 변경
 
 - **Embed Share Code - [Issue Link](https://github.com/ejnkr/bd-frontend/issues/44)** - [2일]
   - [x] 기존 프로덕트에서 Embed Code Migration
@@ -80,7 +81,7 @@
 
 - **하이라이트 페이지 개발** - [3일]
   - [x]  하이라이트 메인 페이지
-    - [ ] 나의 하이라이트 페이지
+    - [x] 나의 하이라이트 페이지
   - [x]  하이라이트 카드 개발
   - [x]  하이라이트 대시보드(업로드/수정) 페이지
     - [x]  하이라이트 영상 수정
@@ -90,7 +91,7 @@
   - [x] UI & Validation Hooks Functions
   - 수정 페이지
     - [x] 하이라이트 페이지 개선
-    - [ ] 접수 페이지 개선
+    - [x] 접수 페이지 개선
 
 - **대회 접수 페이지** - [4일]
   - [x] 페이지 및 데이터 확인
