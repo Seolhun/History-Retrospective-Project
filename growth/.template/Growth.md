@@ -1,6 +1,6 @@
-# - 2019 Golas
+# - 2020 Golas
 
-- Periods : 190902 ~ 190908
+- Periods : 2020.01.01 ~ 2020.12.31
 
 ---
 
@@ -22,7 +22,7 @@
   - Localize-Component 개발/릴리즈
   - D3(vx 참고)를 이용한 Chart/TableComponent 개발/릴리즈
 
-#### - Routine Key Results
+### - Routine Key Results
 
 - 매일 1시간씩 책 독서하기
 - 월 1회 블로그 작성/정리하기
@@ -31,25 +31,22 @@
 
 ---
 
-## What did I do for a month?
+## Localized Component
 
-#### Ticket State
-
-- ⬛️ Not Yet
-- ⚪️ In progress
-- 🔴 Pending
-- ✅ Is Done
+## Seolhun blog
 
 ---
 
-# Company part
+## Hi-Cord
 
-#### Sub Title
+### - API
 
----
+### - Frontend
 
-# My part
+## Hi-Cord-Scrapers
 
-## Ticket Title
+### - Engines
 
-#### Sub Ticket title
+### - Carlo Window UI
+
+### - Utils
