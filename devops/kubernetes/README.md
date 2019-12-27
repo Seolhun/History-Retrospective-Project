@@ -1,242 +1,54 @@
-# AWS EKS Kubernates Practice
+# Kubernetes
 
-- 2019.12.03
-- GS Tower 14F
+## Component - [Link](https://kubernetes.io/ko/docs/concepts/overview/components/)
 
-## Time Table
-- 09:30 – 11:00
-	- Docker, 컨테이너 오케스트레이션 소개
-	- 쿠버네티스, EKS 소개
-	- Amazon EKS 클러스터 생성
+쿠버네티스를 배포하면 `클러스터`를 얻는다.
 
-- 11:00 – 11:15
-	- 쉬는 시간
+클러스터는 쿠버네티스에서 관리하는 `컨테이너화된 애플리케이션을 실행하는 노드`라고 하는 기계의 집합. 클러스터는 최소 1개의 워커 노드와 최소 1개의 마스터 노드를 가진다.
 
-- 11:15 – 12:30
-	- EKS 실습 : EKS 클러스터 생성
-
-- 12:30 – 13:30
-	- 점심 시간
-
-- 13:30 – 14:20
-	- EKS 실습: 마이크로 서비스 배포
-
-- 14:20 – 15:10
-	- EKS 실습: 헬름을 이용한 배포
-
-- 15:10 – 16:00
-	- EKS 실습: EFK를 활용한 로깅
-
-- 16:00 – 16:45
-	- EKS 실습: 프로메테우스를 사용한 모니터링
-
-- 16:45 – 17:00
-	- 맺음말
+**워커 노드는 애플리케이션의 구성요소인 파드를 호스트**한다. 마스터 노드는 워커 노드와 클러스터 내 파드를 관리한다. 다수의 마스터 노드는 장애극복(failover)과 고가용성의 클러스터에서 사용한다.
 
 ---
 
-## Docker Container
+## Object
 
-- Containerize
-	- Kernel을 공유
-	- 운영 측면에서 강점 (VM은 격리환경이 OS에서 발생되기에 보안측면이 강함)
+## Service, Load Balancing, Networking
 
-## Orchestrator
-
-#### Service Management 
-
-#### Scheduling
--	Placement
-- Scaling
-- Upgrades
-- Rollback
-
-#### Resource Management 
-- Memory
-- CPU
-- Ports
-
-- Spec 기반의 설정을 통해 Container를 조절
-
-## Kubernetes
-
-#### Control Plane
-- Etcd
-- API Server
-- Scheduler
-- Controller Manager
-
-#### Kubernetes Node (Data Plane)
-- kubelet (Agent from API Server)
-- kube-proxy (Routing Table controller)
-- cAdvisor
-
-- kubectl
-	- `~/.kube/config` 확인
-
-#### Pods (!important)
-- `A group of one or more containers`
-- `Shared`
-	- Data volumnes
-	- cgroup
-	- Namespace - network, IPC, ETC
-
-#### ReplicaSet
-
-#### Deployment
-- Rolling Update
-- Blue Green Update
-- Canary Update
-
-#### Lables
-- Key/Value Pairs
-- Used to query specific resources within your cluster
-
-#### Services : ClusterIP
-- Exposes the service on a cluster-internal-IP
-- Only reachable from within the cluster
-- Access possible via kube-proxy
-
-#### Services : LoadBalancer
-- Exposes the service externally using a cloud provider's load balancer
-- NodePort and ClusterIP services (to which LB will route) automatically created
-- !Warning
-	- Delayed time to create LB instance
-
-#### Services : NodePort
--	Exposes the service on each Node's IP at a static port
-- Routes to ClusterUP service, which is automatically created
-
-#### Services : Ingress
--	L7 Switch
-- exposes HTTP/HTTPS routes to services within the cluster
-
-#### Storage
-- Lifecycle of a storage volume
-	- Provisioning
-		- Dynamic
-			- Pdos에 요청에 의해 만들어지는 경우
-		- Static
-			- Pods에 요청 전에 만들어져있는 경우
-	- Binding - Persistent Volume binding for Spec in Kubernetes claiming class)
-		- PVC (Persistent Volume Claim)
-		- PV (Persistent Volume)
-	- Using
-		- Cluster mounts volume based on PVC
-	- Reclaming
-		- Retain
-		- Delete
-
-#### StatefulSet
-- Network identifiers
-- Persistent Storage
-- Ordered graceful deployerment and scailing
-- Ordered graceful termination
-- Ordered rolling updates
-- ..., use Deployment or Replicaset
-
-#### Jobs
-
-####  ConfigMap/SecretMap
-- Config
-	- Set indipendent Configuration map to build product
-	- Set configurations with Labels
-- Secret (default `base64`)
-	- Set secret configuration required security
+### Ingress - [Link](https://kubernetes.io/ko/docs/concepts/services-networking/ingress/)
 
 ---
 
-## EKS
+## Network
 
-- Master node 3개(Default)는 EC2, VCP 모두 AWS 내에서 관리된다.
-	- 즉, EC2, VPC Dahsboard에서 확인 불가능
-- 인증은 IAM, 권한은 K8s Role(Rback) 사용
-	- EKS 생성자는 기본적으로 RBack에 system:master로 등록되어있음
-	- 수정을 원하면 `aws-auth configmap`
-		- mapUsers
-- EKS AMI Build Scripts
-- EKS Optimized AMI with GPU Support
-- Worker node Setup - Bootstrapping
+#### ClusterIP
 
-#### [Docs Link](https://aws.amazon.com/ko/eks/)
+**Exposes the service on a cluster-internal IP.**
 
----
+Choosing this value makes the service only reachable from within the cluster. This is the default ServiceType
 
-## Helm
+- spec.clusterIp:spec.ports[*].port
 
-The package manager for Kubernetes
-> Charts help you define, install, and upgrade even the most complex Kubernetes application.
+> You can only access this service while inside the cluster. It is accessible from its spec.clusterIp port. If a spec.ports[*].targetPort is set it will route from the port to the targetPort. The CLUSTER-IP you get when calling kubectl get services is the IP assigned to this service within the cluster internally.
 
-- Chart.yaml
-	- requirements.yaml
-	- values.yaml
+#### NodePort
 
-- Kubernates에 필요한 Deployments와 Service 등에 필요한 설정 값을 함께 Managing 할 수 있음.
-	- Chart.yaml : set Package Name and versions
-	- values.yaml : set variables
+**Exposes the service on each Node’s IP at a static port (the NodePort).**
 
-#### Helm Files
-- NOTES.txt: The “help text” for your chart. This will be displayed to your users when they run helm install.
-- deployment.yaml: A basic manifest for creating a Kubernetes deployment
-- service.yaml: A basic manifest for creating a service endpoint for your deployment
-- _helpers.tpl: A place to put template helpers that you can re-use throughout the chart
-- ingress.yaml: A basic manifest for creating a Kubernetes ingress object for your service
-- tests/: A folder which contains tests for chart
+A ClusterIP service, to which the NodePort service will route, is automatically created. You’ll be able to contact the NodePort service, from outside the cluster, by requesting <NodeIP>:<NodePort>.
 
-## Prometheus
-- Mornitoring to alert
-- Time series Database standalone
+- <NodeIP>:spec.ports[*].nodePort
+- spec.clusterIp:spec.ports[*].port
 
-#### Functions
-- Exporter
-	- Getting Data from exporter
-- PromQL (Grafa recommended)
-	- Query on the UI
+> If you access this service on a nodePort from the node's external IP, it will route the request to spec.clusterIp:spec.ports[*].port, which will in turn route it to your spec.ports[*].targetPort, if set. This service can also be accessed in the same way as ClusterIP
 
-## Grafana
-- Metic analytics
-- Metic visualization for time series
+#### LoadBalancer
 
----
+**Exposes the service externally using a cloud provider’s load balancer.**
 
-## Keywords
-- Sidecar Pattern
-	- [Uber Blog](https://eng.uber.com/distributed-tracing/)
-- Log Aggregator
-	- [Fluentd - high-availability](https://docs.fluentd.org/deployment/high-availability)
- 
+NodePort and ClusterIP services, to which the external load balancer will route, are automatically created.
 
----
+- spec.loadBalancerIp:spec.ports[*].port
+- <NodeIP>:spec.ports[*].nodePort
+- spec.clusterIp:spec.ports[*].port
 
-## Pricing
-- CloudFormation
-- EKS (each EKS Cluster per hours : 0.2 USD)
-	- Cluster
-- EC2 
-	- 3 Node(Default) instance
-	- default m5.large size (0.096 USD per hours)
-		- 0.096 * 24 * 30 * 3 nodes
-			- 207.36 $
-- VCP (each ENI per hours : 0.015 USD)
-	- Ingress network
-
----
-
-## Refs
-
-#### EKS
-- [EKS Workshop](https://eksworkshop.com/010_introduction/)
-- [EKS vs ECS](https://cloudonaut.io/eks-vs-ecs-orchestrating-containers-on-aws/)
-
-#### Helm
-- [Helm](https://helm.sh/)
-- [Helm Hub](https://hub.helm.sh/)
-- [Docs Link](https://docs.aws.amazon.com/ko_kr/eks/latest/userguide/helm.html)
-
-#### EFK (ElasticSearch, Fluentd, Kiabana)
-- [EFK - Logging](https://eksworkshop.com/intermediate/230_logging/)
-- [EKS Stream with Cloud-watch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL_ES_Stream.html)
-
-#### Mornitoring
-- [Prometheus](https://prometheus.io/)
-- [Grafaba](https://grafana.com/)
+> You can access this service from your load balancer's IP address, which routes your request to a nodePort, which in turn routes the request to the clusterIP port. You can access this service as you would a NodePort or a ClusterIP service as well.

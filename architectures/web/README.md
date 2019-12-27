@@ -20,11 +20,10 @@
 - Typescript
 
 ### Framework
-- Next.js
+- Next.js (SSR)
   - To build WAS server and CEO easilly
   - API Mock server with client
-- CSR(Client Side Rendering)
-  -
+- React + CloudFront (CSR)
 
 ### Library
 #### Confirmed
