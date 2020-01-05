@@ -4,12 +4,12 @@
 
 docker build . -t ${TagName}
 docker build --build-arg NODE_ENV=development . -t ${TagName}
-docker build . -t \${TagName} -f /path/to/Dockerfile
+docker build . -t ${TagName} -f /path/to/Dockerfile
 
 ## Run
 
 docker run -d tag
-docker run -d -p 4000:3060 \${IMAGE_ID}
+docker run -d -p 4000:3060 ${IMAGE_ID}
 
 ---
 
@@ -17,7 +17,7 @@ docker run -d -p 4000:3060 \${IMAGE_ID}
 
 #### Remove
 
-docker rmi \$(docker images -q)
+docker rmi $(docker images -q)
 
 ---
 
@@ -25,19 +25,19 @@ docker rmi \$(docker images -q)
 
 #### Stop all containers:
 
-docker kill \$(docker ps -q)
+docker kill $(docker ps -q)
 
 #### Remove all containers
 
-docker rm \$(docker ps -a -q)
+docker rm $(docker ps -a -q)
 
 #### Stop
 
-docker stop \${CONTAINER_ID}
+docker stop ${CONTAINER_ID}
 
 #### Delete
 
-docker rm -f \${CONTAINER_ID}
+docker rm -f ${CONTAINER_ID}
 
 #### List
 
@@ -45,7 +45,7 @@ docker ps -al
 
 #### Logs
 
-docker logs \${ContainerID}
+docker logs ${ContainerID}
 
 ---
 
