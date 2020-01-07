@@ -40,6 +40,7 @@
 #### BackLog
 
 #### InProgress
+- Tournaments
 
 #### Done
 

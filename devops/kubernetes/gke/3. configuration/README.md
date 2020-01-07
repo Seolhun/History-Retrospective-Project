@@ -9,13 +9,23 @@ $ kubectl create serviceaccount --namespace kube-system tiller
 $ kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
 ```
 
-2. Create Ingress Nginx with Helm
+2. Init helm by serviceaccount
+
+> Based on Helm V3
 
 ```bash
-$ helm install stable/nginx-ingress --name my-nginx --set rbac.create=true
+$ helm repo add stable https://kubernetes-charts.storage.googleapis.com/
 ```
 
-## Set Https
+3. Create Ingress Nginx with Helm
+
+```bash
+$ helm install micro-ingress-nginx stable/nginx-ingress --set rbac.create=true
+```
+
+## Set Https with Cert Manager
+
+[Cert-Manager - Docs](https://cert-manager.io/docs/installation/kubernetes/)
 
 1. Apply the yaml config file
 
@@ -43,12 +53,10 @@ helm repo update
 
 5. Install the cert-manager Helm chart
 
+> important thing is Helm V3
+
 ```bash
-helm install \
-  --name cert-manager \
-  --namespace cert-manager \
-  --version v0.12.0 \
-  jetstack/cert-manager
+helm install cert-manager --namespace cert-manager --version v0.12.0 jetstack/cert-manager
 ```
 
 ## Refs
