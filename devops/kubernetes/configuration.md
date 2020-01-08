@@ -1,8 +1,6 @@
-# EKS Configuration
+# Configuration
 
-## Init Configration
-
-### Change `kube-config`
+## Change `kube-config`
 
 #### To EKS
 
@@ -30,11 +28,3 @@ $ gcloud config set project hicord-263305
 $ gcloud config set compute/zone asia-northeast1-a
 $ gcloud container clusters get-credentials hicord-cluster
 ```
-
-> /Users/hunseol/.bash_profile
-
-- [Links](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl?hl=ko)
-
-
-## Refs
-- [EKS Docs](https://docs.aws.amazon.com/eks/latest/userguide/what-is-eks.html)
