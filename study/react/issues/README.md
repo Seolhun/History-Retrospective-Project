@@ -12,6 +12,25 @@
 해당 문제는 
 
 1. external을 유지하고 예제 폴더의 패키지를 삭제는 방법
+
+```js
+<!-- Modules -->
+externals: {
+  react: 'react'
+}
+
+
+<!-- Examples -->
+// Webpack
+resolve: {
+  alias: {
+    react: path.resolve('../node_modules/react'),
+    'react-dom': path.resolve('../node_modules/react-dom'),
+  }
+}
+```
+
 2. npm link로 이미 설치된 패키지를 연결하는 방법
+	- 아직 방법 모름.
 
 이 존재하며, 현재 진행 중인 이슈를 참고하여 문제를 해결할 수 있을 것으로 판단함.
