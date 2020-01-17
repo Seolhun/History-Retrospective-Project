@@ -2,6 +2,8 @@
 
 ## Set Role - RBAC(Role Based Access Control)
 
+- [AWS Helm RBAC Docs](https://awskrug.github.io/eks-workshop/helm_root/helm_intro/install/)
+
 1. Create Auth
 
 ```bash
