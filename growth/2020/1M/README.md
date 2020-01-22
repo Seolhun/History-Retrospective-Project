@@ -10,7 +10,7 @@
   - [ ] HTTP 완벽가이드 완독
   - [ ] 운영체제 완독
 - Projects
-  - hi-cord 개발/릴리즈
+  - firststage 개발/릴리즈
     - Devops
       - [ ] Kubernates On GCP
         - Dashboard
@@ -40,11 +40,39 @@
 #### BackLog
 
 #### InProgress
-- Tournaments
-
-#### Done
-
----
+- bd-ui-brackets
+    - Builder Functions
+        - [x] Entries 2차 배열로 변경
+        - [x] Match Hover 문제 해결
+        - [x] Match Number 함수 수정
+        - [x] entires 라운드 별 Slice 함수 수정
+        - [x] 수정/진행 용 Hover Style 변경
+        - [ ] 3, 4위전 Section 로직 수정
+        - [ ] Absolute 스타일로 변경.
+            - ul, li
+    - UI
+        - Bracket
+            - [x] 부전승 Filter 함수 추가
+            - [ ] Bracket UI 변경
+            - [ ] 3, 4위전
+            - [x] Match UI(하위 UI 모두 통합)
+                - MatchEntries
+                    - Entries
+            - Random Seed & Reset UI 추가
+    - CI/CD
+        - [ ] Travis Github NPM Setting
+    - Deployment
+        - CloudFlare
+          - [x] PROD : btd.gg
+          - [x] DEV : test.btd.gg
+    - Infra
+        - **Https 설정**
+          - [ ] Prod server
+        - **Https 설정**
+          - [ ] Dev server
+- bd-fe-tournaments
+    - UI
+        - [ ] Random Seed & Reset UI 추가
 
 ## Repositories
 
