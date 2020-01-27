@@ -47,18 +47,17 @@
         - [x] Match Number 함수 수정
         - [x] entires 라운드 별 Slice 함수 수정
         - [x] 수정/진행 용 Hover Style 변경
-        - [ ] 3, 4위전 Section 로직 수정
-        - [ ] Absolute 스타일로 변경.
+        - [x] Absolute 스타일로 변경.
             - ul, li
+        - [ ] 3, 4위전 Section 로직 수정
     - UI
         - Bracket
             - [x] 부전승 Filter 함수 추가
-            - [ ] Bracket UI 변경
-            - [ ] 3, 4위전
             - [x] Match UI(하위 UI 모두 통합)
                 - MatchEntries
-                    - Entries
-            - Random Seed & Reset UI 추가
+            - [ ] Bracket UI 변경
+            - [ ] 3, 4위전
+            - [ ] Random Seed & Reset UI 추가
     - CI/CD
         - [ ] Travis Github NPM Setting
     - Deployment
