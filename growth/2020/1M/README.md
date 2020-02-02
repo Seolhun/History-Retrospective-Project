@@ -55,8 +55,9 @@
             - [x] 부전승 Filter 함수 추가
             - [x] Match UI(하위 UI 모두 통합)
                 - MatchEntries
-            - [ ] Bracket UI 변경
+            - [x] Bracket UI 변경
             - [ ] 3, 4위전
+        - Tournament
             - [ ] Random Seed & Reset UI 추가
     - CI/CD
         - [ ] Travis Github NPM Setting
