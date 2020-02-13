@@ -52,9 +52,9 @@
                       - Clear-Cut Experience
                       - Core Mission of Users
               - Hyeonsoo
-                  - dd
+                  - ...
               - Hun
-                  - dd
+                  - ...
           - 이를 배경으로 **"Defined Your customer"** 각자가 생각하는 고객에 대해 정의해보기 **(20)**
               - Tim
                   - 10대 ~ 40대 스마트폰 사용에 익숙한

@@ -18,14 +18,22 @@ $ kubectl config --kubeconfig=$ConfigFile use-context $ContextName
 
 > 만약, --kubeconfig 설정이 되어있지 않다면, 기본적으로 `~/.kube/config`를 참조하게 됩니다.
 
-위 설정파일에 관련 정보가 없으면 각 ClouseProvider의 문서를 따르던지, 각각의 config 파일을 직접 입력해서 추가해야 합니다. [다중 클러스터 접근 구성](https://kubernetes.io/ko/docs/tasks/access-application-cluster/configure-access-multiple-clusters/)을 참조해주시기 바랍니다.
+위 설정파일에 관련 정보가 없으면 각 ClouseProvider의 문서를 따르던지, 각각의 config 파일을 직접 입력해서 추가해야 합니다. 
+
+- [다중 클러스터 접근 구성](https://kubernetes.io/ko/docs/tasks/access-application-cluster/configure-access-multiple-clusters/)을 참조해주시기 바랍니다.
 
 ### Add kube config
 
 #### To EKS
 
 만약에 gcloud를 이용하여 google kubectl을 사용하고 있다면, kube-system내에 context 설정을 변경해주어야 한다.
-그럴 떄, AWS는 `aws eks --region $Region update-kubeconfig --name $ClusterName`을 입력해주어야 한다.
+그럴 때, AWS는 `aws eks --region $Region update-kubeconfig --name $CLUSTER_NAME`을 입력해주어야 한다.
+
+##### Example)
+```bash
+$ aws eks list-clusters
+$ aws eks --region ap-northeast-2 update-kubeconfig --name $CLUSTER_NAME
+```
 
 - [About kube-config changing](https://docs.aws.amazon.com/ko_kr/eks/latest/userguide/create-kubeconfig.html)
 - [About "error: You must be logged in to the server (Unauthorized)" - 1](https://aws.amazon.com/ko/premiumsupport/knowledge-center/amazon-eks-cluster-access/)

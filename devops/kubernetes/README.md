@@ -30,6 +30,7 @@ Choosing this value makes the service only reachable from within the cluster. Th
 
 > You can only access this service while inside the cluster. It is accessible from its spec.clusterIp port. If a spec.ports[*].targetPort is set it will route from the port to the targetPort. The CLUSTER-IP you get when calling kubectl get services is the IP assigned to this service within the cluster internally.
 
+
 #### NodePort
 
 **Exposes the service on each Node’s IP at a static port (the NodePort).**
