@@ -7,13 +7,16 @@
 가장 먼저 보아야 할 파일은 $HOME 디렉토리에 있는 kube config 파일이다.
 
 ```bash
-$ vim ~/.kube/config
+$ less -FX ~/.kube/config
 ```
 
 해당 파일에 이미 설정이 되어 있다면 
 
 ```bash
 $ kubectl config --kubeconfig=$ConfigFile use-context $ContextName
+
+# eg. $ kubectl config use-context arn:aws:eks:ap-northeast-2:215559030652:cluster/battledog-web
+# eg. $ kubectl config use-context gke_hicord-263305_asia-northeast1-a_hicord-cluster
 ```
 
 > 만약, --kubeconfig 설정이 되어있지 않다면, 기본적으로 `~/.kube/config`를 참조하게 됩니다.

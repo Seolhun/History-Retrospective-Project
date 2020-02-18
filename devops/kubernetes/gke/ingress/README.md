@@ -22,5 +22,5 @@ helm repo add stable https://kubernetes-charts.storage.googleapis.com/
 3. Create Ingress Nginx with Helm
 
 ```bash
-helm install micro-ingress-nginx stable/nginx-ingress --set rbac.create=true
+helm install ingress-nginx stable/nginx-ingress --set rbac.create=true
 ```
