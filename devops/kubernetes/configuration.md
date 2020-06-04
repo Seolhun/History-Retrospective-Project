@@ -32,7 +32,7 @@ $ kubectl config --kubeconfig=$ConfigFile use-context $ContextName
 만약에 gcloud를 이용하여 google kubectl을 사용하고 있다면, kube-system내에 context 설정을 변경해주어야 한다.
 그럴 때, AWS는 `aws eks --region $Region update-kubeconfig --name $CLUSTER_NAME`을 입력해주어야 한다.
 
-##### Example)
+##### Example
 ```bash
 $ aws eks list-clusters
 $ aws eks --region ap-northeast-2 update-kubeconfig --name $CLUSTER_NAME
