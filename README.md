@@ -20,13 +20,12 @@
 
 매년 목표에 대한 부분을 작성하여 진행합니다.
 
-### - 2018
+### - 2020
 
-1. 프론트엔드 개발자를 위한 JavaScript 완독/정리
-2. JavaScript 함수형 프로그래밍 공부
-3. HTTP 완벽가이드 완독/정리
-4. NginX 강의/정리/테스트
-5. D3를 이용한 ChartComponent 개발하기
+1. localize-component Release
+2. firststage release
+3. web-performance-tester Release with D3
+4. seolhun.github.io Refactoring and Forntend Guide content Release
 
 ### - 2019
 
@@ -36,3 +35,11 @@
 4. 개인 프로젝트(hi-cord) 릴리즈하기
 5. D3(vx 참고)를 이용한 ChartComponent 개발하기
 6. HTTP 완벽가이드 완독/정리
+
+### - 2018
+
+1. 프론트엔드 개발자를 위한 JavaScript 완독/정리
+2. JavaScript 함수형 프로그래밍 공부
+3. HTTP 완벽가이드 완독/정리
+4. NginX 강의/정리/테스트
+5. D3를 이용한 ChartComponent 개발하기
