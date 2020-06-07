@@ -1,0 +1,30 @@
+{
+  "root": "./contents",
+  "title": "How to be Web Frontend Developer",
+  "description": "How to be Web Frontend Developer",
+  "author": "[Seolhun](https://github.com/Seolhun)",
+  "gitbook": ">= 3.0.0",
+  "structure": {
+    "readme": "README.md",
+    "summary": "SUMMARY.md",
+    "glossary": "GLOSSARY.md"
+  },
+  "pluginsConfig": {
+    "theme-gestalt": {
+      "logo": "./assets/images/logo.png",
+      "favicon": "./assets/images/favicon.png",
+      "baseUrl": null,
+      "excludeDefaultStyles": true,
+      "doNotHideChildrenChapters": false
+    },
+    "ga": {
+      "token": "",
+      "configuration": {
+        "alwaysSendReferrer": true
+      }
+    }
+  },
+  "styles": {
+    "website": "./assets/styles/website.css"
+  }
+}

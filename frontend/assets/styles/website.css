@@ -1,0 +1,15 @@
+.image {
+	text-align: center;
+}
+
+.image.left {
+	text-align: left;
+}
+
+.image.right {
+	text-align: right;
+}
+
+.image img {
+	padding: 20px;
+}

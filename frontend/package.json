@@ -1,0 +1,31 @@
+{
+  "name": "basic-frontend-knowledge",
+  "version": "1.0.0",
+  "description": "To serve frontend information for beginner",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gitbook serve",
+    "build": "gitbook build . docs",
+    "prebuild": "rm -rf docs",
+    "install": "gitbook install",
+    "pdf": "gitbook pdf ./ ./be-frontend.pdf",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Seolhun/basic-frontend-knowledge.git"
+  },
+  "keywords": [
+    "frontend",
+    "beginner"
+  ],
+  "author": "shun10114 <shun10114@gmail.com> (“https://github.com/Seolhun/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Seolhun/basic-frontend-knowledge/issues"
+  },
+  "homepage": "https://github.com/Seolhun/basic-frontend-knowledge#readme",
+  "dependencies": {
+    "gitbook-cli": "^2.3.2"
+  }
+}

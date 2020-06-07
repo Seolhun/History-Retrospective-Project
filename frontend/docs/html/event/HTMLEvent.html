@@ -1,0 +1,925 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>HTMLEvent · How to be Web Frontend Developer</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="[Seolhun](https://github.com/Seolhun)">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="BubblingAndCapturing.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Content List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../frontend/">
+            
+                <a href="../../frontend/">
+            
+                    
+                    Frontend
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../frontend/WhatWeDo.html">
+            
+                <a href="../../frontend/WhatWeDo.html">
+            
+                    
+                    What we do
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Dom.html">
+            
+                <a href="../Dom.html">
+            
+                    
+                    Dom
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../AttributeAndProperty.html">
+            
+                <a href="../AttributeAndProperty.html">
+            
+                    
+                    Attributes와 Properties
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Event
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.3.1" data-path="HTMLEvent.html">
+            
+                <a href="HTMLEvent.html">
+            
+                    
+                    HTMLEvent
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="BubblingAndCapturing.html">
+            
+                <a href="BubblingAndCapturing.html">
+            
+                    
+                    Bubbling과 Capturing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../tags/">
+            
+                <a href="../tags/">
+            
+                    
+                    Tags
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../tags/form/Form.html">
+            
+                <a href="../tags/form/Form.html">
+            
+                    
+                    form
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../BrowswerRendering.html">
+            
+                <a href="../BrowswerRendering.html">
+            
+                    
+                    Browswer Rendering
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../js/">
+            
+                <a href="../../js/">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../js/basic/">
+            
+                <a href="../../js/basic/">
+            
+                    
+                    Basic
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../js/basic/Variable.html">
+            
+                <a href="../../js/basic/Variable.html">
+            
+                    
+                    Variable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../js/basic/Object.html">
+            
+                <a href="../../js/basic/Object.html">
+            
+                    
+                    Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../../js/basic/Array.html">
+            
+                <a href="../../js/basic/Array.html">
+            
+                    
+                    Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../js/advanced/">
+            
+                <a href="../../js/advanced/">
+            
+                    
+                    Advanced
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../js/advanced/Scope.html">
+            
+                <a href="../../js/advanced/Scope.html">
+            
+                    
+                    Scope
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../../js/advanced/Closure.html">
+            
+                <a href="../../js/advanced/Closure.html">
+            
+                    
+                    Closure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../../js/advanced/Prototype.html">
+            
+                <a href="../../js/advanced/Prototype.html">
+            
+                    
+                    Prototype
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../js/functional/Functional.html">
+            
+                <a href="../../js/functional/Functional.html">
+            
+                    
+                    Functional
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../css/">
+            
+                <a href="../../css/">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../css/Selector.html">
+            
+                <a href="../../css/Selector.html">
+            
+                    
+                    Selector
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../css/Position.html">
+            
+                <a href="../../css/Position.html">
+            
+                    
+                    Position
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../css/display/">
+            
+                <a href="../../css/display/">
+            
+                    
+                    Display
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../../css/display/Grid.html">
+            
+                <a href="../../css/display/Grid.html">
+            
+                    
+                    Grid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../../css/display/Flex.html">
+            
+                <a href="../../css/display/Flex.html">
+            
+                    
+                    Flex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../../css/display/Block.html">
+            
+                <a href="../../css/display/Block.html">
+            
+                    
+                    Block
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../browser/">
+            
+                <a href="../../browser/">
+            
+                    
+                    Browser
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../browser/cross-browser/">
+            
+                <a href="../../browser/cross-browser/">
+            
+                    
+                    Cross-Browser
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../../browser/cross-browser/html/">
+            
+                <a href="../../browser/cross-browser/html/">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../../browser/cross-browser/css/">
+            
+                <a href="../../browser/cross-browser/css/">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../../browser/cross-browser/js/">
+            
+                <a href="../../browser/cross-browser/js/">
+            
+                    
+                    JS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../browser/optimization/">
+            
+                <a href="../../browser/optimization/">
+            
+                    
+                    Optimization
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../../browser/optimization/Reflow&Repaint.html">
+            
+                <a href="../../browser/optimization/Reflow&Repaint.html">
+            
+                    
+                    Reflow&Repaint
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../git/">
+            
+                <a href="../../git/">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../git/Basic.html">
+            
+                <a href="../../git/Basic.html">
+            
+                    
+                    Basic1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../git/Basic2.html">
+            
+                <a href="../../git/Basic2.html">
+            
+                    
+                    Basic2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >HTMLEvent</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="html---htmlevent">HTML - HTMLEvent</h1>
+<p>Event &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB294; DOM&#xC758; &#xBAA8;&#xB4E0; Event&#xB97C; &#xD45C;&#xD604;&#xD569;&#xB2C8;&#xB2E4;.
+&#xC77C;&#xBD80;&#xB294; &#xB9C8;&#xC6B0;&#xC2A4;&#xB098; &#xD0A4;&#xBCF4;&#xB4DC; &#xB4F1; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xC720;&#xB3C4;&#xD558;&#xB294; Event&#xACE0;, &#xC77C;&#xBD80;&#xB294; &#xC560;&#xB2C8;&#xBA54;&#xC774;&#xC158; &#xC885;&#xB8CC;&#xC640; &#xBE44;&#xB514;&#xC624; &#xC77C;&#xC2DC;&#xC815;&#xC9C0; &#xB4F1; API&#xC5D0;&#xC11C; &#xBC1C;&#xC0DD;&#xD569;&#xB2C8;&#xB2E4;.
+&#xB9CE;&#xC740; &#xC885;&#xB958;&#xC758; Event&#xAC00; &#xC874;&#xC7AC;&#xD558;&#xACE0;, &#xBA87;&#xBA87;&#xC740; Event &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xC5D0; &#xAE30;&#xBC18;&#xD55C; &#xB2E4;&#xB978; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB97C; &#xC0AC;&#xC6A9;&#xD569;&#xB2C8;&#xB2E4;. Event &#xC790;&#xCCB4;&#xB294; &#xBAA8;&#xB4E0; Event &#xACF5;&#xD1B5;&#xC758; &#xC18D;&#xC131;&#xACFC; &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<blockquote>
+<p>&#xC804;&#xC5ED;&#xC5D0; &#xC120;&#xC5B8;&#xB418;&#xC5B4;&#xC788;&#xB294; Event &#xC885;&#xB958;&#xB4E4;(TypeScript)</p>
+<pre><code class="lang-ts"><span class="hljs-keyword">interface</span> Event { }
+<span class="hljs-keyword">interface</span> AnimationEvent <span class="hljs-keyword">extends</span> Event { }
+<span class="hljs-keyword">interface</span> ClipboardEvent <span class="hljs-keyword">extends</span> Event { }
+<span class="hljs-keyword">interface</span> CompositionEvent <span class="hljs-keyword">extends</span> Event { }
+<span class="hljs-keyword">interface</span> DragEvent <span class="hljs-keyword">extends</span> Event { }
+<span class="hljs-keyword">interface</span> FocusEvent <span class="hljs-keyword">extends</span> Event { }
+<span class="hljs-keyword">interface</span> KeyboardEvent <span class="hljs-keyword">extends</span> Event { }
+<span class="hljs-keyword">interface</span> MouseEvent <span class="hljs-keyword">extends</span> Event { }
+<span class="hljs-keyword">interface</span> TouchEvent <span class="hljs-keyword">extends</span> Event { }
+<span class="hljs-keyword">interface</span> PointerEvent <span class="hljs-keyword">extends</span> Event { }
+<span class="hljs-keyword">interface</span> TransitionEvent <span class="hljs-keyword">extends</span> Event { }
+<span class="hljs-keyword">interface</span> UIEvent <span class="hljs-keyword">extends</span> Event { }
+<span class="hljs-keyword">interface</span> WheelEvent <span class="hljs-keyword">extends</span> Event { }
+</code></pre>
+</blockquote>
+<hr>
+<h2 id="event-properties">Event Properties</h2>
+<ul>
+<li>event.target (Read only)<ul>
+<li>&#xC774;&#xBCA4;&#xD2B8;&#xAC00; &#xCD5C;&#xCD08;&#xB85C; Dispatch &#xB41C; Target &#xCC38;&#xC870;&#xC785;&#xB2C8;&#xB2E4;.</li>
+</ul>
+</li>
+<li>event.currentTarget (Read only)<ul>
+<li>&#xC774;&#xBCA4;&#xD2B8;&#xC5D0; &#xB300;&#xD574; &#xD604;&#xC7AC; &#xB4F1;&#xB85D; &#xB41C; &#xB300;&#xC0C1;&#xC5D0; &#xB300;&#xD55C; &#xCC38;&#xC870;&#xC785;&#xB2C8;&#xB2E4;. &#xC774;&#xAC83;&#xC740; &#xC774;&#xBCA4;&#xD2B8;&#xAC00; &#xD604;&#xC7AC; &#xC804;&#xC1A1; &#xB420; &#xC608;&#xC815;&#xC778; &#xAC1D;&#xCCB4;&#xC785;&#xB2C8;&#xB2E4;.</li>
+</ul>
+</li>
+<li>event.type (Read only)<ul>
+<li>Event&#xC758; &#xC774;&#xB984;&#xC785;&#xB2C8;&#xB2E4;. &#xB300;&#xC18C;&#xBB38;&#xC790;&#xB97C; &#xAD6C;&#xBD84;&#xD558;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
+</ul>
+</li>
+<li>event.returnValue<ul>
+<li>&#xAE30;&#xC874; &#xC0AC;&#xC774;&#xD2B8;&#xAC00; &#xACC4;&#xC18D; &#xC791;&#xB3D9;&#xD558;&#xB3C4;&#xB85D; Internet Explorer&#xC5D0;&#xC11C; &#xB3C4;&#xC785;&#xB418;&#xACE0; DOM &#xC0AC;&#xC591;&#xC5D0; &#xCC44;&#xD0DD; &#xB41C; &#xC5ED;&#xC0AC;&#xC801; &#xC18D;&#xC131;, &#xC774;&#xC0C1;&#xC801;&#xC73C;&#xB85C;&#xB294; &#xB300;&#xC2E0; event.preventDefault() &#xBC0F; event.defaultPrevented&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB824;&#xACE0; &#xC2DC;&#xB3C4;&#xD574;&#xC57C;&#xD558;&#xC9C0;&#xB9CC; returnValue&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xADF8;&#xB807;&#xAC8C; &#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
+</ul>
+</li>
+<li>event.cancelable (Read only)<ul>
+<li>Event&#xB97C; &#xCDE8;&#xC18C;&#xD560; &#xC218; &#xC788;&#xB294;&#xC9C0; &#xB098;&#xD0C0;&#xB0B4;&#xB294; &#xBD88;&#xB9B0; &#xAC12;&#xC785;&#xB2C8;&#xB2E4;.</li>
+</ul>
+</li>
+<li>event.cancelBubble<ul>
+<li>event.stopPropagation ()&#xC758; &#xAE30;&#xB85D; &#xBCC4;&#xCE6D;&#xC785;&#xB2C8;&#xB2E4;. &#xC774;&#xBCA4;&#xD2B8; &#xD578;&#xB4E4;&#xB7EC;&#xC5D0;&#xC11C; &#xB9AC;&#xD134;&#xB418;&#xAE30; &#xC804;&#xC5D0; &#xAC12;&#xC744; true&#xB85C; &#xC124;&#xC815;&#xD558;&#xBA74; &#xC774;&#xBCA4;&#xD2B8; &#xC804;&#xD30C;&#xAC00; &#xBC29;&#xC9C0;&#xB429;&#xB2C8;&#xB2E4;.</li>
+</ul>
+</li>
+<li>event.eventPhase (Read only)<ul>
+<li>&#xCC98;&#xB9AC;&#xC911;&#xC778; &#xC774;&#xBCA4;&#xD2B8; &#xD750;&#xB984;&#xC758; &#xB2E8;&#xACC4;&#xB97C; &#xB098;&#xD0C0;&#xB0C5;&#xB2C8;&#xB2E4;.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>&#xCD94;&#xAC00;&#xC801;&#xC778; Dom Event &#xC18D;&#xC131;&#xC5D0; &#xB300;&#xD574;&#xC11C; &#xBCF4;&#xACE0;&#xC2F6;&#xC73C;&#xC2DC;&#xBA74; &#xC544;&#xB798; &#xC8FC;&#xC18C;&#xB97C; &#xD074;&#xB9AD;&#xD574;&#xC8FC;&#xC138;&#xC694;.</p>
+<ul>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/API/Event#Properties" target="_blank">HTML - Dom Event Properties</a></li>
+</ul>
+</blockquote>
+<h4 id="-eventtarget">- event.target</h4>
+<p>Event&#xB294; &#xB2E4;&#xB978; Element&#xC5D0; &#xC804;&#xD30C;&#xB418;&#xC5B4;&#xB3C4; Event&#xC758; &#xADFC;&#xC6D0;&#xC774; &#xC815;&#xD655;&#xD788; &#xC5B4;&#xB514;&#xC11C; &#xBC1C;&#xC0DD;&#xB418;&#xC5C8;&#xB294;&#xC9C0;&#xB97C; &#xC54C; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC774;&#xB7EC;&#xD55C; &#xC815;&#xBCF4;&#xB97C; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xB294; &#xAC83;&#xC774; &#xBC14;&#xB85C; <code>event.target</code>&#xC785;&#xB2C8;&#xB2E4;.</p>
+<h4 id="-eventcurrenttarget">- event.currentTarget</h4>
+<p>Event&#xC758; currentTarget&#xC740; Event&#xC758; &#xADFC;&#xC6D0;(event.target)&#xACFC;&#xB294; &#xB2E4;&#xB985;&#xB2C8;&#xB2E4;.
+Event&#xB294; &#xD56D;&#xC0C1; &#xC804;&#xD30C;&#xB418;&#xB294; &#xC18D;&#xC131;&#xC744; &#xAC16;&#xACE0; &#xC788;&#xAE30; &#xB54C;&#xBB38;&#xC5D0;, &#xD604;&#xC7AC; Event&#xAC00; &#xC804;&#xD30C;&#xB418;&#xC5B4; &#xC791;&#xB3D9;&#xB418;&#xB294; Event&#xAC00; &#xB2E4;&#xB974;&#xAE30; &#xB54C;&#xBB38;&#xC785;&#xB2C8;&#xB2E4;.
+&#xC774;&#xB807;&#xAC8C; &#xC804;&#xD30C;&#xB418;&#xACE0; &#xC788;&#xB294; Event&#xAC00; &#xC5B4;&#xB514;&#xC5D0; &#xC704;&#xCE58;&#xD558;&#xC600;&#xB294;&#xC9C0;&#xC5D0; &#xB300;&#xD55C; &#xC815;&#xBCF4;&#xB97C; &#xC54C;&#xAE30; &#xC704;&#xD574; currentTarget&#xC774;&#xB780; &#xC18D;&#xC131;&#xC744; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<blockquote>
+<p>event.target &amp; event.currentTarget Example</p>
+<script async src="//jsfiddle.net/SHun10114/uq8Lbdk3/12/embed/js,html,result/"></script>
+
+</blockquote>
+<h4 id="-eventtype">- event.type</h4>
+<p>&#xD604;&#xC7AC; Event&#xAC00; &#xC5B4;&#xB5A0;&#xD55C; type&#xC73C;&#xB85C; &#xB3D9;&#xC791;&#xD558;&#xB294;&#xC9C0;&#xB97C; &#xC54C; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC608;&#xB97C; &#xB4E4;&#xC5B4;, <code>addEventListener(&apos;click&apos;, ...)</code> &#xD639;&#xC740;, <code>&lt;button onclick=&apos;handler&apos;&gt;Hello&lt;/button&gt;</code>&#xCC98;&#xB7FC; Event&#xAC00; &#xD560;&#xB2F9;&#xB41C;&#xB2E4;&#xBA74; type&#xC740; &apos;click&apos;&#xC774;&#xB780; &#xC815;&#xBCF4;&#xB97C; &#xC800;&#xD76C;&#xC5D0;&#xAC8C; &#xC81C;&#xACF5;&#xD574;&#xC904; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<h4 id="-eventcancelable">- event.cancelable</h4>
+<p>&#xC774;&#xBCA4;&#xD2B8;&#xB97C; &#xCDE8;&#xC18C;&#xD560; &#xC218; &#xC788;&#xB294; &#xAC00;&#xB2A5;&#xC5EC;&#xBD80;&#xC5D0; &#xB530;&#xB77C; true &#xB610;&#xB294; false&#xAC00; &#xB429;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> isCancelable = event.cancelable; <span class="hljs-comment">// true or false</span>
+</code></pre>
+<h4 id="-eventcancelbubble">- event.cancelBubble</h4>
+<p>cancelBubble&#xB294; &#xAE30;&#xBCF8;&#xAC12;&#xC774; false&#xC774;&#xBA70;, true&#xB85C; &#xD560; &#xACBD;&#xC6B0; event.stopPropagation()&#xACFC; &#xAC19;&#xC740; &#xD6A8;&#xACFC;&#xB85C; &#xC774;&#xBCA4;&#xD2B8; &#xC804;&#xD30C;(&#xBC84;&#xBE14;&#xB9C1;)&#xB97C; &#xCDE8;&#xC18C;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> button = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;#Button&apos;</span>);
+button.onclick = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{
+    event.cancelBubble = <span class="hljs-literal">true</span>;
+}
+</code></pre>
+<h4 id="-eventeventphase">- event.eventPhase</h4>
+<p>eventPhase&#xB294; &#xC774;&#xBCA4;&#xD2B8; &#xD578;&#xB4E4;&#xB7EC;&#xAC00; &#xD638;&#xCD9C;&#xB41C; &#xB2E8;&#xACC4;&#xC785;&#xB2C8;&#xB2E4;. &#xAC12;&#xC73C;&#xB85C;&#xC11C; 1&#xC740; &#xCEA1;&#xCC98;&#xB9C1; 2&#xB294; &#xD0C0;&#xAC9F;, 3&#xC740; &#xBC84;&#xBE14;&#xB9C1; &#xB2E8;&#xACC4;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> button = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;#Button&apos;</span>);
+button.onclick = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{
+    alert(event.eventPhase); <span class="hljs-comment">// 2</span>
+}
+button.addEventListener(<span class="hljs-string">&apos;onclick&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{
+    alert(event.eventPhase); <span class="hljs-comment">// 1</span>
+}, <span class="hljs-literal">true</span>);
+button.addEventListener(<span class="hljs-string">&apos;onclick&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{
+    alert(event.eventPhase); <span class="hljs-comment">// 3</span>
+});
+</code></pre>
+<h4 id="-eventreturnvalue">- event.returnValue</h4>
+<p>returnValue&#xB294; &#xAE30;&#xBCF8;&#xAC12;&#xC774; true&#xC774;&#xBA70;, false &#xD560; &#xACBD;&#xC6B0; event.preventDefault()&#xACFC; &#xAC19;&#xC740; &#xD6A8;&#xACFC;&#xB85C; &#xC774;&#xBCA4;&#xD2B8; &#xC804;&#xD30C;&#xB97C; &#xCDE8;&#xC18C;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> button = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;#Button&apos;</span>);
+button.onclick = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{
+    event.returnValue = <span class="hljs-literal">false</span>;
+}
+</code></pre>
+<blockquote>
+<p>Event properties Examples</p>
+<script async src="//jsfiddle.net/SHun10114/bwtp6vh9/embed/js,html,result/"></script>
+
+</blockquote>
+<hr>
+<h2 id="event-methods">Event Methods</h2>
+<h4 id="-method--eventprevnetdefault">- Method : event.prevnetDefault()</h4>
+<p>Event&#xB97C; &#xCDE8;&#xC18C;&#xD560; &#xC218; &#xC788;&#xB294; &#xACBD;&#xC6B0;, Event&#xC758; &#xC804;&#xD30C;&#xB97C; &#xB9C9;&#xC9C0;&#xC54A;&#xACE0; &#xADF8; Event&#xB97C; &#xCDE8;&#xC18C;&#xD569;&#xB2C8;&#xB2E4;. Event&#xB97C; &#xCDE8;&#xC18C;&#xD560; &#xC218; &#xC5C6;&#xB294; &#xACBD;&#xC6B0;(cancelable = false)&#xB294; &#xC791;&#xB3D9;&#xB418;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xD2B9;&#xD788;, HTML Tag&#xB9C8;&#xB2E4; &#xAE30;&#xBCF8;&#xC801;&#xC778; Event&#xAC00; &#xC874;&#xC7AC;&#xD558;&#xB294;&#xB370;(&#xC608;, &apos;A&apos; Tag&#xC5D0;&#xC11C; href&#xB85C; &#xC778;&#xD55C; &#xD398;&#xC774;&#xC9C0;&#xC774;&#xB3D9;) &#xC774;&#xB7EC;&#xD55C; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; &#xC874;&#xC7AC;&#xD558;&#xB294; Event&#xB97C; &#xCDE8;&#xC18C;&#xD558;&#xB294;&#xB370; &#xC0AC;&#xC6A9;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<blockquote>
+<p>Event&#xB97C; &#xCDE8;&#xC18C;&#xD558;&#xB294; &#xB3C4;&#xC911;&#xC5D0; preventDefault&#xB97C; &#xD638;&#xCD9C;&#xD558;&#xAC8C;&#xB418;&#xBA74;, &#xC77C;&#xBC18;&#xC801;&#xC73C;&#xB85C;&#xB294; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xC758; &#xAD6C;&#xD604;&#xC5D0; &#xC758;&#xD574; &#xCC98;&#xB9AC;&#xB418;&#xB294; &#xAE30;&#xC874;&#xC758; &#xC561;&#xC158;&#xC774; &#xB3D9;&#xC791;&#xD558;&#xC9C0; &#xC54A;&#xAC8C;&#xB418;&#xACE0;, &#xADF8; &#xACB0;&#xACFC; Event&#xAC00; &#xBC1C;&#xC0DD;&#xD558;&#xC9C0; &#xC54A;&#xAC8C;&#xB429;&#xB2C8;&#xB2E4;.
+Event&#xC758; &#xCDE8;&#xC18C;&#xAC00;&#xB2A5; &#xC5EC;&#xBD80;&#xB294; event.cancelable&#xB97C; &#xC0AC;&#xC6A9;&#xD574;&#xC11C; &#xD655;&#xC778;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xCDE8;&#xC18C;&#xBD88;&#xAC00;&#xB2A5;&#xD55C; Event&#xC5D0; &#xB300;&#xD574;&#xC11C; preventDefault&#xB97C; &#xD638;&#xCD9C;&#xD574;&#xB3C4; &#xACB0;&#xACFC;&#xB294; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.
+preventDefault&#xB294; DOM&#xC744; &#xD1B5;&#xD55C; Event&#xC758; &#xC804;&#xD30C;&#xB97C; &#xB9C9;&#xC9C0;&#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC804;&#xD30C;&#xB97C; &#xB9C9;&#xC744;&#xB54C;&#xB294; <code>event.stopPropagation()</code>&#xB97C; &#xC0AC;&#xC6A9;&#xD574;&#xC8FC;&#xC138;&#xC694;.</p>
+</blockquote>
+<h4 id="-eventstoppropagation">- event.stopPropagation()</h4>
+<p>Event Bubbling&#xC5D0;&#xACFC; Capturing&#xC5D0; &#xC788;&#xC5B4; &#xD604;&#xC7AC; Event &#xC774;&#xD6C4;&#xC758; &#xC804;&#xD30C;&#xB97C; &#xB9C9;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xBAA8;&#xB4E0; Event&#xB294; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; bubble &#xC18D;&#xC131;&#xC744; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xADF8;&#xB7EC;&#xBBC0;&#xB85C;, &#xC804;&#xD30C;&#xB97C; &#xB9C9;&#xAE30; &#xC704;&#xD55C; <code>event.cancelable</code> &#xC18D;&#xC131;&#xC758; &#xBCC0;&#xACBD;&#xC744; &#xD1B5;&#xD574;&#xC11C;&#xB3C4; Bubbling&#xC5D0; &#xC758;&#xD55C; &#xC774;&#xBCA4;&#xD2B8; &#xC804;&#xD30C;&#xB97C; &#xB9C9;&#xC744; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<blockquote>
+<p>Capturing&#xC5D0; &#xAD00;&#xB828;&#xB41C; &#xC18D;&#xC131;&#xC774; &#xC5C6;&#xB294; &#xC774;&#xC720;&#xB294;, Capturing&#xC740; Bubbling&#xCC98;&#xB7FC; &#xAE30;&#xBCF8;&#xC801;&#xC778; &#xC18D;&#xC131;&#xC774; &#xC544;&#xB2D9;&#xB2C8;&#xB2E4;.
+&#xC989;, &#xAC1C;&#xBC1C;&#xC790;&#xC5D0; &#xC758;&#xD574; Capturing &#xC774;&#xBCA4;&#xD2B8;&#xAC00; &#xC8FC;&#xC5B4;&#xC84C;&#xC744; &#xB584;, &#xC804;&#xD30C;&#xAC00; &#xBC29;&#xC9C0;&#xB418;&#xC57C;&#xD558;&#xB294; &#xACF3;&#xC5D0; &#xD574;&#xB2F9; &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xC120;&#xC5B8;&#xD558;&#xBA74; &#xC27D;&#xAC8C; &#xD574;&#xACB0;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;..</p>
+</blockquote>
+<p>&#xD574;&#xB2F9; &#xBA54;&#xC18C;&#xB4DC;&#xB294; <a href="BubblingAndCapturing">BubblingAndCapturing</a>&#xC5D0;&#xC11C; &#xB354; &#xC54C;&#xC544;&#xBCF4;&#xB3C4;&#xB85D; &#xD558;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<hr>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/API/Event" target="_blank">HTML - Dom : Event</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank">HTML - Dom : Event Type</a></li>
+<li><a href="https://developer.mozilla.org/ko/docs/Web/API/EventTarget/addEventListener" target="_blank">HTML - Dom : addEventListener</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Event">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="BubblingAndCapturing.html" class="navigation navigation-next " aria-label="Next page: Bubbling과 Capturing">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"HTMLEvent","level":"1.3.3.1","depth":3,"next":{"title":"Bubbling과 Capturing","level":"1.3.3.2","depth":3,"path":"html/event/BubblingAndCapturing.md","ref":"html/event/BubblingAndCapturing.md","articles":[]},"previous":{"title":"Event","level":"1.3.3","depth":2,"path":"html/event/README.md","ref":"html/event/README.md","articles":[{"title":"HTMLEvent","level":"1.3.3.1","depth":3,"path":"html/event/HTMLEvent.md","ref":"html/event/HTMLEvent.md","articles":[]},{"title":"Bubbling과 Capturing","level":"1.3.3.2","depth":3,"path":"html/event/BubblingAndCapturing.md","ref":"html/event/BubblingAndCapturing.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"root":"./contents","styles":{"website":"./assets/styles/website.css"},"pluginsConfig":{"theme-gestalt":{"logo":"./assets/images/logo.png","favicon":"./assets/images/favicon.png","baseUrl":null,"excludeDefaultStyles":true,"doNotHideChildrenChapters":false},"ga":{"token":"","configuration":{"alwaysSendReferrer":true}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"[Seolhun](https://github.com/Seolhun)","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"How to be Web Frontend Developer","gitbook":">= 3.0.0","description":"How to be Web Frontend Developer"},"file":{"path":"html/event/HTMLEvent.md","mtime":"2019-03-18T17:58:01.230Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-19T16:13:26.698Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

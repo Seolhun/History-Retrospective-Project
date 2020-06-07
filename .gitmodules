@@ -25,6 +25,9 @@
 [submodule "retrospective-interview"]
 	path = retrospective-interview
 	url = git@github.com:Seolhun/retrospective-interview.git
-[submodule "study/frontend"]
-	path = study/frontend
+[submodule "frontend"]
+	path = frontend
 	url = git@github.com:Seolhun/frontend.git
+[submodule "algorithm"]
+	path = algorithm
+	url = git@github.com:Seolhun/algorithm.git
