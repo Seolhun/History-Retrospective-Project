@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "To serve frontend information for beginner",
   "main": "index.js",
+  "author": "shun10114 <shun10114@gmail.com> (“https://github.com/Seolhun/)",
   "scripts": {
     "dev": "gitbook serve",
     "build": "gitbook build . docs",
@@ -19,13 +20,13 @@
     "frontend",
     "beginner"
   ],
-  "author": "shun10114 <shun10114@gmail.com> (“https://github.com/Seolhun/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Seolhun/basic-frontend-knowledge/issues"
   },
   "homepage": "https://github.com/Seolhun/basic-frontend-knowledge#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "gitbook-cli": "^2.3.2"
   }
 }
