@@ -10,18 +10,30 @@
 $ less -FX ~/.kube/config
 ```
 
-해당 파일에 이미 설정이 되어 있다면 
+```bash
+# https://kubernetes.io/ko/docs/reference/kubectl/cheatsheet/
+kubectl config view -o jsonpath='{.users[].name}'    # 첫 번째 사용자 출력
+kubectl config view -o jsonpath='{.users[*].name}'    # 사용자 리스트 조회
+kubectl config get-contexts                          # 컨텍스트 리스트 출력
+kubectl config current-context              # 현재 컨텍스트 출력
+kubectl config use-context my-cluster-name  # my-cluster-name를 기본 컨텍스트로 설정
+```
+
+해당 파일에 이미 설정이 되어 있다면
 
 ```bash
 $ kubectl config --kubeconfig=$ConfigFile use-context $ContextName
+```
 
-# eg. $ kubectl config use-context arn:aws:eks:ap-northeast-2:215559030652:cluster/battledog-web
-# eg. $ kubectl config use-context gke_hicord-263305_asia-northeast1-a_hicord-cluster
+```bash
+$ kubectl config use-context arn:aws:eks:ap-northeast-2:215559030652:cluster/battledog-web
+$ kubectl config use-context arn:aws:eks:ap-northeast-2:215559030652:cluster/btdgg-web
+$ kubectl config use-context gke_hicord-263305_asia-northeast1-a_hicord-cluster
 ```
 
 > 만약, --kubeconfig 설정이 되어있지 않다면, 기본적으로 `~/.kube/config`를 참조하게 됩니다.
 
-위 설정파일에 관련 정보가 없으면 각 ClouseProvider의 문서를 따르던지, 각각의 config 파일을 직접 입력해서 추가해야 합니다. 
+위 설정파일에 관련 정보가 없으면 각 ClouseProvider의 문서를 따르던지, 각각의 config 파일을 직접 입력해서 추가해야 합니다.
 
 - [다중 클러스터 접근 구성](https://kubernetes.io/ko/docs/tasks/access-application-cluster/configure-access-multiple-clusters/)을 참조해주시기 바랍니다.
 
@@ -36,6 +48,10 @@ $ kubectl config --kubeconfig=$ConfigFile use-context $ContextName
 ```bash
 $ aws eks list-clusters
 $ aws eks --region ap-northeast-2 update-kubeconfig --name $CLUSTER_NAME
+```
+```bash
+$ aws eks --region ap-northeast-2 update-kubeconfig --name btdgg-web
+$ aws eks --region ap-northeast-2 update-kubeconfig --name battledog-web
 ```
 
 - [About kube-config changing](https://docs.aws.amazon.com/ko_kr/eks/latest/userguide/create-kubeconfig.html)
