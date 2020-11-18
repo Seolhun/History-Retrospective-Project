@@ -19,7 +19,7 @@
   "author": "Seolhun",
   "license": "MIT",
   "dependencies": {
-    "json-server": "^0.15.0"
+    "json-server": "^0.16.3"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
