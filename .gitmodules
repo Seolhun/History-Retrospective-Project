@@ -31,3 +31,6 @@
 [submodule "study/vue/vue-example"]
 	path = study/vue/vue-example
 	url = git@github.com:Seolhun/vue-example.git
+[submodule "study/design_patterns_in_typescript"]
+	path = study/design_patterns_in_typescript
+	url = git@github.com:torokmark/design_patterns_in_typescript.git
