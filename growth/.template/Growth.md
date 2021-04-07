@@ -1,6 +1,6 @@
-# - 2020 Golas
+# - 2021 Golas
 
-- Periods : 2020.01.01 ~ 2020.12.31
+- Periods : 2021.01.01 ~ 2022.12.31
 
 ---
 
@@ -12,17 +12,12 @@
   - HTTP 완벽가이드 완독/정리
 - Projects
   - hi-cord 개발/릴리즈
-    - Backend API
-      - Auth
-      - Post
-      - Recomendation
+    - Backend
     - FrontEnd
-      - Homepage
-      - Dashboard
   - Localize-Component 개발/릴리즈
   - D3(vx 참고)를 이용한 Chart/TableComponent 개발/릴리즈
 
-### - Routine Key Results
+### Routine Key Results
 
 - 매일 1시간씩 책 독서하기
 - 월 1회 블로그 작성/정리하기
