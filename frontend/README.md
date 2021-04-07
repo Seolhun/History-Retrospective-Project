@@ -1,8 +1,7 @@
-# How to be Front-End Developer
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/Seolhun/frontend.svg)](https://greenkeeper.io/)
+# How to be Good Front-End Developer
 
 ## Contents
+
 1. About Front-End
 	- What we do?
 	- Road Map
@@ -10,40 +9,56 @@
 	- git
 	- node
 	- IDE
-	- TypeScript, Webpack, YARN...
-
+	- TypeScript, Webpack
 3. HTML
 4. CSS
 5. JS
 6. Frameworks
 
+---
 
 ## How to use it?
-#### Run GitBook
+
+### Run GitBook
+
 [GitBook documentation](https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md)
 
-#### Create a book
+### Create a book
+
 - GitBook can setup a boilerplate book:
+
 ```
-$ gitbook init
+gitbook init
 ```
+
 If you wish to create the book into a new directory, you can do so by running gitbook init ./directory
 
 - Preview and serve your book using:
+
 ```
-$ gitbook serve
+gitbook serve
 ```
 
 - Or build the static website using:
+
 ```
-$ gitbook build
+gitbook build
 ```
 
 ### Generate a PDF file
-$ gitbook pdf ./ ./be-frontend.pdf
+
+```
+gitbook pdf ./ ./be-frontend.pdf
+```
 
 ### Generate an ePub file
-$ gitbook epub ./ ./mybook.epub
+
+```
+gitbook epub ./ ./be-frontend.epub
+```
 
 ### Generate a Mobi file
-$ gitbook mobi ./ ./mybook.mobi
+
+```
+gitbook mobi ./ ./be-frontend.mobi
+```
