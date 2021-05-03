@@ -32,28 +32,31 @@
 ## charin-frontend
 
 ### 이번주 
+
 - TTS
   - 1차
-- 
-
-### Pending & 
-
-- 목록
-  - Pagination
 
 #### Done
 
 - 결제 (https://ejncorp.atlassian.net/browse/GOCRE-337)
   - 핸드폰 결제 UI 추가 (https://ejncorp.atlassian.net/browse/GOCRE-318)
+- 후원 
+  - TTS 후원 기능 추가 (https://ejncorp.atlassian.net/browse/GOC-235)
 - 대시보드
   - 후원목록 개선 (https://ejncorp.atlassian.net/browse/GOCRE-207)
-- Test
-  - Test 환경 개선, Test가 정상작동 할 수 있도록 에러나는 부분 개선
+  - TTS 대시보드 개선 (https://ejncorp.atlassian.net/browse/GOC-458)
+- Refactoring
+  - Pagination Hook 추가 (https://ejncorp.atlassian.net/browse/GOC-384)
+  - 
+  - Test
+    - Test 환경 개선, Test가 정상작동 할 수 있도록 에러나는 부분 개선 (https://ejncorp.atlassian.net/browse/GOC-399)
+    - 공통으로 쓰이는 함수들 Unit Test 작성
+- 버그
+  - Minified React error (https://ejncorp.atlassian.net/browse/GOCRE-275)
+
 
 #### In Progress
 
-- 버그
-  - Minified React error (https://ejncorp.atlassian.net/browse/GOCRE-275)
 
 #### Back logs
 
