@@ -9,7 +9,9 @@
     "prebuild": "rm -rf docs",
     "install": "gitbook install",
     "pdf": "gitbook pdf ./ ./be-frontend.pdf",
-    "test": "jest"
+    "test": "jest",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,8 @@
   },
   "homepage": "https://github.com/Seolhun/basic-frontend-knowledge#readme",
   "dependencies": {
-    "gitbook-cli": "^2.3.2"
-  }
+    "gitbook-cli": "^2.3.2",
+    "snyk": "^1.526.0"
+  },
+  "snyk": true
 }
