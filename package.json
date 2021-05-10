@@ -24,5 +24,10 @@
   "bugs": {
     "url": "https://github.com/Seolhun/retrospective-diary/issues"
   },
-  "homepage": "https://github.com/Seolhun/retrospective-diary#readme"
+  "homepage": "https://github.com/Seolhun/retrospective-diary#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "eslint": "^7.25.0"
+  }
 }
