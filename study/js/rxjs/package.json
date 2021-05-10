@@ -9,6 +9,6 @@
   "author": "shun10114 <shun10114@gmail.com> (“https://github.com/Seolhun/)",
   "license": "ISC",
   "dependencies": {
-    "rxjs": "^6.3.0"
+    "rxjs": "^6.6.2"
   }
 }
