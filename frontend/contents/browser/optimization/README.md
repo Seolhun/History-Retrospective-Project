@@ -1,3 +1,0 @@
-# Optimization
-
-## Reflow & Repaint
