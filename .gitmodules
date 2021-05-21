@@ -1,13 +1,15 @@
+
+
 # Contents
-[submodule "company"]
-	path = company
-	url = git@github.com:Seolhun/company.git
-[submodule "frontend"]
-	path = frontend
-	url = git@github.com:Seolhun/frontend.git
+[submodule "about-frontend"]
+	path = about-frontend
+	url = git@github.com:Seolhun/about-frontend.git
 [submodule "algorithm"]
 	path = algorithm
 	url = git@github.com:Seolhun/algorithm.git
+[submodule "company"]
+	path = company
+	url = git@github.com:Seolhun/company.git
 # Devops
 [submodule "devops/aws"]
 	path = devops/aws
@@ -22,12 +24,6 @@
 [submodule "study/java/java-example"]
 	path = study/java/java-example
 	url = git@github.com:Seolhun/java-example.git
-[submodule "study/python/python-example"]
-	path = study/python/python-example
-	url = git@github.com:Seolhun/python-example.git
-[submodule "study/vue/kr-study-incheon"]
-	path = study/vue/kr-study-incheon
-	url = git@github.com:Seolhun/kr-study-incheon.git
 [submodule "study/vue/vue-example"]
 	path = study/vue/vue-example
 	url = git@github.com:Seolhun/vue-example.git
